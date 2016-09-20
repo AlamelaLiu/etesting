@@ -4,15 +4,84 @@
 
     
   <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/armor/</loc>
-    <lastmod>2016-09-20T07:50:02.000Z</lastmod>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/caliper/</loc>
+    <lastmod>2016-09-20T08:18:51.000Z</lastmod>
     <data>
         <display>
-        <title>armor</title>
-        <pubTime>2016-09-20T07:50:02.000Z</pubTime>
+        <title>caliper</title>
+        <pubTime>2016-09-20T08:16:05.000Z</pubTime>
         
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
          
            
+             
+              <breadCrumb title="Utility" url="http://jarsonfang.github.io/etesting/categories/Utility/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/sysbench/</loc>
+    <lastmod>2016-09-20T08:18:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>sysbench</title>
+        <pubTime>2016-09-20T08:15:48.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="Utility" url="http://jarsonfang.github.io/etesting/categories/Utility/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/armor/</loc>
+    <lastmod>2016-09-20T08:18:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>Armor</title>
+        <pubTime>2016-09-20T07:50:02.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="Utility" url="http://jarsonfang.github.io/etesting/categories/Utility/"/>
+          
         </display>
     </data>
     </url>
