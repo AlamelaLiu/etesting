@@ -747,6 +747,378 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/etesting/2016/03/22/git-save-empty-dir/" itemprop="url">
+                  用git保存空目录
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-22T11:07:36+08:00" content="2016-03-22">
+              2016-03-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/VCS/" itemprop="url" rel="index">
+                    <span itemprop="name">VCS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/etesting/2016/03/22/git-save-empty-dir/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/22/git-save-empty-dir/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>git 和 svn 不同，仅仅跟踪文件的变动，不跟踪目录。Perforce 也是如此。所以，一个空目录，如果里面没有文件，即便 git add 这个目录，另外在别处 check out 的时候，是没有这个空目录的。</p>
+<p>只跟踪文件变化，不跟踪目录，这么设计是有原因的。但这会带来一些小麻烦。有时候，确实需要在代码仓库中保留某个空目录。比如测试时需要用到的空目录。</p>
+<p>变通的解决办法是在空目录下存一个 <code>.gitignore</code> 文件。然后 <code>git add</code> 此目录后，相当于跟踪了 <code>.gitignore</code> 文件，产生的“副作用”就是这个“空”目录也纳入“跟踪”，最终的效果是可以 check out 出一个看起来空空的目录。如果有许多这样的空目录，可以用下面的命令自动补充 <code>.gitignore</code> 文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch &#123;&#125;/.gitignore \;</div></pre></td></tr></table></figure></p>
+<p>递归找寻当前目录下，类型为目录，且为空，也没有 <code>.git</code> 开头的文件，在其中用 touch 新建一个空的 <code>.gitignore</code> 文件。然后 <code>git add .</code> 之后即可。</p>
+<p>如果这些特殊文件会对测试带来干扰，那就只好在测试程序运行具体测试项目之前，先跑一段初始化目录结构的代码。另外可能还需要编写负责清理的代码。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/etesting/2014/05/22/everyday-git/" itemprop="url">
+                  开发者日常使用的 Git 命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-05-22T16:31:13+08:00" content="2014-05-22">
+              2014-05-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/VCS/" itemprop="url" rel="index">
+                    <span itemprop="name">VCS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/etesting/2014/05/22/everyday-git/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/05/22/everyday-git/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>原文链接： <a href="https://www.kernel.org/pub/software/scm/git/docs/everyday.html">Everyday GIT With 20 Commands Or So</a>   翻译： <a href="http://blog.jobbole.com"> 伯乐在线 </a> - <a href="http://blog.jobbole.com/author/cjpan/">cjpan</a><br>译文链接： <a href="http://blog.jobbole.com/54184/">http://blog.jobbole.com/54184/</a> （下文在原译文基础上有修正补充）</p>
+<p><span style="color:red;">原文（英）最后更新时间：Last updated 2013-02-15 15:53:17 UTC</span></p>
+<p>这些命令分四种类型：①不需要和其他开发者协作的独立开发者，会经常用到 <code>git init</code>、<code>git show branch</code>、<code>git commit</code> 等命令；②需要和其他人协作的开发者，会常用到 <code>git clone</code>、<code>git push</code>、<code>git pull</code>、<code>git format patch</code>；③在项目中负责接收其他开发者发来更新的核心开发者，会常用到 <code>git am</code>、<code>git pull</code>、<code>git format patch</code>、<code>git revert</code>、<code>git push</code>；④ 代码仓库管理员常用 <code>git daemon</code>、<code>git shell</code> ……</p>
+<p>对于任何想做提交的人来说，甚至对于某位单独工作的人来说，【个人开发者（单独开发）】部分命令都是必不可少的。如果你和别人一起工作，你也会需要【个人开发者（参与者）】部分列出的命令。</p>
+<p>除了上述的部分，担当【集成人员】角色的人需要知道更多命令。【代码库管理】命令帮助系统管理员负责管理，以及向git代码库提交内容。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/etesting/2014/05/22/everyday-git/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/etesting/2014/05/22/git-in-common/" itemprop="url">
+                  git常用命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-05-22T11:00:27+08:00" content="2014-05-22">
+              2014-05-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/VCS/" itemprop="url" rel="index">
+                    <span itemprop="name">VCS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/etesting/2014/05/22/git-in-common/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/05/22/git-in-common/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>原文：<a href="http://www.cnblogs.com/1-2-3/archive/2010/07/18/git-commands.html" target="_blank" rel="external">http://www.cnblogs.com/1-2-3/archive/2010/07/18/git-commands.html</a></p>
+<p>Git 是一个很强大的分布式版本控制系统。它不但适用于管理大型开源软件的源代码，管理私人的文档和源代码也有很多优势。</p>
+<p><img src="/uploads/images/git_commands.png" alt="git_commands"></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -792,7 +1164,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/etesting/archives">
-              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-count">27</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -800,7 +1172,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/etesting/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -809,7 +1181,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/etesting/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
