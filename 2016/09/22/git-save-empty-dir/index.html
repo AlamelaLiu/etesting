@@ -61,7 +61,7 @@
 <link href="/etesting/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Ubuntu,Debian,Fedora,Centos,Opensuse," />
+  <meta name="keywords" content="git," />
 
 
 
@@ -77,16 +77,22 @@
 
 
 
-<meta name="description" content="ToDo …">
+<meta name="description" content="git 和 svn 不同，仅仅跟踪文件的变动，不跟踪目录。Perforce 也是如此。所以，一个空目录，如果里面没有文件，即便 git add 这个目录，另外在别处 check out 的时候，是没有这个空目录的。
+只跟踪文件变化，不跟踪目录，这么设计是有原因的。但这会带来一些小麻烦。有时候，确实需要在代码仓库中保留某个空目录。比如测试时需要用到的空目录。
+变通的解决办法是在空目录下存一个 .gi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="caliper">
-<meta property="og:url" content="http://jarsonfang.github.io/2016/09/20/caliper/index.html">
+<meta property="og:title" content="用git保存空目录">
+<meta property="og:url" content="http://jarsonfang.github.io/2016/09/22/git-save-empty-dir/index.html">
 <meta property="og:site_name" content="Etesting">
-<meta property="og:description" content="ToDo …">
-<meta property="og:updated_time" content="2016-09-20T08:18:51.000Z">
+<meta property="og:description" content="git 和 svn 不同，仅仅跟踪文件的变动，不跟踪目录。Perforce 也是如此。所以，一个空目录，如果里面没有文件，即便 git add 这个目录，另外在别处 check out 的时候，是没有这个空目录的。
+只跟踪文件变化，不跟踪目录，这么设计是有原因的。但这会带来一些小麻烦。有时候，确实需要在代码仓库中保留某个空目录。比如测试时需要用到的空目录。
+变通的解决办法是在空目录下存一个 .gi">
+<meta property="og:updated_time" content="2016-09-22T10:10:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="caliper">
-<meta name="twitter:description" content="ToDo …">
+<meta name="twitter:title" content="用git保存空目录">
+<meta name="twitter:description" content="git 和 svn 不同，仅仅跟踪文件的变动，不跟踪目录。Perforce 也是如此。所以，一个空目录，如果里面没有文件，即便 git add 这个目录，另外在别处 check out 的时候，是没有这个空目录的。
+只跟踪文件变化，不跟踪目录，这么设计是有原因的。但这会带来一些小麻烦。有时候，确实需要在代码仓库中保留某个空目录。比如测试时需要用到的空目录。
+变通的解决办法是在空目录下存一个 .gi">
 
 
 
@@ -107,9 +113,9 @@
 
 
 
-  <link rel="canonical" href="http://jarsonfang.github.io/2016/09/20/caliper/"/>
+  <link rel="canonical" href="http://jarsonfang.github.io/2016/09/22/git-save-empty-dir/"/>
 
-  <title> caliper | Etesting </title>
+  <title> 用git保存空目录 | Etesting </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -262,7 +268,7 @@
             
             
               
-                caliper
+                用git保存空目录
               
             
           </h1>
@@ -274,8 +280,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-20T16:16:05+08:00" content="2016-09-20">
-              2016-09-20
+            <time itemprop="dateCreated" datetime="2016-09-22T11:07:36+08:00" content="2016-09-22">
+              2016-09-22
             </time>
           </span>
 
@@ -288,8 +294,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/Utility/" itemprop="url" rel="index">
-                    <span itemprop="name">Utility</span>
+                  <a href="/etesting/categories/VCS/" itemprop="url" rel="index">
+                    <span itemprop="name">VCS</span>
                   </a>
                 </span>
 
@@ -304,8 +310,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/etesting/2016/09/20/caliper/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/20/caliper/" itemprop="commentsCount"></span>
+                <a href="/etesting/2016/09/22/git-save-empty-dir/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/22/git-save-empty-dir/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -328,7 +334,11 @@
       
 
       
-        <p><strong>ToDo …</strong></p>
+        <p>git 和 svn 不同，仅仅跟踪文件的变动，不跟踪目录。Perforce 也是如此。所以，一个空目录，如果里面没有文件，即便 git add 这个目录，另外在别处 check out 的时候，是没有这个空目录的。</p>
+<p>只跟踪文件变化，不跟踪目录，这么设计是有原因的。但这会带来一些小麻烦。有时候，确实需要在代码仓库中保留某个空目录。比如测试时需要用到的空目录。</p>
+<p>变通的解决办法是在空目录下存一个 <code>.gitignore</code> 文件。然后 <code>git add</code> 此目录后，相当于跟踪了 <code>.gitignore</code> 文件，产生的“副作用”就是这个“空”目录也纳入“跟踪”，最终的效果是可以 check out 出一个看起来空空的目录。如果有许多这样的空目录，可以用下面的命令自动补充 <code>.gitignore</code> 文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch &#123;&#125;/.gitignore \;</div></pre></td></tr></table></figure></p>
+<p>递归找寻当前目录下，类型为目录，且为空，也没有 <code>.git</code> 开头的文件，在其中用 touch 新建一个空的 <code>.gitignore</code> 文件。然后 <code>git add .</code> 之后即可。</p>
+<p>如果这些特殊文件会对测试带来干扰，那就只好在测试程序运行具体测试项目之前，先跑一段初始化目录结构的代码。另外可能还需要编写负责清理的代码。</p>
 
       
     </div>
@@ -351,15 +361,7 @@
       
         <div class="post-tags">
           
-            <a href="/etesting/tags/Ubuntu/" rel="tag">#Ubuntu</a>
-          
-            <a href="/etesting/tags/Debian/" rel="tag">#Debian</a>
-          
-            <a href="/etesting/tags/Fedora/" rel="tag">#Fedora</a>
-          
-            <a href="/etesting/tags/Centos/" rel="tag">#Centos</a>
-          
-            <a href="/etesting/tags/Opensuse/" rel="tag">#Opensuse</a>
+            <a href="/etesting/tags/git/" rel="tag">#git</a>
           
         </div>
       
@@ -368,16 +370,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/etesting/2016/09/20/sysbench/" rel="next" title="sysbench">
-                <i class="fa fa-chevron-left"></i> sysbench
+              <a href="/etesting/2016/09/22/git-in-common/" rel="next" title="git常用命令">
+                <i class="fa fa-chevron-left"></i> git常用命令
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/etesting/2016/09/22/git-in-common/" rel="prev" title="git常用命令">
-                git常用命令 <i class="fa fa-chevron-right"></i>
+              <a href="/etesting/2016/09/22/everyday-git/" rel="prev" title="开发者日常使用的 Git 命令">
+                开发者日常使用的 Git 命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -393,10 +395,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/09/20/caliper/"
-     data-title="caliper"
+        <div class="ds-share flat" data-thread-key="2016/09/22/git-save-empty-dir/"
+     data-title="用git保存空目录"
      data-content=""
-     data-url="http://jarsonfang.github.io/etesting/2016/09/20/caliper/">
+     data-url="http://jarsonfang.github.io/etesting/2016/09/22/git-save-empty-dir/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -426,8 +428,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/09/20/caliper/"
-           data-title="caliper" data-url="http://jarsonfang.github.io/etesting/2016/09/20/caliper/">
+      <div class="ds-thread" data-thread-key="2016/09/22/git-save-empty-dir/"
+           data-title="用git保存空目录" data-url="http://jarsonfang.github.io/etesting/2016/09/22/git-save-empty-dir/">
       </div>
     
   </div>
