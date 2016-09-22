@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/samba/</loc>
+    <lastmod>2016-09-22T07:45:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>Samba</title>
+        <pubTime>2016-09-20T06:16:21.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jarsonfang.github.io/etesting/2016/09/20/caliper/</loc>
     <lastmod>2016-09-20T08:18:51.000Z</lastmod>
     <data>
@@ -602,34 +630,6 @@
         <display>
         <title>Apache2</title>
         <pubTime>2016-09-20T07:00:13.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/Server/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/samba/</loc>
-    <lastmod>2016-09-20T06:50:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>Samba</title>
-        <pubTime>2016-09-20T06:16:21.000Z</pubTime>
         
         <tag>Ubuntu</tag>
          
