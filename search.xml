@@ -955,10 +955,12 @@
 <p><span style="color:red">在执行完脚本的最后一个命令之后，模式空间的内容自动输出（<code>-n</code> 选项或 <code>#n</code> 抑制这个默认的动作）</span>。因此当默认的输出被抑制或者脚本中的控制流更改，以至不能达到脚本的底部时，需要使用打印命令（<code>P</code> 或 <code>p</code>）。<code>Print</code> 命令经常出现在 <code>Next</code> 命令之后和 <code>Delete</code> 命令之前。这 3 个命令能建立一个输入/输出循环，用来维护两行的模式空间，但是一次只输出一行。这个循环的目的是只输出模式空间的第一行，然后<span style="color:red">返回到脚本的顶端</span>将所有的命令应用于模式空间的第二行。没有这个循环，当执行脚本中的最后一个命令时，模式空间中的这两行都被输出。</p>
 <h4 id="范例-8"><a href="#范例-8" class="headerlink" title="范例"></a>范例</h4><p><strong>题目:</strong> 输出 <code>input.dat</code> 档内奇数行资料。假设 <code>input.dat</code> 档内容如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">The</div><div class="line">UNIX</div><div class="line">System</div></pre></td></tr></table></figure></p>
 <p><strong>说明:</strong> 在命令列上</p>
-<pre><code>*   以选项 `-n` , 将资料输出的控制权转给指令。
-*   利用函数参数 `N` 将偶数行添加至 pattern space 内奇数行後。
-*   利用函数参数 `P` 将 pattern space 内的第一行(奇数行)输出。
-</code></pre><p>在奇数行输出後 , pattern space 内剩下的资料行(偶数行)则被放弃输出。最後 , 整个输出只有原先的奇数行资料。</p>
+<ul>
+<li>以选项 <code>-n</code>, 将资料输出的控制权转给指令。</li>
+<li>利用函数参数 <code>N</code> 将偶数行添加至 pattern space 内奇数行後。</li>
+<li>利用函数参数 <code>P</code> 将 pattern space 内的第一行(奇数行)输出。</li>
+</ul>
+<p>在奇数行输出後 , pattern space 内剩下的资料行(偶数行)则被放弃输出。最後 , 整个输出只有原先的奇数行资料。</p>
 <p><strong>sed 命令列:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -n -e &apos;N&apos; -e &apos;P&apos; input.dat</div></pre></td></tr></table></figure></p>
 <p>执行上述命令後, 输出的结果如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">The</div><div class="line">System</div></pre></td></tr></table></figure></p>
 <h3 id="模式空间与保持空间"><a href="#模式空间与保持空间" class="headerlink" title="模式空间与保持空间"></a>模式空间与保持空间</h3><p>模式空间的内容可以<span style="color:red">复制</span>到保持空间，而且保持空间的内容也可以<span style="color:red">复制</span>到模式空间。有一组命令用于在保持空间和模式空间之间移动数据。保持空间用于临时存储。单独的命令不能寻址保持空间或者更改它的内容。</p>
