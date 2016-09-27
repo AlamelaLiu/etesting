@@ -1,12 +1,334 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search>
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/etesting/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+<link href="/etesting/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/etesting/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="awk," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/etesting/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="简体中文版由bones7456 (http://li2z.cn)整理.原文:应该是 http://phi.sinica.edu.tw/aspac/reports/94/94011/ 但是原文很乱.说明:之前也是对awk几乎一无所知,无意中看到这篇文章,网上一搜,居然没有像样的简体中文版.有的也是不怎么完整,或者错误一大堆的.于是就顺手整理了下这篇文章.通过整理这篇文章,自己也渐渐掌握了awk的种">
+<meta property="og:type" content="article">
+<meta property="og:title" content="awk 手册">
+<meta property="og:url" content="http://jarsonfang.github.io/2016/09/23/awk/index.html">
+<meta property="og:site_name" content="Etesting">
+<meta property="og:description" content="简体中文版由bones7456 (http://li2z.cn)整理.原文:应该是 http://phi.sinica.edu.tw/aspac/reports/94/94011/ 但是原文很乱.说明:之前也是对awk几乎一无所知,无意中看到这篇文章,网上一搜,居然没有像样的简体中文版.有的也是不怎么完整,或者错误一大堆的.于是就顺手整理了下这篇文章.通过整理这篇文章,自己也渐渐掌握了awk的种">
+<meta property="og:updated_time" content="2016-09-27T02:43:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="awk 手册">
+<meta name="twitter:description" content="简体中文版由bones7456 (http://li2z.cn)整理.原文:应该是 http://phi.sinica.edu.tw/aspac/reports/94/94011/ 但是原文很乱.说明:之前也是对awk几乎一无所知,无意中看到这篇文章,网上一搜,居然没有像样的简体中文版.有的也是不怎么完整,或者错误一大堆的.于是就顺手整理了下这篇文章.通过整理这篇文章,自己也渐渐掌握了awk的种">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6327478655802934000,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://jarsonfang.github.io/2016/09/23/awk/"/>
+
+  <title> awk 手册 | Etesting </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
   
   
     
-    <entry>
-      <title><![CDATA[awk 手册]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/23/awk/</url>
-      <content type="html"><![CDATA[<blockquote>
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/etesting/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Etesting</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Estuary Testing</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/etesting/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/etesting/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/etesting/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/etesting/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                awk 手册
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-23T15:08:36+08:00" content="2016-09-23">
+              2016-09-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/sed-awk/" itemprop="url" rel="index">
+                    <span itemprop="name">sed & awk</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/etesting/2016/09/23/awk/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/23/awk/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
 <p>简体中文版由bones7456 (<a href="http://li2z.cn)整理" target="_blank" rel="external">http://li2z.cn)整理</a>.<br>原文:应该是 <a href="http://phi.sinica.edu.tw/aspac/reports/94/94011/" target="_blank" rel="external">http://phi.sinica.edu.tw/aspac/reports/94/94011/</a> 但是原文很乱.<br>说明:之前也是对awk几乎一无所知,无意中看到这篇文章,网上一搜,居然没有像样的简体中文版.有的也是不怎么完整,或者错误一大堆的.于是就顺手整理了下这篇文章.通过整理这篇文章,自己也渐渐掌握了awk的种种用法.<br>原文可能比较老,有些目前已经不适用的命令有所改动,文中所有命令均在ubuntu7.04下调试通过,用的awk是mawk.<br>由于本人能力有限,错误和不妥之处在所难免,欢迎多多指正.  </p>
 </blockquote>
 <a id="more"></a>
@@ -726,971 +1048,539 @@
 <p>例5:<br>将某一数值改以现金表示法表示(整数部分每三位加一撇,且含二位小数)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">awk <span class="string">'</span></div><div class="line">BEGIN &#123;</div><div class="line">    Number = 123456789</div><div class="line">    Number = sprintf("$%.2f",Number)</div><div class="line">    while(match(Number, /[0-9][0-9][0-9][0-9]/))</div><div class="line">        sub(/[0-9][0-9][0-9][.,]/, ",&amp;", Number)</div><div class="line">    print Number</div><div class="line">&#125;</div><div class="line">' $*</div></pre></td></tr></table></figure></p>
 <p>结果输出<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$123,456,789.00</div></pre></td></tr></table></figure></p>
 <p>例6:<br>把文件中所有具”<code>program数字.f</code>“形态的字串改为”<code>[Ref: program数字.c]</code>“<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">awk <span class="string">'</span></div><div class="line">&#123;</div><div class="line">    while(match($0, /program[0-9]+\.f/)) &#123;</div><div class="line">        Replace = "[Ref: "substr($0, RSTART, RLENGTH-2)".c]"</div><div class="line">        sub( /program[0-9]+\.f/, Replace)</div><div class="line">    &#125;</div><div class="line">    print</div><div class="line">&#125;</div><div class="line">' $*</div></pre></td></tr></table></figure></p>
-]]></content>
-    </entry>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/etesting/tags/awk/" rel="tag">#awk</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/etesting/2016/09/23/sed-functions/" rel="next" title="sed 函数参数">
+                <i class="fa fa-chevron-left"></i> sed 函数参数
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/09/23/awk/"
+     data-title="awk 手册"
+     data-content=""
+     data-url="http://jarsonfang.github.io/etesting/2016/09/23/awk/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
+
+          
+  <div class="comments" id="comments">
     
-    <entry>
-      <title><![CDATA[sed 函数参数]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/23/sed-functions/</url>
-      <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">fhc2007@fhc2007-desktop:~$ sed --help</div><div class="line">用法: sed [选项]... &#123;脚本(如果没有其他脚本)&#125; [输入文件]...</div><div class="line"></div><div class="line">  -n, --quiet, --silent</div><div class="line">                 取消自动打印模式空间</div><div class="line">  <span class="_">-e</span> 脚本, --expression=脚本</div><div class="line">                 添加“脚本”到程序的运行列表</div><div class="line">  <span class="_">-f</span> 脚本文件, --file=脚本文件</div><div class="line">                 添加“脚本文件”到程序的运行列表</div><div class="line">  -i[扩展名], --in-place[=扩展名]</div><div class="line">                 直接修改文件(如果指定扩展名就备份文件)</div><div class="line">  <span class="_">-l</span> N, --line-length=N</div><div class="line">                 指定“l”命令的换行期望长度</div><div class="line">  --posix</div><div class="line">                 关闭所有 GNU 扩展</div><div class="line">  -r, --regexp-extended</div><div class="line">                 在脚本中使用扩展正则表达式</div><div class="line">  <span class="_">-s</span>, --separate</div><div class="line">                 将输入文件视为各个独立的文件而不是一个长的连续输入</div><div class="line">  -u, --unbuffered</div><div class="line">                 从输入文件读取最少的数据，更频繁的刷新输出</div><div class="line">      --help     打印帮助并退出</div><div class="line">      --version  输出版本信息并退出</div></pre></td></tr></table></figure>
-<p><span style="color:#ff0000">如果没有 -e, –expression, -f 或 –file 选项，那么第一个非选项参数被视为sed脚本。其他非选项参数被视为输入文件，如果没有输入文件，那么程序将从标准输入读取数据。</span></p>
-<p><strong>注：-n 参数和 -i 参数不要一起使用。</strong></p>
-<p>本章将以一节一个函数参数的方式 ,介绍所有 sed 提供的函数参数 , 其中有</p>
-<p>|<a href="#s">s</a>|<a href="#d">d</a>|<a href="#a">a</a>|<a href="#i">i</a>|<a href="#c">c</a>|<a href="#p">p</a>|<a href="#l">l</a>|<a href="#r">r</a>|<a href="#w">w</a>|<a href="#y">y</a>|<a href="#!">!</a>|<a href="#n">n</a>|<a href="#q">q</a>|<a href="#equal">=</a>|<a href="#com">#</a>|<a href="#Next">N</a>|<a href="#Delete">D</a>|<a href="#Print">P</a>|<a href="#h">h</a>|<a href="#Hold">H</a>|<a href="#g">g</a>|<a href="#Gg">G</a>|<a href="#x">x</a>|<a href="#b">b</a>|<a href="#t">t</a>|</p>
-<p>另外 , 在各节中 , 首先简单介绍函数参数功能 , 接着说明函数参数与位址参数配合的格式 ,而其中也一并描述 sed 执行此函数参数的工作情形。<br><a id="more"></a></p>
-<h3 id="s"><a href="#s" class="headerlink" title="s"></a><a name="s">s</a></h3><p>函数参数 <code>s</code> 表示替换(substitute)文件内字串。其指令格式如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]s/pattern/replacemen/[flag]</div></pre></td></tr></table></figure></p>
-<p>对上述格式有下面几点说明 :</p>
-<ol>
-<li>函数参数 <code>s</code> 最多与两个位址参数配合。</li>
-<li>关於 “<code>s/pattern/replacement/[flag]</code>“ 有下面几点说明:</li>
-</ol>
-<ul>
-<li>pattern : 它为 reguler expression 字串。它表示文件中要被替换的字串。</li>
-<li><p>replacement : 它为一般字串。但其内出现下列<span style="color:red">元字符</span>有特别意义 :</p>
-<ul>
-<li><p><code>&amp;</code> : 代表其前 pattern 字串。例如</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-e</span> <span class="string">'s/test/&amp; my car/'</span> 资料档名</div></pre></td></tr></table></figure>
-<p>指令中 , <code>&amp;</code> 代表 pattern 字串 “<code>test</code>“。故执行後 , 资料档的 “<code>test</code>“ 被替换成 “<code>test my car</code>“。</p>
-</li>
-<li><p><code>n</code> : 代表 pattern 中被第 <code>n</code> (<code>n</code> 是从 1 到 9 的数字)个 <code>()</code> 所括起来的字串。例如</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-e</span> <span class="string">'s/(test) (my) (car)/[2 3 1]/'</span> 资料档名</div></pre></td></tr></table></figure>
-<p>指令中 , <code>1</code> 表示 “<code>test</code>“、<code>2</code> 表示 “<code>my</code>“、<code>3</code> 表示 “<code>car</code>“ 字串。故执行後 , 资料档的 “<code>test my car</code>“被替换成 “<code>[my car test]</code>“。（注解：<code>()</code> 与 <code>1 ... 9</code> 合用）</p>
-</li>
-<li>\ : 可用它来还原一些特殊符号(如上述的 &amp; 和 \ )本身字面上的意义（<span style="color:red">转义</span>） , 或用它来<span style="color:red">代表换行</span>。</li>
-</ul>
-</li>
-<li><p>flag : 主要用它来控制一些替换情况 :</p>
-<ul>
-<li>当 flag 为 <code>g</code> 时 , 代表替换所有符合(match)的字串 。</li>
-<li>当 flag 为十进位数字 <code>m</code> 时 , 代表替换行内第 <code>m</code> 个符合的字串。</li>
-<li>当 flag 为 <code>p</code> 时 , 代表替换第一个符合 pattern 的字串後 , 将资料输出标准输出档。</li>
-<li>当 flag 为 <code>w wfile</code> 时 , 代表替换第一个符合 pattern 的字串後 , 输出到 <code>wfile</code> 档内(如果 <code>wfile</code> 不存在 , 则会重新开启名为 <code>wfile</code> 的档案)。</li>
-<li>当没有 flag 时 , 则将资料行内第一个符合 pattern 的字串以 replacement 字串来替换 。</li>
-</ul>
-</li>
-<li><p>delimiter : 在 “<code>/pattern/replace/[flag]</code>“ 中 “<code>/</code>“ 被当成 delimiter。除了空白(blank)、换行(newline) 之外 ,使用者可用任何字元作为 delimiter。例如下述编辑指令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s<span class="comment">#/usr#/usr1#g</span></div></pre></td></tr></table></figure>
-<p>上述命令中”<code>#</code>“为 delimiter。如果用 “<code>/</code>“ 做 delimiter , 则 sed 会将 pattern 与 replacement中的 “<code>/</code>“ 当成 delimiter 而发生错误。</p>
-</li>
-</ul>
-<h4 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h4><p><strong>题目:</strong> 替换 <code>input.dat</code> 档(後面如果没有特别指定 , 均假设文件档名为 <code>input.dat</code>)内 “<code>1996</code>“ 字串成 “<code>1997</code>“ , 同时将这些资料行存入 <code>year97.dat</code> 档内。</p>
-<p><strong>说明:</strong> 用函数参数 <code>s</code> 指示 sed 将 “<code>1996</code>“ 字串替换成 “<code>1997</code>“ , 另外用 <code>s</code> argument 中的 flag <code>w</code> 指示 sed 将替换过的资料行存入 <code>year97.dat</code> 档内。</p>
-<p><strong>sed 命令列:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-e</span> <span class="string">'s/1996/1997/w year97.dat'</span> input.dat</div></pre></td></tr></table></figure></p>
-<p>数字标志很少使用，在这种情况下，正则表达式在一行上重复匹配，而只需对其中某个位置的匹配进行替换。例如，某输入行也许包含 <code>[tab]</code>（制表符）输入，也许包含多个制表位。假设每行有3个制表符，并且要用“&gt;”替换第二个制表位，则可以使用下面的替换命令来完成该功能：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s/[tab]/&gt;/2</div></pre></td></tr></table></figure></p>
-<p>“<code>[tab]</code>“表示一个真正的制表符，而制表符在屏幕上是不可见的。如果输入是一行的文件，如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Column1[tab]column2[tab]Column3[tab]Column4</div></pre></td></tr></table></figure></p>
-<p>对这个文件运行以上脚本产生的输出如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Column1[tab]column2&gt;Column3[tab]Column4</div></pre></td></tr></table></figure></p>
-<p>注意，如果没有数字标志，则替换命令只替换第一个制表符（因此“<code>1</code>”可以被看作是默认的数字标志）。<br>我们可以对前面的示例做一些改动，用换行符取代每行上的第二个制表符。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">s/[tab]/</div><div class="line">/2</div></pre></td></tr></table></figure></p>
-<p>注意，在反斜杠后面不允许有空格。这个脚本产生下面的结果：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Column1[tab]column2</div><div class="line">Column3[tab]Column4</div></pre></td></tr></table></figure></p>
-<h3 id="d"><a href="#d" class="headerlink" title="d"></a><a name="d">d</a></h3><p>函数参数 d 表示删除资料行 , 其指令格式如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]d</div></pre></td></tr></table></figure></p>
-<p>对上述格式有下面几点说明:</p>
-<ol>
-<li>函数参数 <code>d</code> 最多与两个位址参数配合。</li>
-<li><p>sed 执行删除动作情况如下 :</p>
-<ol>
-<li>将 pattern space 内符合位址参数的资料删除。</li>
-<li>将下一笔资料读进 pattern space 。</li>
-<li>重新执行 sed script。</li>
-</ol>
-</li>
-</ol>
-<p>补遗：删除命令是一个可以改变脚本中的控制流的命令。这是因为一旦执行这个命令，那么在“空的”模式空间（注：不允许在被删除的行上进行进一步操作）中就不会再有命令执行。所以，<span style="color:red">删除命令会导致读取新的输入行，而编辑脚本则从头开始新的一轮</span>。重要的是：如果某行匹配了模式中地址（地址参数），那么就删除整个行，而不只是删除行中匹配的部分（要删除行的一部分，可以使用替换命令并指定一个空的替换）。</p>
-<h3 id="a"><a href="#a" class="headerlink" title="a"></a><a name="a">a</a></h3><p>函数参数 <code>a</code> 表示将资料添加到文件中。其指令格式如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1]a 使用者所输入的资料</div></pre></td></tr></table></figure></p>
-<p>对上述格式有下面几点说明:</p>
-<ol>
-<li>函数参数 <code>a</code> 最多与一个位址参数配合。</li>
-<li>函数参数 <code>a</code> 紧接着 “\“ 字元用来表示此行结束 , 使用者所输入的资料必须从下一行输入。如果资料超过一行 , 则须在每行的结尾加入”<code>\n</code>“。</li>
-<li>sed 执行添加动作情况如下: 当 pattern space 内资料输出後 , sed 跟着输出使用者所输入的资料。</li>
-</ol>
-<h4 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h4><p><strong>题目:</strong> 添加 “<code>多工作业系统</code>“ 在含 “<code>UNIX</code>“ 字串的资料行後。假设 input.dat 档的内容如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">UNIX</div></pre></td></tr></table></figure></p>
-<p><strong>说明:</strong> 用函数参数 a 将所输入的资料添加在含 “UNIX” 字串的资料行後。</p>
-<p><strong>sed 命令列如下:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sed -e &apos;/UNIX/a\</div><div class="line">多工作业系统</div><div class="line">&apos; input.dat</div></pre></td></tr></table></figure></p>
-<p>执行上述命令後, 其输出结果如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">UNIX</div><div class="line">多工作业系统</div></pre></td></tr></table></figure></p>
-<p>多行资料输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sed -e &apos;/UNIX/a\</div><div class="line">多工\n作业系统</div><div class="line">&apos; input.dat</div></pre></td></tr></table></figure></p>
-<p>执行上述命令后，其输出结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">UNIX</div><div class="line">多工</div><div class="line">作业系统</div></pre></td></tr></table></figure></p>
-<p>当然，上述命令也可以在一行中输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -e &apos;/UNIX/a 多工\n作业系统&apos; input.dat</div></pre></td></tr></table></figure></p>
-<p>命令结果同上。</p>
-<h3 id="i"><a href="#i" class="headerlink" title="i"></a><a name="i">i</a></h3><p>函数参数 <code>i</code> 表示将资料插入文件中。其指令格式如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1]i 使用者所输入的资料</div></pre></td></tr></table></figure></p>
-<p>对上述格式有下面几点说明:</p>
-<ol>
-<li>函数参数 <code>i</code> 最多与一个位址参数配合。</li>
-<li>函数参数 <code>i</code> 紧接着 “\“ 字元用来表示此行结束, 使用者所输入的资料必须从下一行输入。如果资料超过一行 , 则须在每行的结尾加入”<code>\n</code>“。</li>
-<li>sed 执行插入动作的情况如下: 在 pattern space 内资料输出前 , sed 先输出使用者所输入的资料。</li>
-</ol>
-<h4 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h4><p><strong>题目:</strong> 将 “<code>文章版权属於中央研究院</code>“ 插在 <code>input.dat</code> 档中含 “<code>院长: 李远哲</code>“ 的资料行之前。假设 <code>input.dat</code> 档内容如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">院长: 李远哲</div></pre></td></tr></table></figure></p>
-<p><strong>说明:</strong> 用函数参数 <code>i</code> 将资料行 “<code>文章版权属於中央研究院</code>“ 插在含 “<code>院长: 李远哲</code>“ 的资料行之前。</p>
-<p><strong>sed 命令列如下:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sed -e &apos;/院长：李远哲/i\</div><div class="line">文章版权属於中央研究院</div><div class="line">&apos; input.dat</div></pre></td></tr></table></figure></p>
-<p>执行上述命令後的输出如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">文章版权属於中央研究院</div><div class="line">院长: 李远哲</div></pre></td></tr></table></figure></p>
-<h3 id="c"><a href="#c" class="headerlink" title="c"></a><a name="c">c</a></h3><p>函数参数 <code>c</code> 表示改变文件中的资料。其格式如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]c 使用者所输入的资料</div></pre></td></tr></table></figure></p>
-<p>对上述格式有下面几点说明:</p>
-<ol>
-<li>函数参数 <code>c</code> 最多与两个位址参数配合。</li>
-<li>函数参数 <code>c</code> 紧接着 “\“ 字元用来表示此行结束, 使用者所输入的资料必须从下一行输入。如果资料超过一行 , 则须在每行的结尾加入”\n”。</li>
-<li>sed 执行改变动作的情况: 在 pattern space 内资料输出时, sed 改变它成为使用者所输入的资料。</li>
-</ol>
-<p>补遗：更改命令清除模式空间，它在空间模式中与删除命令有同样的效果。脚本中在更改命令之后的其他命令没有被提供。<br>插入命令和追加命令不影响模式空间的内容。提供的文本将不匹配脚本中后续命令中的任何地址，那些命令也不影响该文本。不管什么更改改变了模式空间，所提供的文本仍然会正确输出。当默认的输出受到抑制时也是这样——所提供的文本将被输出，即时模式空间不是那样的。而且，所提供的文本不影响 sed 的内部行计数器。</p>
-<h3 id="p"><a href="#p" class="headerlink" title="p"></a><a name="p">p</a></h3><p>函数参数 p 表示印出模式空间中的资料。其指令格式如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]p</div></pre></td></tr></table></figure></p>
-<p>对於上述格式有下面几点说明 :</p>
-<ol>
-<li>函数参数 <code>p</code> 最多与两个位址参数配合。</li>
-<li>sed 执行印出动作的情况如下: sed 拷备一份 pattern space 内容至标准输出档。</li>
-</ol>
-<p>除非抑制（<code>-n</code>）默认的输出，否则打印命令将输出行的重复复制。当抑制默认的输出或者当通过程序的流程控制来避免到达脚本的底部时，可能会使用它。</p>
-<h3 id="l"><a href="#l" class="headerlink" title="l"></a><a name="l">l</a></h3><p>函数参数 <code>l</code> , 除可将模式空间资料中的 nonprinting character（非打印字符） 显示为两个数字的ASCII 代码（GNU sed 显示某些字符，例如，回车符，使用的是 ANSI C 转义序列，而不是八进制。）外 , 其於均与函数参数 <code>p</code> 相同。例如 , 将下面 input.dat 档中的 <code>^[</code> 以 ASCII 码印出<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The Great ^[ is a movie starring Steve McQueen.</div></pre></td></tr></table></figure></p>
-<p>（在 vi 中的插入模式下通过键入 CTRL-V（大小写无关），然后按下 ESC 键，产生字符 ^[ ，类似的，按下回车键可产生字符 ^M，按下 CTRL-A（大小写无关），产生字符 ^A，其余类推。）</p>
-<p>执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -e &apos;l&apos; input.dat</div></pre></td></tr></table></figure></p>
-<p>後, 则输出结果如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">The Great 33 is a movie starring Steve McQueen.</div><div class="line">The Great     is a movie starring Steve McQueen.</div></pre></td></tr></table></figure></p>
-<p>上述第二行资料为 sed 的自动输出。</p>
-<p>（在 sed 中不能用 ASCII 值匹配字符（也不能匹配八进制数值），所以，使用 sed 替换（或删除）文档中的非打印字符，得用 vi 来编辑 sed 的编辑命令脚本，使用命令脚本来执行 sed 而无法在命令行上输入 sed 的命令参数。）</p>
-<h3 id="r"><a href="#r" class="headerlink" title="r"></a><a name="r">r</a></h3><p>函数参数 <code>r</code> 表示读入文件的内容到模式空间。其指令格式如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1]r file</div></pre></td></tr></table></figure></p>
-<p>对於上述格式有下面几点说明:</p>
-<ol>
-<li>函数参数 <code>r</code> 最多与一个位址参数配合。</li>
-<li>在指令中, 函数参数 <code>r</code> 与文件名称间, 必须有一空格（空格后到换行符前的每个字符都被当做文件名，因此，前导的和嵌入的空格也是文件名的一部分）。</li>
-<li>sed 执行读入动作的情况如下: 在 pattern space 内资料输出後, sed 读入由 file 指定的文件的内容跟着输出。当 file 不存在时, sed 照样执行其它指令而不会有任何错误讯息产生。</li>
-</ol>
-<h3 id="w"><a href="#w" class="headerlink" title="w"></a><a name="w">w</a></h3><p>函数参数 <code>w</code> 表示将模式空间的内容写入文件。其指令格式如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]w file</div></pre></td></tr></table></figure></p>
-<p>对於上述格式有下面几点说明 :</p>
-<ol>
-<li>函数参数 <code>w</code> 最多与两个位址参数配合。</li>
-<li>在指令中, 函数参数 <code>w</code> 与文件名称间 , 必须有一空格（空格后到换行符前的每个字符都被当做文件名，因此，前导的和嵌入的空格也是文件名的一部分）。</li>
-<li>sed 执行写出动作的情况如 : 将 pattern space 内资料写入文件 file。资料写入时 , 会取代(overwrite)原来文件内的资料（如果一个脚本中有多个指令写到同一个文件中，那么每个写命令都将内容追加到这个文件中）。另外, 当文件不存在时, sed 会重新产生(creat)它。</li>
-</ol>
-<h3 id="y"><a href="#y" class="headerlink" title="y"></a><a name="y">y</a></h3><p>函数参数 <code>y</code> 表示转换资料中的字元。其指令格式如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]y /xyz.../abc.../</div></pre></td></tr></table></figure></p>
-<p>对於上述格式有下面几点说明 :</p>
-<ol>
-<li>函数参数最多配合两个位址参数。</li>
-<li>指令中, <code>/abc.../xyz.../</code>(x、y、z、a、b、c 代表某些字元) 为 <code>y</code> 的 argument 。其中 <code>abc...</code> 与 <code>xyz...</code> 的字元个数必须相同。</li>
-<li>sed 执行转换时, 将 pattern space 内资料内的 <code>a</code> 字元转换成 <code>x</code> 字元 、<code>b</code> 字元转换成 <code>y</code> 字元 、<code>c</code> 字元转换成 <code>z</code> 字元 …。</li>
-</ol>
-<h4 id="范例-3"><a href="#范例-3" class="headerlink" title="范例"></a>范例</h4><p><strong>题目:</strong> 将 <code>input.dat</code> 档中的小写字母改成大写。假设 <code>input.dat</code> 档的内容如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Sodd&apos;s Second Law:</div><div class="line">        Sooner or later, the worst possible set of</div><div class="line">        circumstances is bound to occur.</div></pre></td></tr></table></figure></p>
-<p><strong>说明:</strong> 利用函数参数 <code>y</code> 指示 sed 做字母大小的转换。</p>
-<p><strong>sed 命令列如下:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sed -e &apos;</div><div class="line">y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/</div><div class="line">&apos; input.dat</div></pre></td></tr></table></figure></p>
-<p>执行上述命令输出结果如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SODD&apos;S SECOND LAW:</div><div class="line">      SOONER OR LATER, THE WORST POSSIBLE SET OF</div><div class="line">      CIRCUMSTANCES IS BOUND TO OCCUR.</div></pre></td></tr></table></figure></p>
-<h3 id=""><a href="#" class="headerlink" title="!"></a><a name="!">!</a></h3><p>函数参数 <code>!</code> 表示不执行函数参数。当有如下指令时 ,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]! 函数参数</div></pre></td></tr></table></figure></p>
-<p>表示, 对符合位址参数之资料不执行函数参数。例如删除 , 除了含有 “regular” 字串的资料行外，所有资料行, 则执行 <code>!</code> 后的删除命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -e &apos;/regular/!d&apos; input.dat</div></pre></td></tr></table></figure></p>
-<h3 id="n"><a href="#n" class="headerlink" title="n"></a><a name="n">n</a></h3><p>函数参数 <code>n</code> 表示读入下一行资料。其指令格式如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]n</div></pre></td></tr></table></figure></p>
-<p>对上述格式有下面几点说明 :</p>
-<ol>
-<li>函数参数 <code>n</code> 最多配合两个位址参数。</li>
-<li><p>sed 执行读入下一行动作的情况如下 :</p>
-<ol>
-<li>输出在 pattern space 的资料（默认输出）。</li>
-<li>将下一笔资料读到 pattern space。</li>
-<li>执行<span style="color:red">下一个</span>编辑指令(不用返回到脚本的顶端)。</li>
-</ol>
-</li>
-</ol>
-<p>补遗：<code>next</code> 命令改变了正常的流控制（正常情况下，直到到达脚本的底部才会输出模式空间的内容，总是在读入新行之后从脚本的顶端开始）。实际上，<code>next</code> 命令导致输入的下一行取代模式空间中的当前行。脚本中的后续命令应用于替换后的行，而不是当前行。<span style="color:red">如果没有抑制默认输出，那么在替换发生之前会打印当前行</span>。在较长的脚本中，必须记住<span style="color:red">出现在 next 命令之前的命令不会应用于新的输入行，而出现在其后面的命令不应用于旧的输入行</span>。</p>
-<h4 id="范例-4"><a href="#范例-4" class="headerlink" title="范例"></a>范例</h4><p><strong>题目:</strong> 输出 <code>input.dat</code> 档内偶数行资料。假设 <code>input.dat</code> 档内容如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">The</div><div class="line">UNIX</div><div class="line">Operation</div><div class="line">System</div></pre></td></tr></table></figure></p>
-<p><strong>说明:</strong> 在命令列上</p>
-<ul>
-<li>以选项 <code>-n</code> , 将资料输出的控制权转给指令。</li>
-<li>利用函数参数 <code>n</code> 将下一行资料(偶数行)取代 pattern space 内的资料行(奇数行)。</li>
-<li>利用函数参数 <code>p</code> 将 pattern space 内的资料(偶数行)输出。<br>最後 , 整个输出只有原先档内的偶数行资料。</li>
-</ul>
-<p><strong>sed 命令列如下:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -n -e &apos;n&apos; -e &apos;p&apos; input.dat</div></pre></td></tr></table></figure></p>
-<p>执行上述命令後, 输出的结果如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">UNIX</div><div class="line">System</div></pre></td></tr></table></figure></p>
-<h3 id="q"><a href="#q" class="headerlink" title="q"></a><a name="q">q</a></h3><p>函数参数 <code>q</code> 表示跳离 sed 。其指令格式如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1]q</div></pre></td></tr></table></figure></p>
-<p>对上述格式有下面几点说明 :</p>
-<ol>
-<li>函数参数 <code>q</code> 最多配合一个位址参数。</li>
-<li>sed 执行跳离动作时 , 它停止读取新的输入行（并停止将它们发送到输出）。</li>
-</ol>
-<p>（退出命令 <code>q</code> 只适用于单行的地址。一旦找到和 address 匹配的行，那么脚本就结束。注：需要小心的是，在将编辑操作写回到原始文件的任何程序中不要使用 <code>q</code> 命令。在执行 <code>q</code> 命令之后，就不会再产生输出。在想要编辑文件的一部分并保留剩余部分不改变的情况下，不要使用 <code>q</code> 命令。这种情况下使用 <code>q</code> 时初学者常犯的非常危险的错误。）</p>
-<p>示例，下面一行命令使用退出命令从文件中打印前100行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sed &apos;100q&apos; test</div><div class="line">...</div></pre></td></tr></table></figure></p>
-<p>它打印每一行，直到它到达行100并且退出。在这点上，这个命令的功能与 UNIX 的 <code>head</code> 命令类似。<br><code>quit</code> 的另一个可能的用法是从文件中提取了想要的内容后退出脚本。</p>
-<h4 id="范例-5"><a href="#范例-5" class="headerlink" title="范例"></a>范例</h4><p><strong>题目:</strong>  对文件档执行 <code>script_file</code> 内的编辑指令 , 除非遇到 “<code>Linux</code>“ 字串。</p>
-<p><strong>说明:</strong>  无论 <code>script_file</code> 内是何种指令 , 使用者只要在命令列上用指令<code>/Linux/q</code> , 函数参数 <code>q</code> 会强迫 sed 遇到 “<code>Linux</code>“ 时做跳离动作。</p>
-<p><strong>sed 命令列如下:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -e &apos;/Linux/q&apos; -f script_file input.dat</div></pre></td></tr></table></figure></p>
-<h3 id="-1"><a href="#-1" class="headerlink" title="="></a><a name="equal">=</a></h3><p>函数参数 <code>=</code> 表示印出资料的行号。其指令格式如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]=</div></pre></td></tr></table></figure></p>
-<p>对上述格式有下面几点说明 :</p>
-<ol>
-<li>函数参数 <code>=</code> 最多配合两个位址参数。</li>
-<li>执行时, 行号将在资料输出前先输出。</li>
-</ol>
-<h4 id="范例-6"><a href="#范例-6" class="headerlink" title="范例:"></a>范例:</h4><p><strong>题目:</strong> 印出 <code>input.dat</code> 档内资料行数。假设 <code>input.dat</code> 的内容如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">The UNIX</div><div class="line">Operating System</div></pre></td></tr></table></figure></p>
-<p><strong>说明:</strong> 用函数参数 <code>=</code> 来印出资料的行数。</p>
-<p><strong>sed 命令列如下:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -e &apos;=&apos; input.dat</div></pre></td></tr></table></figure></p>
-<p>执行上述命令後 , 输出的结果如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1</div><div class="line">The UNIX</div><div class="line">2</div><div class="line">Operating System</div></pre></td></tr></table></figure></p>
-<h3 id="-2"><a href="#-2" class="headerlink" title="#"></a><a name="com">#</a></h3><p><span style="color:red">在 script file 内 , 函数参数 <code>#</code> 後的文字为注解。当注解文字超过多行时 , 其行间须以 “\n” 换行字元相隔</span>。在 sed 的System V版本中，注释只允许出现在第一行。而 GNU sed 则可以在脚本的任何地方放置注释，甚至是跟在命令行的后面。注释行的第一个字符必须是“#”号。<span style="color:red">如果跟在<code>#</code>后面的下一个字符是<code>n</code>，那么脚本不会自动产生输出。这和指定命令行选项 <code>-n</code> 是等价的。跟在 <code>n</code> 后面的其余内容被看做是注释。在POSIX标准中，采用这种方式的 <code>#n</code> 必须是文件的前两个字符</span>。</p>
-<p>到此为止，前面介绍的命令（函数参数）可归类为基本的 sed 命令，下面将要介绍的这些命令可归类为 sed 的高级命令。sed 的高级命令可分成3个组：</p>
-<ol>
-<li>处理多行模式空间（<code>N</code>、<code>D</code>、<code>P</code>）。</li>
-<li>采用保持空间来保存模式空间的内容并使它可用于后续的命令（<code>H</code>、<code>h</code>、<code>G</code>、<code>g</code>、<code>x</code>）。</li>
-<li>编写使用分支和条件指令的脚本来更改控制流（<code>:</code>、<code>b</code>、<code>t</code>）。</li>
-</ol>
-<h3 id="多行模式空间"><a href="#多行模式空间" class="headerlink" title="多行模式空间"></a>多行模式空间</h3><p>在前面的正则表达式讨论中，我们强调模式匹配是面向行的。像 grep 这样的程序尝试在单个输入行上匹配一个模式。这就使它很难匹配一个在一行的结尾处开始，并在下一行的开始处结束的短语。其他一些模式只有当在多行上匹配才有意义。<br>sed 能查看模式空间的多个行。这就允许匹配模式扩展到多行上。下面我们将要介绍创建多行模式空间并处理它的内容的命令。这里的 3 个多行命令（<code>N</code>、<code>D</code>、<code>P</code>）对应于前面介绍的小写字母的基本命令（<code>n</code>、<code>d</code>、<code>p</code>）。</p>
-<h3 id="N"><a href="#N" class="headerlink" title="N"></a><a name="Next">N</a></h3><p>函数参数 <code>N</code> 表示添加下一笔资料在 pattern space 内。其指令格式如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]N</div></pre></td></tr></table></figure></p>
-<p>对上述格式有下面几点说明 :</p>
-<ol>
-<li>函数参数 <code>N</code> 最多配合两个位址参数。</li>
-<li>sed 执行时, 将下一行资料读入并添加在 pattern space 内, 资料行间以换行字元(embedded newline character)分隔。此外 , 在替换时 , 换行字元可用转义序列 <code>\n</code> 来匹配。</li>
-</ol>
-<p><span style="color:red">在多行模式空间中，元字符“<code>^</code>”匹配模式空间中的第一个字符，而不匹配换行符后面的字符。同样，“<code>$</code>”只匹配模式空间中最后的换行符，而不匹配任何嵌入的换行符。</span>在执行 <code>Next</code> 命令之后，控制将被传递给脚本中的后续命令（同 <code>next</code> ）。<code>Next</code> 命令与 <code>next</code> 命令不同，<code>next</code> 输出模式空间的内容，然后读取新的输入行。<code>next</code> 命令不创建多行模式空间。</p>
-<h4 id="范例-7"><a href="#范例-7" class="headerlink" title="范例"></a>范例</h4><p><strong>题目:</strong> 将下述两行资料合。假设 <code>input.dat</code> 的内容如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">The UNIX</div><div class="line">Operating System</div></pre></td></tr></table></figure></p>
-<p><strong>说明:</strong> 先利用函数参数 <code>N</code> 将两行资料置於 pattern space 内 , 在利用函数参数 <code>s/\n/ /</code> 将两行资料间的分隔符 <code>\n</code> 以空白替代 , 如此两行资料变成一行输出。</p>
-<p><strong>sed 命令列如下:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -e &apos;N&apos; -e &apos;s/\n/ /&apos; input.dat</div></pre></td></tr></table></figure></p>
-<p>执行上述命令後 , 其输出的结果如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The UNIX Operating System</div></pre></td></tr></table></figure></p>
-<h3 id="D"><a href="#D" class="headerlink" title="D"></a><a name="Delete">D</a></h3><p>函数参数 <code>D</code> 表示删除 pattern space 内的第一行资料（删除模式空间中直到第一个嵌入的换行符的这部分内容）。其指令格式如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]D</div></pre></td></tr></table></figure></p>
-<p>对上述格式有下面几点说明 :</p>
-<ol>
-<li>函数参数 <code>D</code> 最多配合两个位址参数。</li>
-<li>函数参数 <code>D</code> 与 <code>d</code> 的比较如下 :</li>
-</ol>
-<ul>
-<li>当 pattern space 内只有一资料行时 , <code>D</code> 与 <code>d</code> 作用相同。</li>
-<li><p>当 pattern space 内有多行资料行时</p>
-<ul>
-<li><code>D</code> 表示只删除 pattern space 内第一行资料 ; <code>d</code> 则全删除。</li>
-<li><code>D</code> 表示执行删除后 , pattern space 内不添加下一笔资料 , 而将剩下的资料重新执行 sed script （返回到脚本的顶端，将这些指令应用于模式空间剩余的内容）; <code>d</code> 则读入下一行后重新执行 sed script（返回到脚本的顶端）。</li>
-</ul>
-</li>
-</ul>
-<h3 id="P"><a href="#P" class="headerlink" title="P"></a><a name="Print">P</a></h3><p>函数参数 <code>P</code> 表示印出 pattern space 内的第一行资料（输出多行模式空间的第一部分，直到第一个嵌入的换行符为止）。其指令格式如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]P</div></pre></td></tr></table></figure></p>
-<p>对上述格式有下面几点说明 :</p>
-<ol>
-<li>函数参数 <code>P</code> 最多配合两个位址参数。</li>
-<li><code>P</code> 与 <code>p</code> , 除了面对的 pattern space 内的资料行数不同外 , 其它均相同。</li>
-</ol>
-<p><span style="color:red">在执行完脚本的最后一个命令之后，模式空间的内容自动输出（<code>-n</code> 选项或 <code>#n</code> 抑制这个默认的动作）</span>。因此当默认的输出被抑制或者脚本中的控制流更改，以至不能达到脚本的底部时，需要使用打印命令（<code>P</code> 或 <code>p</code>）。<code>Print</code> 命令经常出现在 <code>Next</code> 命令之后和 <code>Delete</code> 命令之前。这 3 个命令能建立一个输入/输出循环，用来维护两行的模式空间，但是一次只输出一行。这个循环的目的是只输出模式空间的第一行，然后<span style="color:red">返回到脚本的顶端</span>将所有的命令应用于模式空间的第二行。没有这个循环，当执行脚本中的最后一个命令时，模式空间中的这两行都被输出。</p>
-<h4 id="范例-8"><a href="#范例-8" class="headerlink" title="范例"></a>范例</h4><p><strong>题目:</strong> 输出 <code>input.dat</code> 档内奇数行资料。假设 <code>input.dat</code> 档内容如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">The</div><div class="line">UNIX</div><div class="line">System</div></pre></td></tr></table></figure></p>
-<p><strong>说明:</strong> 在命令列上</p>
-<pre><code>*   以选项 `-n` , 将资料输出的控制权转给指令。
-*   利用函数参数 `N` 将偶数行添加至 pattern space 内奇数行後。
-*   利用函数参数 `P` 将 pattern space 内的第一行(奇数行)输出。
-</code></pre><p>在奇数行输出後 , pattern space 内剩下的资料行(偶数行)则被放弃输出。最後 , 整个输出只有原先的奇数行资料。</p>
-<p><strong>sed 命令列:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -n -e &apos;N&apos; -e &apos;P&apos; input.dat</div></pre></td></tr></table></figure></p>
-<p>执行上述命令後, 输出的结果如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">The</div><div class="line">System</div></pre></td></tr></table></figure></p>
-<h3 id="模式空间与保持空间"><a href="#模式空间与保持空间" class="headerlink" title="模式空间与保持空间"></a>模式空间与保持空间</h3><p>模式空间的内容可以<span style="color:red">复制</span>到保持空间，而且保持空间的内容也可以<span style="color:red">复制</span>到模式空间。有一组命令用于在保持空间和模式空间之间移动数据。保持空间用于临时存储。单独的命令不能寻址保持空间或者更改它的内容。</p>
-<p>保持空间最常见的用途是，当改变模式空间中的原始内容时，用于保留当前输入行的<span style="color:red">副本</span>。影响模式空间的命令有：</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>缩写</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Hold</td>
-<td>h 或 H</td>
-<td>将模式空间的内容复制或追加到保持空间</td>
-</tr>
-<tr>
-<td>Get</td>
-<td>g 或 G</td>
-<td>将保持空间的内容复制或追加到模式空间</td>
-</tr>
-<tr>
-<td>Exchang</td>
-<td>x</td>
-<td>交换模式空间和保持空间的内容</td>
-</tr>
-</tbody>
-</table>
-<p>hold(<code>h</code>，<code>H</code>)命令将数据移至保持空间，而 get(<code>g</code>，<code>G</code>)命令将保持空间的数据移回到模式空间。同一命令的小写字母和大写字母之间的差别是，小写字母命令改写目的缓存区的内容，而大写字母命令追加缓存区的现有内容。</p>
-<p>hold（小写）命令用模式空间的内容取代保持空间的内容。get（小写）命令用保持空间的内容取代模式空间的内容。<br>Hold（大写）命令在保持空间的内容之后放置一个换行符，且后面跟随模式空间的内容（即使保持空间是空的，换行符也被追加到保持空间）。Get（大写）命令在模式空间的内容之后放置一个换行符，且后面跟随保持空间的内容。</p>
-<p>交换命令交换两个缓存区的内容。对两个缓存区没有副作用。</p>
-<h3 id="h"><a href="#h" class="headerlink" title="h"></a><a name="h">h</a></h3><p>函数参数 <code>h</code> 表示暂存 pattern space 的资料至 hold space。其指令格式如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]h</div></pre></td></tr></table></figure></p>
-<p>对上述格式有下面几点说明 :</p>
-<ol>
-<li>函数参数 <code>h</code> 最多配合两个位址参数。</li>
-<li>sed 执行暂存动作时 , 会盖掉(overwrite) hold space 内原来的资料。</li>
-<li>当 sed 全部执行结束时 , hold space 内资料会自动清除。</li>
-</ol>
-<h3 id="H"><a href="#H" class="headerlink" title="H"></a><a name="Hold">H</a></h3><p>函数参数 <code>H</code> 与 <code>h</code> 唯一差别是 , sed 执行 <code>h</code> 时 , 资料盖掉(overwrite) hold space 内原来的资料 ,而 <code>H</code> , 资料则是 “添加(append)” 在 hold space 原来资料後。</p>
-<h3 id="g"><a href="#g" class="headerlink" title="g"></a><a name="g">g</a></h3><p>函数参数 <code>g</code> 表示与函数参数 <code>h</code> 相反的动作 , 它表示将 hold space 内资料放回 pattern space内。其指令格式如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]g</div></pre></td></tr></table></figure></p>
-<p>函数参数 g 最多配合两个位址参数。<br>sed 执行放回动作时 , 资料盖掉(overwrite) pattern space 内原来的资料。</p>
-<h3 id="G"><a href="#G" class="headerlink" title="G"></a><a name="Gg">G</a></h3><p>函数参数 <code>G</code> 与 <code>g</code> 唯一差别是 , sed 执行 <code>g</code> 时 , 资料盖掉(overwrite) pattern space 内原来的资料 , 而 <code>G</code> , 资料则是 “添加(append)” 在 pattern space 原来资料後。</p>
-<h3 id="x"><a href="#x" class="headerlink" title="x"></a><a name="x">x</a></h3><p>函数参数 <code>x</code> 表示交换 hold space 与 pattern space 内的资料。其指令格式如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[, address2]]x</div></pre></td></tr></table></figure></p>
-<p>函数参数 <code>x</code> 大部份与其它处理 hold space 的函数参数一起配合。例如 , 将 <code>input.dat</code> 档内第 1 行资料取代第 3 行资料。此时 , 用函数参数 <code>h</code> 与 <code>x</code> 来配合。其中 , 以函数参数 <code>h</code> 将第 1 资料存入 hold space ;当第 3 行资料出现在pattern space , 以函数参数 <code>x</code> 交换 hold space 与 pattern space 的内容。如此 , 第 3 行资料就被第 1 资料替代。其命令列如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -e &apos;1h&apos; -e &apos;3x&apos; input.dat</div></pre></td></tr></table></figure></p>
-<h3 id="高级流程控制指令"><a href="#高级流程控制指令" class="headerlink" title="高级流程控制指令"></a>高级流程控制指令</h3><p>分支（<code>b</code>）和测试（<code>t</code>）命令将脚本中的控制转移到包含特殊标签的行。如果没有指定标签，则将控制转移到脚本的结尾处。分支命令用于无条件转移，测试命令用于有条件转移，它们只有当替换命令改变当前行时才会执行。<br>标签是任意不多于7个字符的序列（GNU sed 允许标签为任意长度）。标签本身占据一行并以冒号开始：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:mylabel</div></pre></td></tr></table></figure></p>
-<p>在冒号和标签之间不允许有空格。行结尾处的空格将被认为是标签的一部分。当在分支命令或测试命令中指定标签时，在命令和标签之间允许有空格：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">b mylabel</div></pre></td></tr></table></figure></p>
-<p>注意，不要在标签后面插入空格。</p>
-<h3 id="b-label"><a href="#b-label" class="headerlink" title="b :label"></a><a name="b">b :label</a></h3><p>函数参数 <code>:</code> 与函数参数 <code>b</code> 可在 sed script 内建立类似 BASIC 语言中 GOTO 指令的功能。其中 , 函数参数 <code>:</code> 建立标记;函数参数 <code>b</code> 将下一个执行的指令 branch 到标记处执行。函数参数 <code>:</code> 与 <code>b</code> , 在 script file 内配合的情况如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">     .</div><div class="line">     .</div><div class="line">     .</div><div class="line">编辑指令m1</div><div class="line">:记号</div><div class="line">编辑指令m2</div><div class="line">     .</div><div class="line">     .</div><div class="line">     .</div><div class="line">[address1[, address2]]b [记号]</div></pre></td></tr></table></figure></p>
-<p>其中, 当 sed 执行至指令<code>[address1[, address2]]b [记号]</code>时 , 如 pattern space 内的资料符合位址参数 , 则 sed 将下一个执行的位置 branch 至由 <code>:记号</code>设定的标记处 , 也就是再由 “<code>编辑指令 m2</code>“ … 执行。另外 , 如果指令中函数参数 <code>b</code> 後没有记号 , 则 sed 将下一个执行的指令 branch 到 script file 的最後 , 利用此可使 sed script 内有类似 C 语言中的 case statement 结构。</p>
-<h4 id="范例-9"><a href="#范例-9" class="headerlink" title="范例"></a>范例</h4><p><strong>题目:</strong> 将 <code>input.dat</code> 档内资料行的开头字母重覆印 40 次。假设 <code>input.dat</code> 档的内容如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">A</div><div class="line">B</div><div class="line">C</div></pre></td></tr></table></figure></p>
-<p><strong>说明:</strong> 用指令 <code>b p1</code> 与 <code>:p1</code> 构成执行增加字母的回圈(loop) , 同时在字母出现 40 个时 , 也用指令 <code>b</code> 来跳出圈。下面就以档内第一行资料 “<code>A</code>“ 为例 , 描述它如何连续多添加 39 个 “<code>A</code>“ 在同一行:</p>
-<ul>
-<li>用指令 <code>s/A/AA/</code> 将 “<code>A</code>“ 替换成 “<code>AA</code>“。</li>
-<li>用指令 <code>b p1</code> 与 <code>:p1</code> 构成回圈(loop) , 它目的使上述动作被反覆的执行。每执行一次圈 , 则资料行上的 “<code>A</code>“ 就多出一个。例如 , 第一次圈资料行变成 “<code>AA</code>“ , 第二次圈资料行变成 “<code>AAA</code>“ …。</li>
-<li>用指令 <code>[ABC]\{40\}/b</code> （注解：<code>\{重复次数\}</code> 、<code>\{下限,上限\}</code>）来作为停止回圈的条件。当资料行有连续 40 个 <code>A</code> 出现时 , 函数参数 <code>b</code> 将执行的指令跳到最後 , 停止对此行的编辑。</li>
-</ul>
-<p>同样, 对其它资料行也如同上述的方式执行。</p>
-<p><strong>sed 命令列如下:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">sed -e &apos;&#123;</div><div class="line">:p1</div><div class="line">/A/s/A/AA/</div><div class="line">/B/s/B/BB/</div><div class="line">/C/s/C/CC/</div><div class="line">/[ABC]\&#123;40\&#125;/b</div><div class="line">b p1</div><div class="line">&#125;&apos; input.dat</div></pre></td></tr></table></figure></p>
-<p>命令结果输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</div><div class="line">BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</div><div class="line">CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</div></pre></td></tr></table></figure></p>
-<h3 id="t"><a href="#t" class="headerlink" title="t"></a><a name="t">t</a></h3><p>基本上, 函数参数 <code>t</code> 与 函数参数 <code>b</code> 的功能类似 , 除了在执行 <code>t</code> 的 branch 前 , 会先去测试其前的替换指令有没有执行替换成功外。在 script file 内的情况如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">     .</div><div class="line">     .</div><div class="line">     .</div><div class="line">编辑指令m1</div><div class="line">:记号</div><div class="line">编辑指令m2</div><div class="line">     .</div><div class="line">     .</div><div class="line">     .</div><div class="line">s/.../.../</div><div class="line">[address1[, address2]]t [记号]</div><div class="line">编辑指令m3</div></pre></td></tr></table></figure></p>
-<p>其中 , 与函数参数 <code>b</code> 不同处在於, 执行函数参数 <code>t</code> branch 时, 会先检查其前一个替换指令成功与否。如成功, 则执行 branch; 不成功, 则不 branch, 而继续执行下一个编辑指令, 例如上面的<code>编辑指令m3</code>。</p>
-<h4 id="范例-10"><a href="#范例-10" class="headerlink" title="范例"></a>范例</h4><p><strong>题目:</strong> 将 <code>input.dat</code> 档中资料 <code>A1</code> 替换成<code>C1</code>、<code>C1</code> 替换成<code>B1</code>、<code>B1</code> 替换成<code>A1</code>。<code>input.dat</code> 档的内容如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">代号</div><div class="line">B1</div><div class="line">A1</div><div class="line">B1</div><div class="line">C1</div><div class="line">A1</div><div class="line">C1</div></pre></td></tr></table></figure></p>
-<p><strong>说明:</strong> <code>input.dat</code> 档中全部资料行只需要执行一次替换动作 , 但为避免资料被替换多次 , 所以利用函数参数 <code>t</code> 在 sed script 内形成一类似 C 语言中 case statement 结构 , 使每行资料替换一次後能立即用函数参数 <code>t</code> 跳离替换编辑。</p>
-<p><strong>sed 命令列:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">sed -e &apos;&#123;</div><div class="line">s/A1/C1/</div><div class="line">t</div><div class="line">s/C1/B1/</div><div class="line">t</div><div class="line">s/B1/A1/</div><div class="line">t</div><div class="line">&#125;&apos; input.dat</div></pre></td></tr></table></figure></p>
-]]></content>
-    </entry>
+      <div class="ds-thread" data-thread-key="2016/09/23/awk/"
+           data-title="awk 手册" data-url="http://jarsonfang.github.io/etesting/2016/09/23/awk/">
+      </div>
     
-    <entry>
-      <title><![CDATA[sed 学习手册]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/23/sed-manual/</url>
-      <content type="html"><![CDATA[<h2 id="sed-简要介绍"><a href="#sed-简要介绍" class="headerlink" title="sed 简要介绍"></a>sed 简要介绍</h2><p>Sed(Stream EDitor)为 UNIX 系统上提供将编辑工作自动化的编辑器 , 使用者无需直接编辑资料。使用者可利用 sed 所提供 20 多种不同的<span style="color:red;">函数[参数] </span>, 组合它们完成不同的编辑动作。此外 ,由於 sed 都以行为单位编辑文件 , 故其亦是行编辑器(line editor)。<br> 一般 sed 最常用在编辑那些需要不断重覆某些编辑动作的文件上, 例如将文件中的某个字串替换成另一个字串等等。这些相较於一般 UNIX 编辑器(交互式的, 如 vi、emacs)用手动的方式修改文件, sed 用起来较省力。</p>
-<p>sed 是一个非交互式上下文(context)编辑器,它被设计在下列三种情况下发挥作用:</p>
-<ol>
-<li>编辑那些对舒适的交互式编辑而言太大的文件。</li>
-<li>在编辑命令太复杂而难于在交互模式下键入的时候，编辑任何大小的文件。</li>
-<li>要在对输入的一趟扫描中有效的进行多个”全局”(global)编辑函数。</li>
-</ol>
-<p>因为每次只把输入的某些行驻留在内存中, 并且不使用临时文件,所以可编辑的文件的有效大小,只受限于输入和输出要同时共存于次级存储的要求。可以单独的建立复杂的编辑脚本并作为给 sed 的命令文件。对于复杂的编辑,这节省了可观的键入和随之而来的错误。从命令文件运行 sed 高效于作者所知道的任何交互式编辑器,甚至包括能用预先写好的脚本驱动的编辑器。</p>
-<p>相较于交互式编辑器而言,根本性的损失是缺乏相对地址(由于操作是每次一行的),和缺乏对命令如期运行的立即验证。<br><a id="more"></a></p>
-<h2 id="sed-如何工作"><a href="#sed-如何工作" class="headerlink" title="sed 如何工作"></a>sed 如何工作</h2><p>如同其它 UNIX 命令, sed 由标准输入读入编辑文件并由标准输出送出结果。下图表示 sed将资料行 “<code>Unix</code>“ 替换成 “<code>UNIX</code>“,<br><img src="/uploads/images/sed.gif" alt="sed"><br>在图中, 上方 standard input 为标准输入, 是读取资料之处; standard output 为标准输出, 是送出结果之处;中间 sed 方块的下面两个虚线方块表示 sed 的工作流程。其中, 左边虚线方块表示 sed 将标准输入资料置入pattern space, 右边虚线方块表示 sed 将 pattern space 中编辑完毕後的资料送到标准输出。</p>
-<p>在虚线方块中, 两个实线方块分别表示 pattern space 与 sed script。其中, pattern space 为一缓区, 它是sed 工作场所; 而 sed script 则表示一组执行的编辑指令。</p>
-<p>在图中, 左边虚线方块 “Unix” 由标准输入置入 pattern space; 接着 , 在右边虚线方块中, sed执行 sed script 中的编辑指令<code>s/Unix/UNIX/</code>, 结果 “Unix” 被替换成 “UNIX”, 之後, “UNIX” 由pattern space 送到标准输出。</p>
-<p>总合上述所言, 当 sed 由标准输入读入一行资料并放入 pattern space 时, sed 依照 sed script 的编辑指令逐一对 pattern space 内的资料执行编辑, 之後, 再由 pattern space 内的结果送到标准输出, 接着再将下一行资料读入。如此重复执行上述动作 , 直至读完所有资料行为止。</p>
-<p>sed 维护一种模式空间（patter space），即一个工作区或临时缓冲区，当应用编辑命令时将在那里存储单个输入行。sed 还维护了称为保持空间(hold space)的另一个临时缓冲区，可以将模式空间的内容复制到保持空间并在以后检索它们。</p>
-<h2 id="使用-sed"><a href="#使用-sed" class="headerlink" title="使用 sed"></a>使用 sed</h2><p>sed 命令列可分成编辑指令与文件档部份。其中, 编辑指令负责控制所有的编辑工作; 文件档表示所处理的档案。sed 的编辑指令均由<span style="color:#ff0000">位址(address)</span>与<span style="color:#ff0000">函数(function)</span>两部份组成, 其中, 在执行时, sed 利用它的<span style="color:red;">位址参数</span>来决定编辑的对象; 而用它的<span style="color:red;">函数[参数]</span>编辑。</p>
-<p>此外, sed 编辑指令, 除了可在命令列上执行, 也可在档案内执行。其中差别只是在命令列上执行时, 其前必须加上选项 <code>-e</code>; 而在档案内时, 则只需在其档名前加上选项 <code>-f</code>。另外, sed 执行编辑指令是依照它们在命令列上或档内的次序。</p>
-<p>下面各节, 将介绍执行命令列上的编辑指令、sed 编辑指令、执行档案内的编辑指令、执行多个档案的编辑、及执行 sed 输出控制。</p>
-<h3 id="执行命令列上的编辑指令"><a href="#执行命令列上的编辑指令" class="headerlink" title="执行命令列上的编辑指令"></a>执行命令列上的编辑指令</h3><p>当编辑指令在命令列上执行时, 其前必须加上选项 <code>-e</code> 。其命令格式如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-e</span> <span class="string">'编辑指令 1'</span> <span class="_">-e</span> <span class="string">'编辑指令 2'</span> ... 文件档</div></pre></td></tr></table></figure></p>
-<p>其中, 所有编辑指令都紧接在选项 <code>-e</code> 之後, 并置於两个 “<code>&#39;</code>“ 特殊字元间。另外, 命令上编辑指令的执行是由左而右。</p>
-<p>一般编辑指令不多时, 使用者通常直接在命令上执行它们。例如, 删除 <code>yel.dat</code> 内 <code>1</code> 至<code>10</code> 行资料 , 并将其馀文字中的 “<code>yellow</code>“ 字串改成 “<code>black</code>“ 字串。此时 , 可将编辑指令直接在命令上执行 , 其命令如下 :<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-e</span> <span class="string">'1,10d'</span> <span class="_">-e</span> <span class="string">'s/yellow/black/g'</span> yel.dat</div></pre></td></tr></table></figure></p>
-<p>在命令中 , 编辑指令 ‘<code>1,10d</code>‘ 执行删除 <code>1</code> 至 <code>10</code> 行资料 ; 编辑指令 ‘<code>s/yellow/black/g</code>‘，”<code>yellow</code>“ 字串替换(substitute)成 “<code>black</code>“ 字串。</p>
-<h3 id="sed-的编辑指令"><a href="#sed-的编辑指令" class="headerlink" title="sed 的编辑指令"></a>sed 的编辑指令</h3><p> sed 编辑指令的格式如下 :<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address1[,address2]]<span class="keyword">function</span>[argument]</div></pre></td></tr></table></figure></p>
-<p>其中 , 位址参数 <code>address1</code> 、<code>address2</code> 为行数或 regular expression 字串 , 表示所执行编辑的资料行 ; 函数参数 <code>function[argument]</code> 为 sed 的内定函数 , 表示执行的编辑动作。</p>
-<p>下面两小节 , 将仔细介绍位址参数的表示法与有哪些函数参数供选择。</p>
-<p><strong>位址(address)参数的表示法</strong></p>
-<p>实际上 , 位址参数表示法只是将要编辑的资料行 , 用它们的行数或其中的字串来代替表示它们。下面举几个例子说明(指令都以函数参数 d 为例) :</p>
-<ul>
-<li>删除档内第 10 行资料 , 则指令为 <code>10d</code></li>
-<li>删除含有 “man” 字串的资料行时 , 则指令为 <code>/man/d</code></li>
-<li>删除档内第 10 行到第 200 行资料, 则指令为 <code>10,200d</code></li>
-<li>删除档内第 10 行到含 “man” 字串的资料行 , 则指令为 <code>10,/man/d</code></li>
-</ul>
-<p>接下来 , 以位址参数的内容与其个数两点 , 完整说明指令中位址参数的表示法(同样也以函数参数 <code>d</code> 为例)。</p>
-<ul>
-<li><p>位址参数的内容:</p>
-<ul>
-<li>位址为十进位数字 （行地址）: 此数字表示行号。当指令执行时 , 将对符合此行号的资料执行函数参数指示的编辑动作。例如 ,删除资料档中的第 15 行资料 , 则指令为 <code>15d</code>。其馀类推 ,如删除资料档中的第 m 行资料 , 则指令为 <code>md</code> 。行号是由 sed 维护的内部行数。该计数器不会因为多个输入文件而重置。因此，不管指定多少个输入文件，在<span style="color:red">输入流</span>（多个文件（流）构成一个输入流，文件个数不同，输入流的大小也会不同）中也只有一行<code>1</code>。同样，输入流也只有一个最后的行。可以使用寻址符号 <code>$</code> 指定。下面的示例删除输入流的最后一行：<code>$d</code>（<code>$</code> 符号不应该和正则表达式中使用的 <code>$</code> 相混淆，在这里表示行的结束）</li>
-<li>位址为 regular expression（模式地址）: 当资料行中有符合 regular expression 所表示的字串时 , 则执行函数参数指示的编辑动作。另外 ,在regular expression 前後必须加上 “<code>/</code>“。例如指令为 <code>/t.*t/d</code> , 表示删除所有含两 “<code>t</code>“ 字母的资料行。其中 , “<code>.</code>“表示任意字元; “<code>*</code>“ 表示其前字元可重复任意次 , 它们结合 “<code>.*</code>“ 表示两 “<code>t</code>“ 字母间的任意字串。</li>
-</ul>
-</li>
-<li><p>位址参数的个数 : 在指令中 , <span style="color:red">如果没有指定位址参数</span> , 表示全部资料行执行函数参数所指示的编辑动作;<span style="color:red"> 如果只有一位址参数</span> , 表示只有符合位址的资料行才编辑 ; <span style="color:red">如果指定了由逗号分隔的两个位址参数 </span>, 如 <code>address1,address2</code> 时 ,表示对资料区执行编辑 , <code>address1</code> 代表起始资料行 , <code>address2</code> 代表结束资料行（即编辑命令应用于第一个地址的第一行和它后面的行，直到匹配第二个地址的行（包括此行）。你可以把第一个地址看做是启用动作，并把第二个地址看做是禁用动作。sed 没有办法先行决定第二个地址是否会匹配。一旦匹配了第一个地址，这个（些）动作就将应用于这些行。于是编辑命令应用于“所有”随后的行直到第二个地址被匹配。）。<span style="color:red">如果地址后面跟有感叹号(!)</span>，那么编辑命令就应用于<span style="color:red">不匹配</span>该地址的所有的行。对於上述内容 , 以下面例子做具体说明。</p>
-<ol>
-<li>例如指令为<code>d</code>其表示删除档内所有资料行。</li>
-<li>例如指令为<code>5d</code>其表示删除档内第五行资料。</li>
-<li>例如指令为<code>1,/apple/d</code>其表示删除资料区 , 由档内第一行至内有 “<code>apple</code>“ 字串的资料行。</li>
-<li>例如指令为<code>/apple/,/orange/d</code>其表示删除资料区 , 由档内含有 “<code>apple</code>“ 字串至含有 “<code>orange</code>“ 字串的资料行</li>
-<li>例如指令为<code>/regular/!d</code>其表示删除所有的不包含“<code>regular</code>”字符串的资料行。</li>
-</ol>
-</li>
-</ul>
-<p><strong>有哪些函数(function)参数</strong></p>
-<p>下表中介绍所有 sed 的函数参数的功能。</p>
-<table>
-<thead>
-<tr>
-<th>函数参数</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>:label</td>
-<td>建立script file内指令互相参考的位置</td>
-</tr>
-<tr>
-<td>#</td>
-<td>建立注解</td>
-</tr>
-<tr>
-<td>{ }</td>
-<td>集合有相同位址参数的指令</td>
-</tr>
-<tr>
-<td>!</td>
-<td>不执行函数参数</td>
-</tr>
-<tr>
-<td>=</td>
-<td>印出资料行数（line number）</td>
-</tr>
-<tr>
-<td>a\</td>
-<td>添加使用者输入的资料</td>
-</tr>
-<tr>
-<td>b label</td>
-<td>将执行的指令跳至由 : 建立的参考位置</td>
-</tr>
-<tr>
-<td>c\</td>
-<td>以使用者输入的资料取代资料</td>
-</tr>
-<tr>
-<td>d</td>
-<td>删除资料</td>
-</tr>
-<tr>
-<td>D</td>
-<td>删除 pattern space 内第一个 newline 字母 \n 前的资料</td>
-</tr>
-<tr>
-<td>g</td>
-<td>从 hold space 中拷贝资料</td>
-</tr>
-<tr>
-<td>G</td>
-<td>拷贝 hold space 中的资料添加到 pattern space</td>
-</tr>
-<tr>
-<td>h</td>
-<td>从 pattern space 中拷贝资料到 hold space</td>
-</tr>
-<tr>
-<td>H</td>
-<td>拷贝 pattern space 中的资料添加到 hold space</td>
-</tr>
-<tr>
-<td>I</td>
-<td>印出资料中的 nonprinting character 的ASCII码值</td>
-</tr>
-<tr>
-<td>i\</td>
-<td>插入添加使用者输入的资料行</td>
-</tr>
-<tr>
-<td>n</td>
-<td>读入下一笔资料</td>
-</tr>
-<tr>
-<td>N</td>
-<td>添加下一笔资料到 pattern space</td>
-</tr>
-<tr>
-<td>p</td>
-<td>印出资料</td>
-</tr>
-<tr>
-<td>P</td>
-<td>印出 pattern space 内第一个 newline 字母 \n 前的资料</td>
-</tr>
-<tr>
-<td>q</td>
-<td>跳出 sed 编辑</td>
-</tr>
-<tr>
-<td>r</td>
-<td>读入文档内容</td>
-</tr>
-<tr>
-<td>s</td>
-<td>替换字串</td>
-</tr>
-<tr>
-<td>t label</td>
-<td>先执行一替换编辑命令，如果替换成功，则将编辑指令跳至 :label 处执行</td>
-</tr>
-<tr>
-<td>w</td>
-<td>写资料到文档</td>
-</tr>
-<tr>
-<td>x</td>
-<td>交换 hold space 与 pattern space 中的内容</td>
-</tr>
-<tr>
-<td>y</td>
-<td>转换(transform)字元</td>
-</tr>
-</tbody>
-</table>
-<p>虽然 , sed 只有上表所述几个拥有基本编辑功能的函数 , 但由指令中位址参数和指令与指令间的配合 , 也能使sed 完成大部份的编辑任务。</p>
-<h3 id="执行档案内的编辑指令"><a href="#执行档案内的编辑指令" class="headerlink" title="执行档案内的编辑指令"></a>执行档案内的编辑指令</h3><p>当执行的指令太多 , 在命令列上撰写起来十分混乱 , 此时 , 可将这些指令整理储存在档案  (譬如档名为 <code>script_file</code> )内 , 用选项 <code>-f script_file</code> , 则让 sed 执行 <code>script_file</code> 内的编辑指令。其命令的格示如下 :<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-f</span> script_file 文件档</div></pre></td></tr></table></figure></p>
-<p>其中 , 执行 <code>script_file</code> 内编辑指令的顺序是由上而下。例如上一节的例子 , 其可改成如下命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-f</span> ysb.scr yel.dat</div></pre></td></tr></table></figure></p>
-<p>其中 , <code>ysb.scr</code> 档的内容如下 :<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1,10d</div><div class="line">s/yellow/black/g</div></pre></td></tr></table></figure></p>
-<p>另外 , 在命令列上可混合使用选项 <code>-e</code> 与 <code>-f</code> , sed 执行指令顺序依然是由命令列的左到右,如执行至 <code>-f</code> 後档案内的指令 , 则由上而下执行。</p>
-<h3 id="执行多个文件档的编辑"><a href="#执行多个文件档的编辑" class="headerlink" title="执行多个文件档的编辑"></a>执行多个文件档的编辑</h3><p>在 sed 命令列上 , 一次可执行编辑多个文件档 , 它们跟在编辑指令之後。例如 , 替换 <code>white.dat</code>、<code>red.dat</code>、<code>black.dat</code> 档内的 “<code>yellow</code>“ 字串成 “<code>blue</code>“ , 其命令如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-e</span> <span class="string">'s/yellow/blue/g'</span> white.dat red.dat black.dat</div></pre></td></tr></table></figure></p>
-<p>上述命令执行时 , sed 依 <code>white.dat</code>、<code>red.dat</code>、<code>black.dat</code> 顺序 , 执行编辑指令 <code>s/yellow/blue/</code> ,进行字串的替换。</p>
-<h3 id="执行输出的控制"><a href="#执行输出的控制" class="headerlink" title="执行输出的控制"></a>执行输出的控制</h3><p>在命令列上的选项 <code>-n</code> 表示输出由编辑指令控制。由前章内容得知 , sed 会 “自动的”将资料由 pattern space 输送到标准输出档。但藉着选项 <code>-n</code> , 可将 sed 这 “自动的” 的动作改成 “被动的” 由它所执行的编辑指令来决定结果是否输出。</p>
-<p>由上述可知 , 选项 <code>-n</code> 必须与编辑指令一起配合 , 否则无法获得结果。例如 , 印出<code>white.dat</code>档内含有 “<code>white</code>“ 字串的资料行 , 其命令如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -n <span class="_">-e</span> <span class="string">'/white/p'</span> white.dat</div></pre></td></tr></table></figure></p>
-<p>上面命令中 , 选项 <code>-n</code> 与编辑指令 <code>/white/p</code>  一起配合控制输出。其中 ，选项 <code>-n</code> 将输出控制权移给编辑指令；<code>/white/p</code> 将资料行中含有 “<code>white</code>“ 字串印出萤幕。</p>
-<h2 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h2><p>一般在实际使用编辑器的过程中 , 常需要执行替换文件中的字串、搬移、删除、与搜寻资料行等等动作。当然 , 一般交谈式编辑器(如 vi、emacs)都能做得到上述功能 , 但文件一旦有大量上述编辑需求时 , 则用它们编辑十分没有效率。本章将用举例的方式说明如何用 sed 自动执行这些编辑功能。此外 , 在本章范例中 , 均以下述方式描述文件的需求 :</p>
-<blockquote>
-<p>将文件中…资料 , 执行…(动作)</p>
-</blockquote>
-<p>如此 , 目的是为了能将它们迅速的转成编辑指令。其中 , “<code>...资料</code>“ 部份 , 转成指令中的<code>位址参数</code>表示 ;”<code>执行...动作</code>“ 部份 , 则转成<code>函数参数</code>表示 。另外 ,将一个地址嵌套在另一个地址中（内层地址必须在外层地址的作用范围之内），或者 “执行…动作” 要由数个函数参数表示时, 则可利用 “<code>{</code>“与 “<code>}</code>“ 集合这些函数参数（注：左大括号必须在行末，而且右大括号本身必须单独占一行。要确保在大括号之后没有空格。）, 其指令形式如下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">位址参数&#123;</div><div class="line">   函数参数 1</div><div class="line">   函数参数 2</div><div class="line">   函数参数 3</div><div class="line">   ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>上述指令表示 , 将对符合位址参数的资料 , 依次执行函数参数 1、函数参数 2、函数参数 3 … 表示的动作。</p>
-<p>下面各节 , 分别举例说明 sed 替换资料、移动、删除资料、及搜寻资料的命令。</p>
-<h3 id="替换文件中的资料"><a href="#替换文件中的资料" class="headerlink" title="替换文件中的资料"></a>替换文件中的资料</h3><p>sed 可替换文件中的字串、资料行、甚至资料区。其中 , 表示替换字串的指令中的函数参数为 <code>s</code> ;表示替换资料行、或资料区的指令中的函数参数为 <code>c</code> 。上述情况以下面三个例子说明。</p>
-<p>例一. 将文件中含 “<code>machine</code>“ 字串的资料行中的 “<code>phi</code>“ 字串 , 替换成为 “<code>beta</code>“ 字串。其命令列如下 :<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-e</span> <span class="string">'/machine/s/phi/beta/g'</span> input.dat (以後文件档都以 input.dat 代表)</div></pre></td></tr></table></figure></p>
-<p>例二. 将文件中第 5 行资料 , 替换成句子 “Those who in quarrels interpose, must often wipe a bloody nose.”。其命令列如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-e</span> <span class="string">'5c</span></div><div class="line">Those must often wipe a bloody nose.</div><div class="line">' input.dat</div></pre></td></tr></table></figure></p>
-<p>例三. 将文件中 1 至 100 行的资料区 , 替换成如下两行资料 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">How are you?</div><div class="line">data be deleted!</div></pre></td></tr></table></figure></p>
-<p>则其命令列如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-e</span> <span class="string">'1,100c</span></div><div class="line">How are you?</div><div class="line">data be deleted!</div><div class="line">' input.dat</div></pre></td></tr></table></figure></p>
-<h3 id="搬动文件中的资料"><a href="#搬动文件中的资料" class="headerlink" title="搬动文件中的资料"></a>搬动文件中的资料</h3><p>使用者可用 sed 中的 hold space 暂存编辑中的资料、用函数参数 <code>w</code> 将文件资料搬动到它档内储存、或用函数参数 <code>r</code> 将它档内容搬到文件内。Hold space 是 sed 用来暂存 pattern space 内资料的暂存器 , 当 sed 执行函数参数<code>h</code>、<code>H</code> 时 , 会将 pattern space 资料暂存到 hold space ;当执行函数参数<code>x</code>、<code>g</code>、<code>G</code> 时 , 会将暂存的资料取到 pattern space 。下面举三个例子说明。</p>
-<p>例一. 将文件中的前 100 资料 , 搬到文件中第 300 後输出。其命令列如下 :<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-f</span> mov.scr 文件档</div></pre></td></tr></table></figure></p>
-<p>mov.scr 档的内容为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1,100&#123;</div><div class="line">H</div><div class="line">d</div><div class="line">&#125;</div><div class="line">300G</div></pre></td></tr></table></figure></p>
-<p>其中 ,<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1,100&#123;</div><div class="line">H</div><div class="line">d</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>它表示将文件中的前 100 资料 , 先储存在 hold space 之後删除 ;指令 <code>300G</code> 表示 , 将 hold space 内的资料 , 添加在文件中的第 300 行资料後输出。</p>
-<p>例二. 将文件中含 “<code>phi</code>“ 字串的资料行 , 搬至 <code>mach.inf</code> 档中储存。其命令列如下 :<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-e</span> <span class="string">'/phi/w mach.inf'</span> 文件档</div></pre></td></tr></table></figure></p>
-<p>例三. 将 <code>mach.inf</code> 档内容 , 搬至文件中含 “<code>beta</code>“ 字串的资料行。其命令列如下 :<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-e</span> <span class="string">'/beta/r mach.inf'</span> 文件档</div></pre></td></tr></table></figure></p>
-<p>另外 , 由於 sed 是一 stream 编辑器 , 故理论上输出後的文件资料不可能再搬回来编辑。</p>
-<h3 id="删除文件中的资料"><a href="#删除文件中的资料" class="headerlink" title="删除文件中的资料"></a>删除文件中的资料</h3><p>因为 sed 是一行编辑器 , 所以 sed 很容易删除个别资料行或整个资料区。一般用函数参数 <code>d</code> 或 <code>D</code> 来表示。下面举两个例子说明。</p>
-<ul>
-<li><p>将文件内所有空白行全部删除。其命令列为</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-e</span> <span class="string">'/^$/d'</span> 文件档</div></pre></td></tr></table></figure>
-<p>regular expression <code>^$</code> 表示空白行。 其中 , <code>^</code> 限制其後字串必须在行首; <code>$</code> 限制其前字串必须在行尾。</p>
-</li>
-<li><p>将文件内连续的空白行 , 删除它们成为一行。其命令列为</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-e</span> <span class="string">'/^$/&#123;</span></div><div class="line">N</div><div class="line">/^$/D</div><div class="line">&#125;' 文件档</div></pre></td></tr></table></figure>
-<p>其中 , 函数参数 <code>N</code> 表示 , 将空白行的下一行资料添加至 pattern space 内。函数参数 <code>/^$/D</code> 表示 ,当添加的是空白行时 , 删除第一行空白行 , 而且剩下的空白行则再重新执行指令一次。指令重新执行一次 , 删除一行空白行 ,如此反覆直至空白行後添加的为非空白行为止 , 故连续的空白行最後只剩一空白行被输出。</p>
-</li>
-</ul>
-<h3 id="搜寻文件中的资料"><a href="#搜寻文件中的资料" class="headerlink" title="搜寻文件中的资料"></a>搜寻文件中的资料</h3><p>sed 可以执行类似 UNIX 命令 grep 的功能。理论上 , 可用 regular expression 。例如 , 将文件中含有 “<code>gamma</code>“ 字串的资料行输出。则其命令列如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -n <span class="_">-e</span> <span class="string">'/gamma/p'</span> 文件档</div></pre></td></tr></table></figure></p>
-<p>但是 , sed 是行编辑器 , 它的搜寻基本上是以一行为单位。因此 , 当一些字串因换行而被拆成两部份时 , 一般的方法则不可行。此时 , 就必须以合两行的方式来搜寻这些资料。其情况如下面例子:</p>
-<p>例. 将文件中含 “<code>omega</code>“ 字串的资料输出。其命令列如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed <span class="_">-f</span> gp.scr 文件档</div></pre></td></tr></table></figure></p>
-<p><code>gp.scr</code> 档的内容如下 :<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/omega/b</div><div class="line">N</div><div class="line">h</div><div class="line">s/.*n//</div><div class="line">/omega/b</div><div class="line">g</div><div class="line">D</div></pre></td></tr></table></figure></p>
-<p>在上述 sed script , 因藉着函数参数 <code>b</code> 形成类似 C 语言中的 case statement 结构 , 使得 sed 可分别处理当资料内含 “<code>omega</code>“ 字串 ; 当 “<code>omega</code>“ 字串被拆成两行 ; 以及资料内没有”<code>omega</code>“ 字串的情况。接下来就依上述的三种情况 , 将 sed script 分成下面三部份来讨论。</p>
-<ol>
-<li><p>当资料内含 “<code>omega</code>“ , 则执行编辑指令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/omega/b</div></pre></td></tr></table></figure>
-<p>它表示当资料内含 “<code>omega</code>“ 字串时 , sed 不用再对它执行後面的指令 , 而直接将它输出。</p>
-</li>
-<li><p>当资料内没有”<code>omega</code>“ , 则执行编辑指令如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">N</div><div class="line">h</div><div class="line">s/.*n//</div><div class="line">/omega/b</div></pre></td></tr></table></figure>
-<p>其中 , 函数参数 <code>N</code> , 它表示将下一行资料读入使得 pattern space 内含前後两行资料 。函数参数 <code>h</code> , 它表示将 pattern space 内的前後两行资料存入 hold space 。函数参数 <code>s/.*n//</code> , 它表示将 pattern space 内的前後两行资料合成一行。<code>/omega/b</code> , 它表示如果合後的资料内含 “<code>omega</code>“ 字串 , 则不用再执行它之後的指令 , 而将此资料自动输出 。</p>
-</li>
-<li><p>当合并後的资料依旧不含 “<code>omega</code>“ , 则执行编辑指令如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">g</div><div class="line">D</div></pre></td></tr></table></figure>
-<p>其中 , 函数参数 <code>g</code> , 它表示将 hold space 内合前的两行资料放回 pattern space。 函数参数 <code>D</code> , 它表示删除两行资料中的第一行资料 , 并让剩下的那行资料 , 重新执行 sed script 。如此 ,无论是资料行内或行间的字串才可搜寻完全。</p>
-</li>
-</ol>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[sed & awk 概述]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/23/sed-awk-overview/</url>
-      <content type="html"><![CDATA[<p>摘自《sed与awk》 Dale Dougberty&amp;Arnold Robbins 著</p>
-<p>如果你正要开始学习 sed 与 awk，最好从了解它们的共同点入手：</p>
-<ul>
-<li>它们都使用相似的语法来调用。</li>
-<li>它们都是面向字符流的，都是从文本文件中<span style="color:red">一次一行</span>的读取输入,并将输出直接送到标准输出端。</li>
-<li>它们都使用正则表达式进行模式匹配。</li>
-<li>它们允许用户在脚本中指定指令。</li>
-</ul>
-<p>它们有如此多的共同点，原因之一是它们都起源于相同的行编辑器—— ed。下面首先对 ed 做简短介绍，再介绍 sed 和 awk 是如何一步步形成<span style="color:red">可编程的编辑器</span>的。sed 和 awk 的区别在于它们控制所做的工作时所用的指令不同。这是一个主要的区别，而且这影响了这些程序最适于处理的任务类型。<br><a id="more"></a></p>
-<h2 id="awk-起源于-sed-和-grep-而不是-ed"><a href="#awk-起源于-sed-和-grep-而不是-ed" class="headerlink" title="awk 起源于 sed 和 grep 而不是 ed"></a>awk 起源于 sed 和 grep 而不是 ed</h2><p>可以将 awk 的起源追溯到 sed 和 grep，并且经由这两个程序追溯到 ed（最初的UNIX行编辑器）。</p>
-<p>如果使用过行编辑器，那么理解 sed 和 awk 的行定位就会更容易。如果使用过 vi（全屏幕的编辑器），那么你一定熟悉由底层的行编辑器 ex（它依次是 ed 中的特征的扩展集）衍生的大量命令。</p>
-<p>下面来看一些使用行编辑器 ed 的基本操作。不要担心，这只是帮助你了解 sed 和 awk 的练习，而不是想让你相信行编辑器的奇妙。这个练习中出现的 ed 命令和稍后要学的 sed 命令相同。你可以自由地使用 ed 做实验，以便对它如何工作有一个了解。</p>
-<p>使用行编辑器，每次可以处理一行。知道处于文件中的哪一行是很重要的。当使用 ed 打开文件时，它显示了文件中的字符个数并定位在<span style="color:red">最后一行</span>。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ ed <span class="built_in">test</span></div><div class="line">339</div></pre></td></tr></table></figure></p>
-<p>没有提示符。如果输入了 ed 不理解的命令，它将打印一个问号作为错误消息。可以输入打印命令 p 来显示当前的行。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p</div><div class="line">label on the first box.</div></pre></td></tr></table></figure></p>
-<p>默认情况下，一个命令只影响当前的行。要进行一项编辑工作，首先要移至想要编辑的行，然后应用相应的命令。要移到某一行，就要指定它的地址（address）。一个地址可以由一个行号、一个指示文件中特定位置的符号或一个正则表达式组成。通过输入行号 1 可以转到第一行，然后输入删除命令来删除那一行。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1</div><div class="line">You might think of a regular expression</div><div class="line">d</div></pre></td></tr></table></figure></p>
-<p>输入“<code>1</code>”使第一行成为当前行，并在屏幕上显示它。ed 中的删除命令是<code>d</code>，上例中是删除当前行。与移至某行然后再对它进行编辑不同的是，可以将标识命令对象的某一行或某些行的地址，放在编辑命令的前面作为命令的前缀。例如，如果输入“<code>1d</code>”，那么第一行就被删除。</p>
-<p>还可以将一个正则表达式作为一个地址。为了删除包含单词“<code>regular</code>”的行，可以使用下面的命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/regular/d</div></pre></td></tr></table></figure></p>
-<p>其中的斜杠界定的对象是正则表达式，“<code>regular</code>”是想要匹配的字符串。这个命令删除包含“<code>regular</code>”的第一行并且使跟在它后面的这一行成为当前行。<br><span style="color:red">注：确信(be sure)你已经理解了使用删除命令来删除整个行。它不只是删除那一行上的单词“<code>regular</code>”。</span><br>要删除包含这个正则表达式的所有行，可以在命令前面加上字母<code>g</code>，表示该命令是一个全局命令。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">g/regular/d</div></pre></td></tr></table></figure></p>
-<p>全局命令使匹配正则表达式的所有行成为特定命令的对象。</p>
-<p>迄今为止只是使用了删除文本的命令，替代文本（用文中的一部分取代另一部分）更为有趣。ed 中的替换命令 <code>s</code> 是：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[address]s/pattern/replacement/flag</div></pre></td></tr></table></figure></p>
-<p><code>pattern</code> 是一个正则表达式，并用 <code>replacement</code> 替代当前行中与这个正则表达式匹配的字符串。例如，下面的命令用“<code>complex</code>”取代当前行上第一次出现的“<code>regular</code>”。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s/regular/complex/</div></pre></td></tr></table></figure></p>
-<p>由于没有指定地址，所以它只影响当前行上的<span style="color:red">第一次出现</span>。如果当前行上没有找到“<code>regular</code>”则出现一个错误。为了寻找同一行上的多次出现，必须指定 <code>g</code> 作为标志：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s/regular/complex/g</div></pre></td></tr></table></figure></p>
-<p>这个命令改变了当前行上的所有的出现。必须指定地址从而使该命令不只是对当前行操作。下面的替换命令指定了一个地址：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/regular/s/regular/complex/g</div></pre></td></tr></table></figure></p>
-<p>这个命令影响文件中与这个地址匹配的<span style="color:red">第一行</span>。记住，第一个“<code>regular</code>”是一个地址，第二个是匹配替换命令的模式。要将它应用于所有的行，必须使用全局命令，即在地址前放置<code>g</code>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">g/regular/s/regular/complex/g</div></pre></td></tr></table></figure></p>
-<p>现在，这个替换应用于所有的地方，即所有行上的所有出现。<br><span style="color:red">注：注意“<code>g</code>”的不同含义。开始处的“<code>g</code>”是全局命令，意味着对所有与地址匹配的行进行改变。结尾处的“<code>g</code>”是一个标志，意味着改变一行上的每个出现，不只是第一个。</span></p>
-<p><span style="color:red">地址和模式不必相同。</span>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">g/regular expression/s/regular/complex/g</div></pre></td></tr></table></figure></p>
-<p>表示在包含字符串“<code>regular expression</code>”的任意行上，用“<code>complex</code>”代替“<code>regular</code>”。<br><span style="color:red">如果地址和模式相同，那么可以通过指定两个连续的定界符（<code>//</code>）来告诉 ed。</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">g/regular/s//complex/g</div></pre></td></tr></table></figure></p>
-<p>在这个例子中，“<code>regular</code>”被指定为“地址”，同时应用相应的地址匹配替换模式。</p>
-<p>PS：到此为止，也不难理解 vi 中的“搜索及替换”命令了。</p>
-<p><span style="color:red">vi 编辑器中的“搜索及替换”命令：</span></p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/pattern</code></td>
-<td>从光标开始处向文件尾搜索pattern</td>
-</tr>
-<tr>
-<td><code>?pattern</code></td>
-<td>从光标开始处向文件首搜索pattern</td>
-</tr>
-<tr>
-<td><code>n</code></td>
-<td>在同一方向重复上一次搜索命令</td>
-</tr>
-<tr>
-<td><code>N</code></td>
-<td>在反方向上重复上一次搜索命令</td>
-</tr>
-<tr>
-<td><code>:s/p1/p2/g</code></td>
-<td>将当前行中所有p1均用p2替换<br>（如果去掉结尾处的“g”标志，则只是替换当前行中p1的第一次出现）</td>
-</tr>
-<tr>
-<td><code>:n1,n2 s/p1/p2/g</code></td>
-<td>将第n1至n2行中所有p1均用p2替换<br>（如果去掉结尾处的“g”标志，则只是替换匹配的每一行中p1的第一次出现）</td>
-</tr>
-<tr>
-<td><code>:g/p1/s//p2/g</code></td>
-<td>将文件中所有p1均用p2替换</td>
-</tr>
-</tbody>
-</table>
-<p><span style="color:red">类似的 UNIX 实用工具 grep 来源于 ed 中的下面的全局命令：</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">g/re/p</div></pre></td></tr></table></figure></p>
-<p>（PS：估计这也是程序名称“grep”的由来吧）</p>
-<p>它表示“<code>全局正则表达式打印</code>”。grep 是从 ed 中提取并可用做外部程序的行编辑命令。它是执行一个编辑命令的“硬连接（hard-wired）”。将正则表达式作为命令行上的一个参数并将它用做要打印的行的地址。如下例所示，寻找匹配“<code>box</code>”的行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ grep <span class="string">'box'</span> <span class="built_in">test</span></div><div class="line">You are given a series of boxes,the first one labeled <span class="string">"A"</span>,</div><div class="line">label on the first box.</div></pre></td></tr></table></figure></p>
-<p>它打印匹配正则表达式的所有的行。</p>
-<p>注：在使用正则表达式作为命令行上的一个参数时，假如模式中包含有可以由 shell 解释的空格或任意字符（例如<code>$</code>和<code>*</code>），那么必须用<strong>单引号</strong>括住。这也是在命令行上使用正则表达式时的一个良好习惯——正则表达式要正确地传递到使用它的程序而不只是由 shell 解释。</p>
-<p>ed 的一个更有趣的特征是脚本化编辑工作的能力，将编辑命令放在独立的文件中并将它们作为行编辑器的输入。例如，如果将一系列命令放到名为 <code>ed-script</code> 的文件中，下面的命令将执行这个脚本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ed <span class="built_in">test</span> &lt; ed-script</div></pre></td></tr></table></figure></p>
-<p>这个特征使 ed 成为可编程的编辑器。也就是说，你可以脚本化任何手动执行的操作。</p>
-<h2 id="ed、sed、awk"><a href="#ed、sed、awk" class="headerlink" title="ed、sed、awk"></a>ed、sed、awk</h2><p>sed 是作为特殊目的的编辑器而创建的，用于专门执行脚本；与 ed 不同，它不能交互地使用。sed 与 ed 的主要区别在于它是面向字符流的。<span style="color:red">默认情况下，到 sed 的所有输入都会经过相应的处理，并转为标准输出。输入文件本身不发生改变。如果确实想改变输入文件，一般使用 shell 机制进行输出重定向（注：不要将来自命令的输出重定向到输入文件，否则会改写输入文件。甚至可能在 sed 处理这个文件之前发生，并破坏你的数据。），当你对所做的编辑工作满意时，用修改后的版本代替最初的文件。 </span></p>
-<p>ed 不是面向字符流的，并且文件本身会发生改变。ed 脚本必须包含保存文件并退出编辑器的命令。它不产生到达屏幕的输出，但由特殊命令生成的东西除外。</p>
-<p>sed 的字符流定位对如何应用寻址有重要的影响。在 ed 中没有指定地址的命令只影响当前行。sed 遍历文件，每次一行，这样每一行都成为当前行，而且每一行都应用这个命令。结果是 sed 对文件中的每一行应用了没有地址的命令。</p>
-<p>看一下下面的替换命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s/regular/complex/</div></pre></td></tr></table></figure></p>
-<p>如果在 ed 中交互式的输入这个命令，则用“<code>complex</code>”取代当前行上第一次出现的“<code>regular</code>”。在 ed 脚本中，如果这是脚本中的第一个命令，那么它就只是应用于文件的最后一行（ed 的默认当前行）。然而，在 sed 脚本中，相同的命令应用于所有的行。也就是说，sed 命令是隐式的全局命令。在 sed 中，上一个示例的命令和 ed 中如下所示的全局命令结果相同。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">g/regular/s//complex/</div></pre></td></tr></table></figure></p>
-<p><span style="color:red">注：理解 ed 中的当前行寻址与 sed 中全局行寻址之间的区别是很重要的。在 ed 中，使用寻址扩大受命令影响的行数；在 sed 中，使用寻址限制受命令影响的行数。</span></p>
-<p>awk 是作为可编程的编辑器而开发的，同 sed 一样，它也是面向字符流的，并且解释编辑命令的脚本。awk 与 sed 不同的地方是它废弃了行编辑器的命令集。它提供了仿效 C 语言的程序设计语言，例如，<code>print</code> 语句取代 <code>p</code> 命令；但延续了寻址的概念，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/regular/ &#123;<span class="built_in">print</span>&#125;</div></pre></td></tr></table></figure></p>
-<p>用于打印匹配“<code>regular</code>”的那些行。大括号（<code>{}</code>）用于包围应用于同一个地址的一个或多个语句。</p>
-<p>在脚本中使用程序设计语言的优点是，它提供了更多的方式来控制可编程的编辑器所做的事情。awk 提供了表达式、条件语句、循环和其他程序设计结构。</p>
-<p>awk 最独特的特征之一是它分析或拆分每个输入行，并生成可用于脚本处理的独立的单词（一个编辑器，例如 vi，也识别单词，允许一个单词一个单词的移动，或者使一个单词成为操作对象，但是这些特征只能在交互式下使用）。虽然 awk 是作为可编程的编辑器设计的，但它还可以完成许多其他任务。</p>
-<p>更多的关于 sed &amp; awk ，请详读《sed &amp; awk》 Dale Dougberty &amp; Arnold Robbins 著</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[开发者日常使用的 Git 命令]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/22/everyday-git/</url>
-      <content type="html"><![CDATA[<p>原文链接： <a href="https://www.kernel.org/pub/software/scm/git/docs/everyday.html" target="_blank" rel="external">Everyday GIT With 20 Commands Or So</a>   翻译： <a href="http://blog.jobbole.com" target="_blank" rel="external"> 伯乐在线 </a> - <a href="http://blog.jobbole.com/author/cjpan/" target="_blank" rel="external">cjpan</a><br>译文链接： <a href="http://blog.jobbole.com/54184/" target="_blank" rel="external">http://blog.jobbole.com/54184/</a> （下文在原译文基础上有修正补充）</p>
-<p><span style="color:red;">原文（英）最后更新时间：Last updated 2013-02-15 15:53:17 UTC</span></p>
-<p>这些命令分四种类型：①不需要和其他开发者协作的独立开发者，会经常用到 <code>git init</code>、<code>git show branch</code>、<code>git commit</code> 等命令；②需要和其他人协作的开发者，会常用到 <code>git clone</code>、<code>git push</code>、<code>git pull</code>、<code>git format patch</code>；③在项目中负责接收其他开发者发来更新的核心开发者，会常用到 <code>git am</code>、<code>git pull</code>、<code>git format patch</code>、<code>git revert</code>、<code>git push</code>；④ 代码仓库管理员常用 <code>git daemon</code>、<code>git shell</code> ……</p>
-<p>对于任何想做提交的人来说，甚至对于某位单独工作的人来说，【个人开发者（单独开发）】部分命令都是必不可少的。如果你和别人一起工作，你也会需要【个人开发者（参与者）】部分列出的命令。</p>
-<p>除了上述的部分，担当【集成人员】角色的人需要知道更多命令。【代码库管理】命令帮助系统管理员负责管理，以及向git代码库提交内容。<br><a id="more"></a></p>
-<h2 id="个人开发者（单独开发）Individual-Developer-Standalone"><a href="#个人开发者（单独开发）Individual-Developer-Standalone" class="headerlink" title="个人开发者（单独开发）Individual Developer (Standalone)"></a>个人开发者（单独开发）Individual Developer (Standalone)</h2><p>单独的个人开发者不会与他人交换修补程序，只用到下列命令，独自在单独的代码库上工作：</p>
-<ul>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-init.html" target="_blank" rel="external">git-init(1)</a> 创建新代码库。to create a new repository.</li>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-show-branch.html" target="_blank" rel="external">git-show-branch(1)</a> 查看你在哪里。to see where you are.</li>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-log.html" target="_blank" rel="external">git-log(1)</a> 查看发生过什么。to see what happened.</li>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-checkout.html" target="_blank" rel="external">git-checkout(1)</a>和<a href="https://www.kernel.org/pub/software/scm/git/docs/git-branch.html" target="_blank" rel="external">git-branch(1)</a> 切换分支。to switch branches.</li>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-add.html" target="_blank" rel="external">git-add(1)</a> 管理索引文件。to manage the index file.</li>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-diff.html" target="_blank" rel="external">git-diff(1)</a>和<a href="https://www.kernel.org/pub/software/scm/git/docs/git-status.html" target="_blank" rel="external">git-status(1)</a> 查看你正在做什么。to see what you are in the middle of doing.</li>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-commit.html" target="_blank" rel="external">git-commit(1)</a> 将推进当前分支。to advance the current branch.</li>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-reset.html" target="_blank" rel="external">git-reset(1)</a>和<a href="https://www.kernel.org/pub/software/scm/git/docs/git-checkout.html" target="_blank" rel="external">git-checkout(1)</a> （带路径名参数）放弃（撤销）修改。to undo changes.</li>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-merge.html" target="_blank" rel="external">git-merge(1)</a> 合并本地分支。to merge between local branches.</li>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-rebase.html" target="_blank" rel="external">git-rebase(1)</a> 维护主题分支。to maintain topic branches.</li>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-tag.html" target="_blank" rel="external">git-tag(1)</a> 给已知点打标签。to mark known point.</li>
-</ul>
-<h3 id="实例-Examples"><a href="#实例-Examples" class="headerlink" title="实例 Examples"></a>实例 Examples</h3><p><strong>用Tar包作为一个新代码库的起始点</strong><br>Use a tarball as a starting point for a new repository.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ tar zxf frotz.tar.gz</div><div class="line">$ <span class="built_in">cd</span> frotz</div><div class="line">$ git init</div><div class="line">$ git add . &lt;1&gt;</div><div class="line">$ git commit -m <span class="string">"import of frotz source tree."</span></div><div class="line">$ git tag v2.43 &lt;2&gt;</div></pre></td></tr></table></figure></p>
-<ol>
-<li>添加现目录下的所有文件。</li>
-<li>打一个轻量的无注释的标签。</li>
-</ol>
-<p><strong>创建一个主题分支并开发</strong><br>Create a topic branch and develop.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">$ git checkout -b alsa-audio &lt;1&gt;</div><div class="line">$ edit/compile/<span class="built_in">test</span></div><div class="line">$ git checkout -- curses/ux_audio_oss.c &lt;2&gt;</div><div class="line">$ git add curses/ux_audio_alsa.c &lt;3&gt;</div><div class="line">$ edit/compile/<span class="built_in">test</span></div><div class="line">$ git diff HEAD &lt;4&gt;</div><div class="line">$ git commit <span class="_">-a</span> <span class="_">-s</span> &lt;5&gt;</div><div class="line">$ edit/compile/<span class="built_in">test</span></div><div class="line">$ git reset --soft HEAD^ &lt;6&gt;</div><div class="line">$ edit/compile/<span class="built_in">test</span></div><div class="line">$ git diff ORIG_HEAD &lt;7&gt;</div><div class="line">$ git commit <span class="_">-a</span> -c ORIG_HEAD &lt;8&gt;</div><div class="line">$ git checkout master &lt;9&gt;</div><div class="line">$ git merge alsa-audio &lt;10&gt;</div><div class="line">$ git <span class="built_in">log</span> --since=<span class="string">'3 days ago'</span> &lt;11&gt;</div><div class="line">$ git <span class="built_in">log</span> v2.43.. curses/ &lt;12&gt;</div></pre></td></tr></table></figure></p>
-<ol>
-<li>创建(create)一个主题分支。</li>
-<li>还原(revert)你在<code>curses/ux_audio_oss.c</code>文件里搞砸了的修改。</li>
-<li>如果你添加一个新文件，你需要告诉git；之后，如果你使用<em><code>git commit -a</code></em>， 删除和修改就会被(git)捕获。</li>
-<li>查看你正在提交什么修改。</li>
-<li>提交所有的你已测试文件，包括你的签名。</li>
-<li>撤回最后一次提交，保留工作区（working tree）内容。</li>
-<li>查看自从上一个不成熟提交后的修改。</li>
-<li>沿用原先写过的（注释）信息，重做在之前步骤中撤销了的提交。</li>
-<li>切换到主干（master）分支。</li>
-<li>合并一个主题分支到主分支。</li>
-<li>回顾提交记录；其他限制输出的形式也可以合并包含（combined and include）： <em><code>--max-count=10</code></em>(显示10个提交)，<em><code>--until=2005-12-10</code></em> 等。</li>
-<li>只查看从<em><code>v2.43</code></em>标签开始以来影响到<em><code>curses/</code></em>目录的修改。</li>
-</ol>
-<h2 id="个人开发者（参与开发）Individual-Developer-Participant"><a href="#个人开发者（参与开发）Individual-Developer-Participant" class="headerlink" title="个人开发者（参与开发）Individual Developer (Participant)"></a>个人开发者（参与开发）Individual Developer (Participant)</h2><p>作为一个团体项目里的参与角色，开发人员需要学习如何与他人沟通，除了那些单独开发者需要掌握的命令以外，还要使用这些命令。</p>
-<ul>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-clone.html" target="_blank" rel="external">git-clone(1)</a> 从上游代码库填充你的本地代码库。<br>from the upstream to prime your local repository.</li>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-pull.html" target="_blank" rel="external">git-pull(1)</a>和<a href="https://www.kernel.org/pub/software/scm/git/docs/git-fetch.html" target="_blank" rel="external">git-fetch(1)</a> 从“origin”得到最新的上游代码库。<br>from “origin” to keep up-to-date with the upstream.</li>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-push.html" target="_blank" rel="external">git-push(1)</a> 共享代码库，如果你采用cvs风格的代码库工作流的话。<br>to shared repository, if you adopt CVS style shared repository workflow.</li>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-format-patch.html" target="_blank" rel="external">git-format-patch(1)</a> 准备e-mail提交，如果你使用Linux内核风格的公共论坛工作流的话。<br>to prepare e-mail submission, if you adopt Linux kernel-style public forum workflow.</li>
-</ul>
-<h3 id="实例-Examples-1"><a href="#实例-Examples-1" class="headerlink" title="实例 Examples"></a>实例 Examples</h3><p><strong>复制上游代码库并在其上工作，提交修改到上游代码库。</strong><br>Clone the upstream and work on it. Feed changes to upstream.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> git://git.kernel.org/pub/scm/.../torvalds/linux-2.6 my2.6</div><div class="line">$ <span class="built_in">cd</span> my2.6</div><div class="line">$ edit/compile/<span class="built_in">test</span>; git commit <span class="_">-a</span> <span class="_">-s</span> &lt;1&gt;</div><div class="line">$ git format-patch origin &lt;2&gt;</div><div class="line">$ git pull &lt;3&gt;</div><div class="line">$ git <span class="built_in">log</span> -p ORIG_HEAD.. arch/i386 include/asm-i386 &lt;4&gt;</div><div class="line">$ git pull git://git.kernel.org/pub/.../jgarzik/libata-dev.git ALL &lt;5&gt;</div><div class="line">$ git reset --hard ORIG_HEAD &lt;6&gt;</div><div class="line">$ git gc &lt;7&gt;</div><div class="line">$ git fetch --tags &lt;8&gt;</div></pre></td></tr></table></figure></p>
-<ol>
-<li>按需重复。(repeat as needed)</li>
-<li>从你的分支中提取补丁文件，用于电子邮件提交。</li>
-<li><em><code>git pull</code></em>命令默认从“<em><code>origin</code></em>”里取得内容并合并到当前的分支中去。</li>
-<li>在<code>pull</code>之后，立即查看在上游仓库中自上次检出之后提交的修改（日志），仅查看关注的部分。</li>
-<li>从一个指定代码库的一个指定分支获取内容并合并。</li>
-<li>撤销（revert）<code>pull</code>操作。</li>
-<li>从撤销的<code>pull</code>操作中回收残存的对象。（代码库清理）</li>
-<li>不时地，从<em><code>origin</code></em>中获取官方的标签，并保存于<em><code>.git/refs/tags/</code></em>。</li>
-</ol>
-<p><strong>推送到另一个代码库</strong><br>Push into another repository.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">satellite$ git <span class="built_in">clone</span> mothership:frotz frotz &lt;1&gt;</div><div class="line">satellite$ <span class="built_in">cd</span> frotz</div><div class="line">satellite$ git config --get-regexp <span class="string">'^(remote|branch)\.'</span> &lt;2&gt;</div><div class="line">remote.origin.url mothership:frotz</div><div class="line">remote.origin.fetch refs/heads/*:refs/remotes/origin/*</div><div class="line">branch.master.remote origin</div><div class="line">branch.master.merge refs/heads/master</div><div class="line">satellite$ git config remote.origin.push \</div><div class="line">           master:refs/remotes/satellite/master &lt;3&gt;</div><div class="line">satellite$ edit/compile/<span class="built_in">test</span>/commit</div><div class="line">satellite$ git push origin &lt;4&gt;</div><div class="line"></div><div class="line">mothership$ <span class="built_in">cd</span> frotz</div><div class="line">mothership$ git checkout master</div><div class="line">mothership$ git merge satellite/master &lt;5&gt;</div></pre></td></tr></table></figure></p>
-<ol>
-<li><code>mothership</code>机器的<code>home</code>目录下有一个<code>frotz</code>代码库；复制它（clone from it）以在<code>satellite</code>机器上开始一个代码库。</li>
-<li>复制（<code>clone</code>）操作默认设定这些配置变量。它安排<em><code>git pull</code></em>去抓取并保存<code>mothership</code>机器上的分支到本地的<em><code>remotes/origin/*</code></em> 跟踪分支。</li>
-<li>安排<em><code>git push</code></em>去推送本地的主（<em><code>master</code></em>）分支到<code>mothership</code>机器的<em><code>remotes/satellite/master</code></em>分支</li>
-<li><code>push</code>操作会在<code>mothership</code>机器的<em><code>remotes/satellite/master</code></em>的远程跟踪分支上存储我们的工作。你可以用此作为一个备份方法。</li>
-<li>在<code>mothership</code>机器上，将<code>satellite</code>机器上已完成的工作合并到<code>master</code>分支中。</li>
-</ol>
-<p><strong>分支的特定标签</strong><br>Branch off of a specific tag.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ git checkout -b private2.6.14 v2.6.14 &lt;1&gt;</div><div class="line">$ edit/compile/<span class="built_in">test</span>; git commit <span class="_">-a</span></div><div class="line">$ git checkout master</div><div class="line">$ git format-patch -k -m --stdout v2.6.14..private2.6.14 |</div><div class="line">  git am -3 -k &lt;2&gt;</div></pre></td></tr></table></figure></p>
-<ol>
-<li>创建一个私有分支，基于熟知（但稍许过时的）标签。</li>
-<li>在还没有正式“合并（merging）”的情况下，向前移植<code>private2.6.14</code>分支所有的修改到<code>master</code>分支上。</li>
-</ol>
-<h2 id="集成人员-Integrator"><a href="#集成人员-Integrator" class="headerlink" title="集成人员 Integrator"></a>集成人员 Integrator</h2><p>在一个团队项目中担任集成者的是一名相当重要的人员，他/她接收其他人的修改，评审并集成然后发布最终结果供其他人使用；除了参与者需要的那些命令之外，还需要使用以下这些命令。</p>
-<ul>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-am.html" target="_blank" rel="external">git-am(1)</a> 采用你的贡献者邮寄过来的补丁文件。<br>to apply patches e-mailed in from your contributors.*   <a href="https://www.kernel.org/pub/software/scm/git/docs/git-pull.html" target="_blank" rel="external">git-pull(1)</a> 从你的可信任的助手处合并内容。<br>to merge from your trusted lieutenants.</li>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-format-patch.html" target="_blank" rel="external">git-format-patch(1)</a> 准备并向你的贡献者发送建议选项。<br>to prepare and send suggested alternative to contributors.<em>   <a href="https://www.kernel.org/pub/software/scm/git/docs/git-revert.html" target="_blank" rel="external">git-revert(1)</a> 撤销不好的提交。<br>to undo botched commits.</em>   <a href="https://www.kernel.org/pub/software/scm/git/docs/git-push.html" target="_blank" rel="external">git-push(1)</a> 发布最新的内容。<br>to publish the bleeding edge.</li>
-</ul>
-<h3 id="实例-Examples-2"><a href="#实例-Examples-2" class="headerlink" title="实例 Examples"></a>实例 Examples</h3><p><strong>我典型的GIT一天</strong><br>My typical GIT day.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">$ git status &lt;1&gt;</div><div class="line">$ git show-branch &lt;2&gt;</div><div class="line">$ mailx &lt;3&gt;</div><div class="line">&amp; s 2 3 4 5 ./+to-apply</div><div class="line">&amp; s 7 8 ./+hold-linus</div><div class="line">&amp; q</div><div class="line">$ git checkout -b topic/one master</div><div class="line">$ git am -3 -i <span class="_">-s</span> -u ./+to-apply &lt;4&gt;</div><div class="line">$ compile/<span class="built_in">test</span></div><div class="line">$ git checkout -b hold/linus &amp;&amp; git am -3 -i <span class="_">-s</span> -u ./+hold-linus &lt;5&gt;</div><div class="line">$ git checkout topic/one &amp;&amp; git rebase master &lt;6&gt;</div><div class="line">$ git checkout pu &amp;&amp; git reset --hard next &lt;7&gt;</div><div class="line">$ git merge topic/one topic/two &amp;&amp; git merge hold/linus &lt;8&gt;</div><div class="line">$ git checkout maint</div><div class="line">$ git cherry-pick master~4 &lt;9&gt;</div><div class="line">$ compile/<span class="built_in">test</span></div><div class="line">$ git tag <span class="_">-s</span> -m <span class="string">"GIT 0.99.9x"</span> v0.99.9x &lt;10&gt;</div><div class="line">$ git fetch ko &amp;&amp; git show-branch master maint <span class="string">'tags/ko-*'</span> &lt;11&gt;</div><div class="line">$ git push ko &lt;12&gt;</div><div class="line">$ git push ko v0.99.9x &lt;13&gt;</div></pre></td></tr></table></figure></p>
-<ol>
-<li>查看我正在做什么，如果有的话。</li>
-<li>查看我拥有的主题分支，并考虑它们的完成度。</li>
-<li>读邮件，保存合适的，并且保存那些尚未完成的。</li>
-<li>采用它们，交互式地，带着我的签名。</li>
-<li>按需创建主题分支，还是由我签名采用。</li>
-<li>为内部的还未合并到主分支，也没有作为稳定分支的一部分公开的主题分支重定基线。</li>
-<li>从接下来开始，每次都重置<em>pu</em>。</li>
-<li>合并仍然在料理中的主题分支</li>
-<li>向后移植（backport）极其重要的修正。</li>
-<li>创建一个签名的标签。</li>
-<li>确保我不会意外将主分支回滚到我已经推出来的内容。简写的<em><code>ko</code></em>指向我在kernel.org上已有的代码库里，看起来像这样：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ cat .git/remotes/ko</div><div class="line">URL: kernel.org:/pub/scm/git/git.git</div><div class="line">Pull: master:refs/tags/ko-master</div><div class="line">Pull: next:refs/tags/ko-next</div><div class="line">Pull: maint:refs/tags/ko-maint</div><div class="line">Push: master</div><div class="line">Push: next</div><div class="line">Push: +pu</div><div class="line">Push: maint</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>在从<em><code>git show-branch</code></em>的输出里，主分支（<em><code>master</code></em>）应该包含<em><code>ko-master</code></em>所有的内容，并且<em><code>next</code></em>应该包含<em><code>ko-next</code></em>所有的内容。<br>12.  推送最新内容<br>13.  推送标签</p>
-<h2 id="代码库管理-Repository-Administration"><a href="#代码库管理-Repository-Administration" class="headerlink" title="代码库管理 Repository Administration"></a>代码库管理 Repository Administration</h2><p>代码库管理员使用下列工具来设置及维护开发者对代码库的访问。</p>
-<ul>
-<li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-daemon.html" target="_blank" rel="external">git-daemon(1)</a> 允许匿名者从代码库下载。<br>to allow anonymous download from repository.*   <a href="https://www.kernel.org/pub/software/scm/git/docs/git-shell.html" target="_blank" rel="external">git-shell(1)</a> 可以被用作为限制登录shell，用于共享中央代码库的用户。<br>can be used as a <em>restricted login shell</em> for shared central repository users.<br><a href="https://www.kernel.org/pub/software/scm/git/docs/howto/update-hook-example.txt" target="_blank" rel="external">update hook howto</a> 有一个很好的管理共享中央代码库的实例。</li>
-</ul>
-<h3 id="实例-Examples-3"><a href="#实例-Examples-3" class="headerlink" title="实例 Examples"></a>实例 Examples</h3><p><strong>我们假设下面的内容均在/etc/services目录下</strong><br>We assume the following in /etc/services<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ grep 9418 /etc/services</div><div class="line">git             9418/tcp                <span class="comment"># Git Version Control System</span></div></pre></td></tr></table></figure></p>
-<p><strong>从inetd中运行git-daemon来服务于/pub/scm</strong><br>Run git-daemon to serve /pub/scm from inetd.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ grep git /etc/inetd.conf</div><div class="line">git     stream  tcp     nowait  nobody \</div><div class="line">  /usr/bin/git-daemon git-daemon --inetd --export-all /pub/scm</div></pre></td></tr></table></figure></p>
-<p>实际的配置应该在1行里。</p>
-<p><strong>从xinetd运行git-daemon来服务于/pub/scm</strong><br>Run git-daemon to serve /pub/scm from xinetd.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">$ cat /etc/xinetd.d/git-daemon</div><div class="line"><span class="comment"># default: off</span></div><div class="line"><span class="comment"># description: The git server offers access to git repositories</span></div><div class="line">service git</div><div class="line">&#123;</div><div class="line">        <span class="built_in">disable</span> = no</div><div class="line">        <span class="built_in">type</span>            = UNLISTED</div><div class="line">        port            = 9418</div><div class="line">        socket_type     = stream</div><div class="line">        <span class="built_in">wait</span>            = no</div><div class="line">        user            = nobody</div><div class="line">        server          = /usr/bin/git-daemon</div><div class="line">        server_args     = --inetd --export-all --base-path=/pub/scm</div><div class="line">        log_on_failure  += USERID</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>检查<code>xinetd(8)</code>文档并设置，这个文档来自于Fedora系统。其他也许会不一样。</p>
-<p><strong>授予开发者只推/拉访问操作权限</strong><br>Give push/pull only access to developers.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ grep git /etc/passwd &lt;1&gt;</div><div class="line">alice:x:1000:1000::/home/alice:/usr/bin/git-shell</div><div class="line">bob:x:1001:1001::/home/bob:/usr/bin/git-shell</div><div class="line">cindy:x:1002:1002::/home/cindy:/usr/bin/git-shell</div><div class="line">david:x:1003:1003::/home/david:/usr/bin/git-shell</div><div class="line">$ grep git /etc/shells &lt;2&gt;</div><div class="line">/usr/bin/git-shell</div></pre></td></tr></table></figure></p>
-<ol>
-<li>登录<code>shell</code>被设置到<code>/usr/bin/git-shell</code>, 不允许<em><code>git push</code></em>和<em><code>git pull</code></em>以外的任何操作。用户需要获得一个访问此机器的<code>ssh</code>权限。</li>
-<li>在许多发布版本中，<code>/etc/shells</code>需要列出作为一个登录<code>shell</code>所使用的程序。</li>
-</ol>
-<p><strong>CVS风格的共享代码库</strong><br>CVS-style shared repository.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">$ grep git /etc/group &lt;1&gt;</div><div class="line">git:x:9418:alice,bob,cindy,david</div><div class="line">$ <span class="built_in">cd</span> /home/devo.git</div><div class="line">$ ls <span class="_">-l</span> &lt;2&gt;</div><div class="line">  lrwxrwxrwx   1 david git    17 Dec  4 22:40 HEAD -&gt; refs/heads/master</div><div class="line">  drwxrwsr-x   2 david git  4096 Dec  4 22:40 branches</div><div class="line">  -rw-rw-r--   1 david git    84 Dec  4 22:40 config</div><div class="line">  -rw-rw-r--   1 david git    58 Dec  4 22:40 description</div><div class="line">  drwxrwsr-x   2 david git  4096 Dec  4 22:40 hooks</div><div class="line">  -rw-rw-r--   1 david git 37504 Dec  4 22:40 index</div><div class="line">  drwxrwsr-x   2 david git  4096 Dec  4 22:40 info</div><div class="line">  drwxrwsr-x   4 david git  4096 Dec  4 22:40 objects</div><div class="line">  drwxrwsr-x   4 david git  4096 Nov  7 14:58 refs</div><div class="line">  drwxrwsr-x   2 david git  4096 Dec  4 22:40 remotes</div><div class="line">$ ls <span class="_">-l</span> hooks/update &lt;3&gt;</div><div class="line">  -r-xr-xr-x   1 david git  3536 Dec  4 22:40 update</div><div class="line">$ cat info/allowed-users &lt;4&gt;</div><div class="line">refs/heads/master       alice\|cindy</div><div class="line">refs/heads/doc-update   bob</div><div class="line">refs/tags/v[0-9]*       david</div></pre></td></tr></table></figure></p>
-<ol>
-<li>把开发者置于同一<code>git</code>组中。</li>
-<li>将共享代码库配为组可写。</li>
-<li>使用 Documentation/howto/ 中Carl的<code>update-hook</code>实例作为分支策略控制。</li>
-<li>alice和cindy可以推送到主分支（master），只有bob可以推送进<code>doc-update</code>。david是发布经理，并且是唯一可以创建并推送版本标签的人。</li>
-</ol>
-<p><strong>支持dumb协议传送的HTTP服务器</strong><br>HTTP server to support dumb protocol transfer.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">dev$ git update-server-info &lt;1&gt;</div><div class="line">dev$ ftp user@isp.example.com &lt;2&gt;</div><div class="line">ftp&gt; cp -r .git /home/user/myproject.git</div></pre></td></tr></table></figure></p>
-<ol>
-<li>确保你的 <code>info/refs</code> 和 <code>objects/info/packs</code> 是最新的。</li>
-<li>上传到由你的ISP托管的公共HTTP服务器。</li>
-</ol>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[用git保存空目录]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/22/git-save-empty-dir/</url>
-      <content type="html"><![CDATA[<p>git 和 svn 不同，仅仅跟踪文件的变动，不跟踪目录。Perforce 也是如此。所以，一个空目录，如果里面没有文件，即便 git add 这个目录，另外在别处 check out 的时候，是没有这个空目录的。</p>
-<p>只跟踪文件变化，不跟踪目录，这么设计是有原因的。但这会带来一些小麻烦。有时候，确实需要在代码仓库中保留某个空目录。比如测试时需要用到的空目录。</p>
-<p>变通的解决办法是在空目录下存一个 <code>.gitignore</code> 文件。然后 <code>git add</code> 此目录后，相当于跟踪了 <code>.gitignore</code> 文件，产生的“副作用”就是这个“空”目录也纳入“跟踪”，最终的效果是可以 check out 出一个看起来空空的目录。如果有许多这样的空目录，可以用下面的命令自动补充 <code>.gitignore</code> 文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch &#123;&#125;/.gitignore \;</div></pre></td></tr></table></figure></p>
-<p>递归找寻当前目录下，类型为目录，且为空，也没有 <code>.git</code> 开头的文件，在其中用 touch 新建一个空的 <code>.gitignore</code> 文件。然后 <code>git add .</code> 之后即可。</p>
-<p>如果这些特殊文件会对测试带来干扰，那就只好在测试程序运行具体测试项目之前，先跑一段初始化目录结构的代码。另外可能还需要编写负责清理的代码。</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[git常用命令]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/22/git-in-common/</url>
-      <content type="html"><![CDATA[<p>原文：<a href="http://www.cnblogs.com/1-2-3/archive/2010/07/18/git-commands.html" target="_blank" rel="external">http://www.cnblogs.com/1-2-3/archive/2010/07/18/git-commands.html</a></p>
-<p>Git 是一个很强大的分布式版本控制系统。它不但适用于管理大型开源软件的源代码，管理私人的文档和源代码也有很多优势。</p>
-<p><img src="/uploads/images/git_commands.png" alt="git_commands"></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[caliper]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/caliper/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[sysbench]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/sysbench/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Armor]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/armor/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[OpenJDK]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/openjdk/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Ceph]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/ceph/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[ODP]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/odp/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hadoop]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/hadoop/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[KVM]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/kvm/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Xen]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/xen/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[OpenStack]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/openstack/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Docker]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/docker/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[LXC]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/lxc/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[QEMU]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/qemu/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[LAMP]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/lamp/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[PHP]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/php/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[PostgreSQL]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/postgresql/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[MySQL]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/mysql/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Apache2]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/apache2/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Nginx]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/nginx/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[DNS]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/dns/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[DHCP]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/dhcp/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[FTP]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/ftp/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Samba]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/samba/</url>
-      <content type="html"><![CDATA[<h2 id="On-Centos"><a href="#On-Centos" class="headerlink" title="On Centos"></a>On Centos</h2><h3 id="安装应用"><a href="#安装应用" class="headerlink" title="安装应用"></a>安装应用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install samba</div></pre></td></tr></table></figure>
-<h3 id="在home目录下新建samba文件夹"><a href="#在home目录下新建samba文件夹" class="headerlink" title="在home目录下新建samba文件夹"></a>在home目录下新建samba文件夹</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /home &amp;&amp; sudo mkdir samba</div></pre></td></tr></table></figure>
-<h3 id="修改配置文件-etc-samba-smb-conf"><a href="#修改配置文件-etc-samba-smb-conf" class="headerlink" title="修改配置文件/etc/samba/smb.conf"></a>修改配置文件/etc/samba/smb.conf</h3><p>添加如下配置项<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">[share]</div><div class="line">   comment = shared area</div><div class="line">   public = yes</div><div class="line">   writable = yes</div><div class="line">   path = /home/samba</div><div class="line">   create mask = 0777</div><div class="line">   directory mask = 0777</div><div class="line">   force user = smb</div><div class="line">   force group = smb</div><div class="line">   available = yes</div><div class="line">   browseable = yes</div></pre></td></tr></table></figure></p>
-<h3 id="新建用户smb"><a href="#新建用户smb" class="headerlink" title="新建用户smb"></a>新建用户smb</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adduser smb --shell /bin/bash</div></pre></td></tr></table></figure>
-<h3 id="给新用户设置密码"><a href="#给新用户设置密码" class="headerlink" title="给新用户设置密码"></a>给新用户设置密码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">passwd smb</div><div class="line">smbpasswd <span class="_">-a</span> smb</div></pre></td></tr></table></figure>
-<h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl stop firewalld.service</div></pre></td></tr></table></figure>
-<h3 id="重启smb服务"><a href="#重启smb服务" class="headerlink" title="重启smb服务"></a>重启smb服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart nmb.service smb.service</div></pre></td></tr></table></figure>
-<h3 id="测试验证"><a href="#测试验证" class="headerlink" title="测试验证"></a>测试验证</h3><p><strong>在/home/samba目录下新建一个测试文件</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /home/samba</div><div class="line">sudo touch readme.txt</div></pre></td></tr></table></figure>
-<p><strong>查看当前板子的IP地址</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ip addr</div></pre></td></tr></table></figure>
-<p><strong>访问samba目录</strong></p>
-<p>在PC机上输入：<code>smb://192.168.1.xxx</code><br>在出现的登录界面输入新添加的用户名和密码进行登录</p>
-<h2 id="On-Fedora"><a href="#On-Fedora" class="headerlink" title="On Fedora"></a>On Fedora</h2><p><strong>ToDo …</strong></p>
-<h2 id="On-Ubuntu"><a href="#On-Ubuntu" class="headerlink" title="On Ubuntu"></a>On Ubuntu</h2><p><strong>ToDo …</strong></p>
-<h2 id="On-Debian"><a href="#On-Debian" class="headerlink" title="On Debian"></a>On Debian</h2><p><strong>ToDo …</strong></p>
-<h2 id="On-Opensuse"><a href="#On-Opensuse" class="headerlink" title="On Opensuse"></a>On Opensuse</h2><p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>http://jarsonfang.github.io/etesting/2016/09/20/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    </entry>
-    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/etesting/images/avatar.png"
+               alt="Estuary" />
+          <p class="site-author-name" itemprop="name">Estuary</p>
+          <p class="site-description motion-element" itemprop="description">Testing cases</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/etesting/archives">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/etesting/categories">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/etesting/tags">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/jarsonfang/etesting/" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://open-estuary.org/" target="_blank" title="Estuary.org">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Estuary.org
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/open-estuary/" target="_blank" title="Estuary.github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Estuary.github
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/etesting/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://tldp.org/LDP/abs/html/" title="ABS" target="_blank">ABS</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://git-scm.com/book/zh/" title="ProGit" target="_blank">ProGit</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://hexo.io/" title="Hexo" target="_blank">Hexo</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://theme-next.iissnan.com/" title="NexT" target="_blank">NexT</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.markdowntutorial.com/" title="Markdown-Tutorial" target="_blank">Markdown-Tutorial</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://guides.github.com/features/mastering-markdown/" title="Mastering-Markdown" target="_blank">Mastering-Markdown</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cirosantilli.com/markdown-style-guide/" title="Markdown-Style-Guide" target="_blank">Markdown-Style-Guide</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/" title="Markdown-Simple-World" target="_blank">Markdown-Simple-World</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#有关本手册"><span class="nav-number">1.1.</span> <span class="nav-text">有关本手册</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#awk概述"><span class="nav-number">2.</span> <span class="nav-text">awk概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么使用awk"><span class="nav-number">2.1.</span> <span class="nav-text">为什么使用awk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何取得awk"><span class="nav-number">2.2.</span> <span class="nav-text">如何取得awk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk如何工作"><span class="nav-number">2.3.</span> <span class="nav-text">awk如何工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#名词定义"><span class="nav-number">2.4.</span> <span class="nav-text">名词定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何执行awk"><span class="nav-number">3.</span> <span class="nav-text">如何执行awk</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-程序的主要结构"><span class="nav-number">3.1.</span> <span class="nav-text">awk 程序的主要结构:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pattern-是什么"><span class="nav-number">3.2.</span> <span class="nav-text">Pattern 是什么 ?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Actions-是什么"><span class="nav-number">3.3.</span> <span class="nav-text">Actions 是什么?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-如何处理-Pattern-Actions"><span class="nav-number">3.4.</span> <span class="nav-text">awk 如何处理 Pattern { Actions } ?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-如何处理-Actions-的语法-缺少Pattern部分"><span class="nav-number">3.5.</span> <span class="nav-text">awk 如何处理{ Actions } 的语法? (缺少Pattern部分)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-的字段变量"><span class="nav-number">3.6.</span> <span class="nav-text">awk 的字段变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#读入数据行时-awk如何更新-update-这些内建的字段变量"><span class="nav-number">3.7.</span> <span class="nav-text">读入数据行时, awk如何更新(update)这些内建的字段变量?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk的内建变量-Built-in-Variables"><span class="nav-number">3.8.</span> <span class="nav-text">awk的内建变量(Built-in Variables)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk的工作流程"><span class="nav-number">3.9.</span> <span class="nav-text">awk的工作流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打印文件中指定的字段数据并加以计算"><span class="nav-number">3.10.</span> <span class="nav-text">打印文件中指定的字段数据并加以计算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择符合指定条件的记录"><span class="nav-number">4.</span> <span class="nav-text">选择符合指定条件的记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#awk-中数组"><span class="nav-number">5.</span> <span class="nav-text">awk 中数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#awk中数组的特性"><span class="nav-number">5.1.</span> <span class="nav-text">awk中数组的特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用一个数组Number"><span class="nav-number">5.1.1.</span> <span class="nav-text">使用一个数组Number[]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何取出数组中储存的信息"><span class="nav-number">5.1.2.</span> <span class="nav-text">如何取出数组中储存的信息</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#awk-程序中使用-Shell-命令"><span class="nav-number">6.</span> <span class="nav-text">awk 程序中使用 Shell 命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#awk-程序的应用实例"><span class="nav-number">7.</span> <span class="nav-text">awk 程序的应用实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#重定向输出到文件"><span class="nav-number">7.1.</span> <span class="nav-text">重定向输出到文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-中如何利用系统资源"><span class="nav-number">7.2.</span> <span class="nav-text">awk 中如何利用系统资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行-awk-程序的几种方式"><span class="nav-number">7.3.</span> <span class="nav-text">执行 awk 程序的几种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改变-awk-切割字段的方式-amp-自定义函数"><span class="nav-number">7.4.</span> <span class="nav-text">改变 awk 切割字段的方式 & 自定义函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-getline-来读取数据"><span class="nav-number">7.5.</span> <span class="nav-text">使用 getline 来读取数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理多行的数据"><span class="nav-number">8.</span> <span class="nav-text">处理多行的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何读取命令行上的参数"><span class="nav-number">9.</span> <span class="nav-text">如何读取命令行上的参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写可与用户交互的-awk-程序"><span class="nav-number">10.</span> <span class="nav-text">编写可与用户交互的 awk 程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-awk-编写递归程序"><span class="nav-number">11.</span> <span class="nav-text">使用 awk 编写递归程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录-A-──-Pattern"><span class="nav-number">12.</span> <span class="nav-text">附录 A ── Pattern</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BEGIN"><span class="nav-number">12.1.</span> <span class="nav-text">BEGIN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#END"><span class="nav-number">12.2.</span> <span class="nav-text">END</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关系表达式"><span class="nav-number">12.3.</span> <span class="nav-text">关系表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式"><span class="nav-number">12.4.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#混合-Pattern"><span class="nav-number">12.5.</span> <span class="nav-text">混合 Pattern</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pattern1-Pattern2"><span class="nav-number">12.6.</span> <span class="nav-text">Pattern1, Pattern2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录-B-──-Actions"><span class="nav-number">13.</span> <span class="nav-text">附录 B ── Actions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#流程控制指令"><span class="nav-number">13.1.</span> <span class="nav-text">流程控制指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-中的-I-O-指令"><span class="nav-number">13.2.</span> <span class="nav-text">awk 中的 I/O 指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-释放所占用的记忆体的指令"><span class="nav-number">13.3.</span> <span class="nav-text">awk 释放所占用的记忆体的指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-中的数学运算符-Arithmetic-Operators"><span class="nav-number">13.4.</span> <span class="nav-text">awk 中的数学运算符(Arithmetic Operators)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-中的赋值运算符-Assignment-Operators"><span class="nav-number">13.5.</span> <span class="nav-text">awk 中的赋值运算符(Assignment Operators)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-中的条件运算符-Conditional-Operator"><span class="nav-number">13.6.</span> <span class="nav-text">awk 中的条件运算符(Conditional  Operator)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-中的逻辑运算符-Logical-Operators"><span class="nav-number">13.7.</span> <span class="nav-text">awk 中的逻辑运算符(Logical Operators)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-中的关系运算符-Relational-Operators"><span class="nav-number">13.8.</span> <span class="nav-text">awk 中的关系运算符(Relational Operators)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-中其它的运算符"><span class="nav-number">13.9.</span> <span class="nav-text">awk 中其它的运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-中各运算符的运算级"><span class="nav-number">13.10.</span> <span class="nav-text">awk 中各运算符的运算级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录C-──-awk-的內建函数-Built-in-Functions"><span class="nav-number">14.</span> <span class="nav-text">附录C ── awk 的內建函数(Built-in Functions)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字串函数"><span class="nav-number">14.1.</span> <span class="nav-text">字串函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数学函数"><span class="nav-number">14.2.</span> <span class="nav-text">数学函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录D-──-awk-的內建变量-Built-in-Variables"><span class="nav-number">15.</span> <span class="nav-text">附录D ── awk 的內建变量 Built-in Variables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录E-──-正则表达式-Regular-Expression-简介"><span class="nav-number">16.</span> <span class="nav-text">附录E ── 正则表达式(Regular Expression) 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要使用正则表达式"><span class="nav-number">16.1.</span> <span class="nav-text">为什么要使用正则表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是正则表达式"><span class="nav-number">16.2.</span> <span class="nav-text">什么是正则表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组成正则表达式的元素"><span class="nav-number">16.3.</span> <span class="nav-text">组成正则表达式的元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#match是什么"><span class="nav-number">16.4.</span> <span class="nav-text">match是什么?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk-中提供二个关系运算符-Relational-Operator-见注一"><span class="nav-number">16.5.</span> <span class="nav-text">awk 中提供二个关系运算符(Relational Operator,见注一) ~ !~</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用-Regular-Expression-解题的简例"><span class="nav-number">16.6.</span> <span class="nav-text">应用 Regular Expression 解题的简例</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Estuary</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/etesting/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/etesting/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/etesting/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/etesting/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/etesting/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/etesting/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/etesting/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/etesting/js/src/motion.js?v=5.0.1"></script>
+
+
+
   
   
-</search>
+
+  
+  <script type="text/javascript" src="/etesting/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/etesting/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/etesting/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"estuary"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/etesting/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/etesting/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/etesting/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

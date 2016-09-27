@@ -61,7 +61,7 @@
 <link href="/etesting/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="Testing" />
 
 
 
@@ -77,22 +77,15 @@
 
 
 
-<meta name="description" content="git 和 svn 不同，仅仅跟踪文件的变动，不跟踪目录。Perforce 也是如此。所以，一个空目录，如果里面没有文件，即便 git add 这个目录，另外在别处 check out 的时候，是没有这个空目录的。
-只跟踪文件变化，不跟踪目录，这么设计是有原因的。但这会带来一些小麻烦。有时候，确实需要在代码仓库中保留某个空目录。比如测试时需要用到的空目录。
-变通的解决办法是在空目录下存一个 .gi">
-<meta property="og:type" content="article">
-<meta property="og:title" content="用git保存空目录">
-<meta property="og:url" content="http://jarsonfang.github.io/2016/03/22/git-save-empty-dir/index.html">
+<meta name="description" content="Testing cases">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Etesting">
+<meta property="og:url" content="http://jarsonfang.github.io/tags/sed/index.html">
 <meta property="og:site_name" content="Etesting">
-<meta property="og:description" content="git 和 svn 不同，仅仅跟踪文件的变动，不跟踪目录。Perforce 也是如此。所以，一个空目录，如果里面没有文件，即便 git add 这个目录，另外在别处 check out 的时候，是没有这个空目录的。
-只跟踪文件变化，不跟踪目录，这么设计是有原因的。但这会带来一些小麻烦。有时候，确实需要在代码仓库中保留某个空目录。比如测试时需要用到的空目录。
-变通的解决办法是在空目录下存一个 .gi">
-<meta property="og:updated_time" content="2016-09-22T10:06:08.000Z">
+<meta property="og:description" content="Testing cases">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用git保存空目录">
-<meta name="twitter:description" content="git 和 svn 不同，仅仅跟踪文件的变动，不跟踪目录。Perforce 也是如此。所以，一个空目录，如果里面没有文件，即便 git add 这个目录，另外在别处 check out 的时候，是没有这个空目录的。
-只跟踪文件变化，不跟踪目录，这么设计是有原因的。但这会带来一些小麻烦。有时候，确实需要在代码仓库中保留某个空目录。比如测试时需要用到的空目录。
-变通的解决办法是在空目录下存一个 .gi">
+<meta name="twitter:title" content="Etesting">
+<meta name="twitter:description" content="Testing cases">
 
 
 
@@ -113,9 +106,9 @@
 
 
 
-  <link rel="canonical" href="http://jarsonfang.github.io/2016/03/22/git-save-empty-dir/"/>
+  <link rel="canonical" href="http://jarsonfang.github.io/tags/sed/"/>
 
-  <title> 用git保存空目录 | Etesting </title>
+  <title> 标签: sed | Etesting </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,7 +129,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <div class="container one-collumn sidebar-position-right  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,193 +240,109 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                用git保存空目录
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-22T11:07:36+08:00" content="2016-03-22">
-              2016-03-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/VCS/" itemprop="url" rel="index">
-                    <span itemprop="name">VCS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/etesting/2016/03/22/git-save-empty-dir/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/22/git-save-empty-dir/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>git 和 svn 不同，仅仅跟踪文件的变动，不跟踪目录。Perforce 也是如此。所以，一个空目录，如果里面没有文件，即便 git add 这个目录，另外在别处 check out 的时候，是没有这个空目录的。</p>
-<p>只跟踪文件变化，不跟踪目录，这么设计是有原因的。但这会带来一些小麻烦。有时候，确实需要在代码仓库中保留某个空目录。比如测试时需要用到的空目录。</p>
-<p>变通的解决办法是在空目录下存一个 <code>.gitignore</code> 文件。然后 <code>git add</code> 此目录后，相当于跟踪了 <code>.gitignore</code> 文件，产生的“副作用”就是这个“空”目录也纳入“跟踪”，最终的效果是可以 check out 出一个看起来空空的目录。如果有许多这样的空目录，可以用下面的命令自动补充 <code>.gitignore</code> 文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch &#123;&#125;/.gitignore \;</div></pre></td></tr></table></figure></p>
-<p>递归找寻当前目录下，类型为目录，且为空，也没有 <code>.git</code> 开头的文件，在其中用 touch 新建一个空的 <code>.gitignore</code> 文件。然后 <code>git add .</code> 之后即可。</p>
-<p>如果这些特殊文件会对测试带来干扰，那就只好在测试程序运行具体测试项目之前，先跑一段初始化目录结构的代码。另外可能还需要编写负责清理的代码。</p>
-
-      
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        sed
+        <small>标签</small>
+      </h2>
     </div>
 
-    <div>
+    
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-
-      
-    </div>
-
-    <div>
-      
+            <a class="post-title-link" href="/etesting/2016/09/23/sed-functions/" itemprop="url">
+              
+                <span itemprop="name">sed 函数参数</span>
+              
+            </a>
         
+      </h1>
 
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-09-23T14:33:06+08:00"
+              content="2016-09-23" >
+          09-23
+        </time>
+      </div>
 
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/etesting/tags/git/" rel="tag">#git</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/etesting/2014/05/22/everyday-git/" rel="next" title="开发者日常使用的 Git 命令">
-                <i class="fa fa-chevron-left"></i> 开发者日常使用的 Git 命令
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/etesting/2016/09/20/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
+    
       
-        <div class="ds-share flat" data-thread-key="2016/03/22/git-save-empty-dir/"
-     data-title="用git保存空目录"
-     data-content=""
-     data-url="http://jarsonfang.github.io/etesting/2016/03/22/git-save-empty-dir/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
 
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/etesting/2016/09/23/sed-manual/" itemprop="url">
+              
+                <span itemprop="name">sed 学习手册</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-09-23T14:30:15+08:00"
+              content="2016-09-23" >
+          09-23
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
       
-    </div>
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/etesting/2016/09/23/sed-awk-overview/" itemprop="url">
+              
+                <span itemprop="name">sed & awk 概述</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-09-23T14:23:20+08:00"
+              content="2016-09-23" >
+          09-23
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
   </div>
+
+  
 
 
           </div>
           
 
-  <p>热评文章</p>
-  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
-
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/03/22/git-save-empty-dir/"
-           data-title="用git保存空目录" data-url="http://jarsonfang.github.io/etesting/2016/03/22/git-save-empty-dir/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -453,17 +362,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/etesting/images/avatar.png"
@@ -474,7 +374,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/etesting/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">31</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -482,7 +382,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/etesting/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -491,7 +391,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/etesting/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -591,17 +491,6 @@
       </section>
 
       
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <p class="post-toc-empty">此文章未包含目录</p>
-            
-          </div>
-        </section>
-      
 
     </div>
   </aside>
@@ -697,10 +586,6 @@
   
 
   
-  <script type="text/javascript" src="/etesting/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/etesting/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 

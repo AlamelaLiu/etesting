@@ -4,12 +4,92 @@
 
     
   <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/22/git-save-empty-dir/</loc>
-    <lastmod>2016-09-22T10:10:59.000Z</lastmod>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/23/awk/</loc>
+    <lastmod>2016-09-27T02:43:00.000Z</lastmod>
     <data>
         <display>
-        <title>用git保存空目录</title>
-        <pubTime>2016-09-22T03:07:36.000Z</pubTime>
+        <title>awk 手册</title>
+        <pubTime>2016-09-23T07:08:36.000Z</pubTime>
+        
+        <tag>awk</tag>
+         
+         
+           
+             
+              <breadCrumb title="sed &amp; awk" url="http://jarsonfang.github.io/etesting/categories/sed-awk/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/23/sed-awk-overview/</loc>
+    <lastmod>2016-09-27T02:42:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>sed & awk 概述</title>
+        <pubTime>2016-09-23T06:23:20.000Z</pubTime>
+        
+        <tag>sed</tag>
+         
+         
+           
+             
+              <breadCrumb title="sed &amp; awk" url="http://jarsonfang.github.io/etesting/categories/sed-awk/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/23/sed-manual/</loc>
+    <lastmod>2016-09-27T02:42:03.000Z</lastmod>
+    <data>
+        <display>
+        <title>sed 学习手册</title>
+        <pubTime>2016-09-23T06:30:15.000Z</pubTime>
+        
+        <tag>sed</tag>
+         
+         
+           
+             
+              <breadCrumb title="sed &amp; awk" url="http://jarsonfang.github.io/etesting/categories/sed-awk/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/23/sed-functions/</loc>
+    <lastmod>2016-09-27T02:41:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>sed 函数参数</title>
+        <pubTime>2016-09-23T06:33:06.000Z</pubTime>
+        
+        <tag>sed</tag>
+         
+         
+           
+             
+              <breadCrumb title="sed &amp; awk" url="http://jarsonfang.github.io/etesting/categories/sed-awk/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/22/git-in-common/</loc>
+    <lastmod>2016-09-22T10:29:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>git常用命令</title>
+        <pubTime>2016-09-22T03:00:27.000Z</pubTime>
         
         <tag>git</tag>
          
@@ -24,12 +104,12 @@
 
     
   <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/22/git-in-common/</loc>
-    <lastmod>2016-09-22T10:10:36.000Z</lastmod>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/22/git-save-empty-dir/</loc>
+    <lastmod>2016-09-22T10:10:59.000Z</lastmod>
     <data>
         <display>
-        <title>git常用命令</title>
-        <pubTime>2016-09-22T03:00:27.000Z</pubTime>
+        <title>用git保存空目录</title>
+        <pubTime>2016-09-22T03:07:36.000Z</pubTime>
         
         <tag>git</tag>
          
