@@ -4,6 +4,745 @@
 
     
   <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/openstack/</loc>
+    <lastmod>2016-09-28T03:37:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>OpenStack</title>
+        <pubTime>2016-09-20T07:17:37.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="virtualization" url="http://jarsonfang.github.io/etesting/categories/testing/virtualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/lxc/</loc>
+    <lastmod>2016-09-28T03:37:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>LXC</title>
+        <pubTime>2016-09-20T07:04:17.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="virtualization" url="http://jarsonfang.github.io/etesting/categories/testing/virtualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/docker/</loc>
+    <lastmod>2016-09-28T03:37:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>Docker</title>
+        <pubTime>2016-09-20T07:05:40.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="virtualization" url="http://jarsonfang.github.io/etesting/categories/testing/virtualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/qemu/</loc>
+    <lastmod>2016-09-28T03:36:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>QEMU</title>
+        <pubTime>2016-09-20T07:03:36.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="virtualization" url="http://jarsonfang.github.io/etesting/categories/testing/virtualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/xen/</loc>
+    <lastmod>2016-09-28T03:36:51.000Z</lastmod>
+    <data>
+        <display>
+        <title>Xen</title>
+        <pubTime>2016-09-20T07:21:31.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="virtualization" url="http://jarsonfang.github.io/etesting/categories/testing/virtualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/kvm/</loc>
+    <lastmod>2016-09-28T03:36:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>KVM</title>
+        <pubTime>2016-09-20T07:21:35.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="virtualization" url="http://jarsonfang.github.io/etesting/categories/testing/virtualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/samba/</loc>
+    <lastmod>2016-09-28T03:36:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>Samba</title>
+        <pubTime>2016-09-20T06:16:21.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/testing/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/ftp/</loc>
+    <lastmod>2016-09-28T03:36:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>FTP</title>
+        <pubTime>2016-09-20T06:46:04.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/testing/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/dhcp/</loc>
+    <lastmod>2016-09-28T03:36:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>DHCP</title>
+        <pubTime>2016-09-20T06:52:13.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/testing/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/dns/</loc>
+    <lastmod>2016-09-28T03:35:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>DNS</title>
+        <pubTime>2016-09-20T06:56:36.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/testing/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/nginx/</loc>
+    <lastmod>2016-09-28T03:35:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Nginx</title>
+        <pubTime>2016-09-20T06:59:06.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/testing/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/apache2/</loc>
+    <lastmod>2016-09-28T03:35:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>Apache2</title>
+        <pubTime>2016-09-20T07:00:13.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/testing/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/postgresql/</loc>
+    <lastmod>2016-09-28T03:35:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>PostgreSQL</title>
+        <pubTime>2016-09-20T07:01:15.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+        <tag>SQL</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/testing/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/mysql/</loc>
+    <lastmod>2016-09-28T03:35:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>MySQL</title>
+        <pubTime>2016-09-20T07:01:12.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+        <tag>SQL</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/testing/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/php/</loc>
+    <lastmod>2016-09-28T03:34:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>PHP</title>
+        <pubTime>2016-09-20T07:01:52.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/testing/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/lamp/</loc>
+    <lastmod>2016-09-28T03:34:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>LAMP</title>
+        <pubTime>2016-09-20T07:02:41.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/testing/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/hadoop/</loc>
+    <lastmod>2016-09-28T03:34:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hadoop</title>
+        <pubTime>2016-09-20T07:34:02.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="App" url="http://jarsonfang.github.io/etesting/categories/testing/App/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/odp/</loc>
+    <lastmod>2016-09-28T03:34:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>ODP</title>
+        <pubTime>2016-09-20T07:35:51.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="App" url="http://jarsonfang.github.io/etesting/categories/testing/App/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/ceph/</loc>
+    <lastmod>2016-09-28T03:34:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ceph</title>
+        <pubTime>2016-09-20T07:39:21.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="App" url="http://jarsonfang.github.io/etesting/categories/testing/App/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/openjdk/</loc>
+    <lastmod>2016-09-28T03:33:35.000Z</lastmod>
+    <data>
+        <display>
+        <title>OpenJDK</title>
+        <pubTime>2016-09-20T07:39:30.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="App" url="http://jarsonfang.github.io/etesting/categories/testing/App/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/armor/</loc>
+    <lastmod>2016-09-28T03:33:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>Armor</title>
+        <pubTime>2016-09-20T07:50:02.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="Utility" url="http://jarsonfang.github.io/etesting/categories/testing/Utility/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/sysbench/</loc>
+    <lastmod>2016-09-28T03:05:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>sysbench</title>
+        <pubTime>2016-09-20T08:15:48.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="Utility" url="http://jarsonfang.github.io/etesting/categories/testing/Utility/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/caliper/</loc>
+    <lastmod>2016-09-28T03:05:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>caliper</title>
+        <pubTime>2016-09-20T08:16:05.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Debian</tag>
+         
+        <tag>Fedora</tag>
+         
+        <tag>Centos</tag>
+         
+        <tag>Opensuse</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="Utility" url="http://jarsonfang.github.io/etesting/categories/testing/Utility/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/23/sed-awk-overview/</loc>
+    <lastmod>2016-09-27T06:11:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>sed & awk 概述</title>
+        <pubTime>2016-09-23T06:23:20.000Z</pubTime>
+        
+        <tag>sed</tag>
+         
+        <tag>awk</tag>
+         
+         
+           
+             
+              <breadCrumb title="sed &amp; awk" url="http://jarsonfang.github.io/etesting/categories/sed-awk/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jarsonfang.github.io/etesting/2016/09/23/sed-functions/</loc>
     <lastmod>2016-09-27T03:05:02.000Z</lastmod>
     <data>
@@ -32,26 +771,6 @@
         <pubTime>2016-09-23T07:08:36.000Z</pubTime>
         
         <tag>awk</tag>
-         
-         
-           
-             
-              <breadCrumb title="sed &amp; awk" url="http://jarsonfang.github.io/etesting/categories/sed-awk/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/23/sed-awk-overview/</loc>
-    <lastmod>2016-09-27T02:42:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>sed & awk 概述</title>
-        <pubTime>2016-09-23T06:23:20.000Z</pubTime>
-        
-        <tag>sed</tag>
          
          
            
@@ -137,654 +856,6 @@
            
              
               <breadCrumb title="VCS" url="http://jarsonfang.github.io/etesting/categories/VCS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/samba/</loc>
-    <lastmod>2016-09-22T08:15:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>Samba</title>
-        <pubTime>2016-09-20T06:16:21.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/Server/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/caliper/</loc>
-    <lastmod>2016-09-20T08:18:51.000Z</lastmod>
-    <data>
-        <display>
-        <title>caliper</title>
-        <pubTime>2016-09-20T08:16:05.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="Utility" url="http://jarsonfang.github.io/etesting/categories/Utility/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/sysbench/</loc>
-    <lastmod>2016-09-20T08:18:33.000Z</lastmod>
-    <data>
-        <display>
-        <title>sysbench</title>
-        <pubTime>2016-09-20T08:15:48.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="Utility" url="http://jarsonfang.github.io/etesting/categories/Utility/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/armor/</loc>
-    <lastmod>2016-09-20T08:18:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>Armor</title>
-        <pubTime>2016-09-20T07:50:02.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="Utility" url="http://jarsonfang.github.io/etesting/categories/Utility/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/openjdk/</loc>
-    <lastmod>2016-09-20T07:40:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>OpenJDK</title>
-        <pubTime>2016-09-20T07:39:30.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="App" url="http://jarsonfang.github.io/etesting/categories/App/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/ceph/</loc>
-    <lastmod>2016-09-20T07:39:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ceph</title>
-        <pubTime>2016-09-20T07:39:21.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="App" url="http://jarsonfang.github.io/etesting/categories/App/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/odp/</loc>
-    <lastmod>2016-09-20T07:37:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>ODP</title>
-        <pubTime>2016-09-20T07:35:51.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="App" url="http://jarsonfang.github.io/etesting/categories/App/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/hadoop/</loc>
-    <lastmod>2016-09-20T07:37:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hadoop</title>
-        <pubTime>2016-09-20T07:34:02.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="App" url="http://jarsonfang.github.io/etesting/categories/App/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/postgresql/</loc>
-    <lastmod>2016-09-20T07:33:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>PostgreSQL</title>
-        <pubTime>2016-09-20T07:01:15.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-        <tag>SQL</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/Server/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/mysql/</loc>
-    <lastmod>2016-09-20T07:33:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>MySQL</title>
-        <pubTime>2016-09-20T07:01:12.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-        <tag>SQL</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/Server/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/ftp/</loc>
-    <lastmod>2016-09-20T07:25:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>FTP</title>
-        <pubTime>2016-09-20T06:46:04.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/Server/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/xen/</loc>
-    <lastmod>2016-09-20T07:22:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>Xen</title>
-        <pubTime>2016-09-20T07:21:31.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="virtualization" url="http://jarsonfang.github.io/etesting/categories/virtualization/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/kvm/</loc>
-    <lastmod>2016-09-20T07:22:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>KVM</title>
-        <pubTime>2016-09-20T07:21:35.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="virtualization" url="http://jarsonfang.github.io/etesting/categories/virtualization/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/openstack/</loc>
-    <lastmod>2016-09-20T07:20:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>OpenStack</title>
-        <pubTime>2016-09-20T07:17:37.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="virtualization" url="http://jarsonfang.github.io/etesting/categories/virtualization/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/php/</loc>
-    <lastmod>2016-09-20T07:13:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>PHP</title>
-        <pubTime>2016-09-20T07:01:52.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/Server/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/lamp/</loc>
-    <lastmod>2016-09-20T07:11:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>LAMP</title>
-        <pubTime>2016-09-20T07:02:41.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/Server/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/dhcp/</loc>
-    <lastmod>2016-09-20T07:09:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>DHCP</title>
-        <pubTime>2016-09-20T06:52:13.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/Server/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/dns/</loc>
-    <lastmod>2016-09-20T07:08:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>DNS</title>
-        <pubTime>2016-09-20T06:56:36.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/Server/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/docker/</loc>
-    <lastmod>2016-09-20T07:07:30.000Z</lastmod>
-    <data>
-        <display>
-        <title>Docker</title>
-        <pubTime>2016-09-20T07:05:40.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="virtualization" url="http://jarsonfang.github.io/etesting/categories/virtualization/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/qemu/</loc>
-    <lastmod>2016-09-20T07:07:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>QEMU</title>
-        <pubTime>2016-09-20T07:03:36.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="virtualization" url="http://jarsonfang.github.io/etesting/categories/virtualization/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/lxc/</loc>
-    <lastmod>2016-09-20T07:05:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>LXC</title>
-        <pubTime>2016-09-20T07:04:17.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="virtualization" url="http://jarsonfang.github.io/etesting/categories/virtualization/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/nginx/</loc>
-    <lastmod>2016-09-20T07:01:09.000Z</lastmod>
-    <data>
-        <display>
-        <title>Nginx</title>
-        <pubTime>2016-09-20T06:59:06.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/Server/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/apache2/</loc>
-    <lastmod>2016-09-20T07:00:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>Apache2</title>
-        <pubTime>2016-09-20T07:00:13.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/Server/"/>
           
         </display>
     </data>
