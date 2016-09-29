@@ -4,6 +4,144 @@
 
     
   <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/29/Grub_Manual.4All/</loc>
+    <lastmod>2016-09-29T08:27:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>Grub_Manual.4All</title>
+        <pubTime>2016-09-29T07:52:01.000Z</pubTime>
+        
+        <tag>D05</tag>
+         
+         
+           
+             
+              <breadCrumb title="D05" url="http://jarsonfang.github.io/etesting/categories/D05/"/>
+          
+             
+              <breadCrumb title="Deployment" url="http://jarsonfang.github.io/etesting/categories/D05/Deployment/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/29/Readme.4D05/</loc>
+    <lastmod>2016-09-29T08:27:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>Readme.4D05</title>
+        <pubTime>2016-09-29T07:52:01.000Z</pubTime>
+        
+        <tag>D05</tag>
+         
+         
+           
+             
+              <breadCrumb title="D05" url="http://jarsonfang.github.io/etesting/categories/D05/"/>
+          
+             
+              <breadCrumb title="Deployment" url="http://jarsonfang.github.io/etesting/categories/D05/Deployment/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/29/Quick_Deployment.4D05/</loc>
+    <lastmod>2016-09-29T08:27:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>Quick_Deployment.4D05</title>
+        <pubTime>2016-09-29T07:52:01.000Z</pubTime>
+        
+        <tag>D05</tag>
+         
+         
+           
+             
+              <breadCrumb title="D05" url="http://jarsonfang.github.io/etesting/categories/D05/"/>
+          
+             
+              <breadCrumb title="Deployment" url="http://jarsonfang.github.io/etesting/categories/D05/Deployment/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/29/UEFI_Manual.4D05/</loc>
+    <lastmod>2016-09-29T08:27:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>UEFI_Manual.4D05</title>
+        <pubTime>2016-09-29T07:52:01.000Z</pubTime>
+        
+        <tag>D05</tag>
+         
+         
+           
+             
+              <breadCrumb title="D05" url="http://jarsonfang.github.io/etesting/categories/D05/"/>
+          
+             
+              <breadCrumb title="Deployment" url="http://jarsonfang.github.io/etesting/categories/D05/Deployment/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/29/Deploy_Manual.4D05/</loc>
+    <lastmod>2016-09-29T08:27:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>Deploy_Manual.4D05</title>
+        <pubTime>2016-09-29T07:52:01.000Z</pubTime>
+        
+        <tag>D05</tag>
+         
+         
+           
+             
+              <breadCrumb title="D05" url="http://jarsonfang.github.io/etesting/categories/D05/"/>
+          
+             
+              <breadCrumb title="Deployment" url="http://jarsonfang.github.io/etesting/categories/D05/Deployment/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/2016/09/20/samba-on-centos/</loc>
+    <lastmod>2016-09-29T08:17:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>Samba on Centos 7</title>
+        <pubTime>2016-09-20T06:16:21.000Z</pubTime>
+        
+        <tag>Centos</tag>
+         
+         
+           
+             
+              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
+          
+             
+              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/testing/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jarsonfang.github.io/etesting/2016/09/20/openstack/</loc>
     <lastmod>2016-09-28T03:37:25.000Z</lastmod>
     <data>
@@ -183,37 +321,6 @@
           
              
               <breadCrumb title="virtualization" url="http://jarsonfang.github.io/etesting/categories/testing/virtualization/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/2016/09/20/samba/</loc>
-    <lastmod>2016-09-28T03:36:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>Samba</title>
-        <pubTime>2016-09-20T06:16:21.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Debian</tag>
-         
-        <tag>Fedora</tag>
-         
-        <tag>Centos</tag>
-         
-        <tag>Opensuse</tag>
-         
-         
-           
-             
-              <breadCrumb title="testing" url="http://jarsonfang.github.io/etesting/categories/testing/"/>
-          
-             
-              <breadCrumb title="Server" url="http://jarsonfang.github.io/etesting/categories/testing/Server/"/>
           
         </display>
     </data>
