@@ -4,6 +4,38 @@
   
     
     <entry>
+      <title><![CDATA[Readme.4D05]]></title>
+      <url>http://jarsonfang.github.io/etesting/D05/Deployment/Readme.4D05/</url>
+      <content type="html"><![CDATA[<p>This is the readme file for D05 platform<br><a id="more"></a></p>
+<p>After you executed <code>./estuary/build.sh --file=./estuary/estuarycfg.json --builddir=./workspace</code> for D05, all targets files will be produced. they are:</p>
+<h3 id="UEFI-D05-fd"><a href="#UEFI-D05-fd" class="headerlink" title="UEFI_D05.fd"></a>UEFI_D05.fd</h3><p><strong>description</strong>: UEFI_D05.fd is the UEFI bios for D05 platform.</p>
+<p><strong>target</strong>: <code>&lt;project root&gt;/workspace/binary/D05/UEFI_D05.fd</code></p>
+<p><strong>source</strong>: <code>&lt;project root&gt;/uefi</code></p>
+<p>build commands(supposedly, you are in <code>&lt;project root&gt;</code> currently):<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./estuary/submodules/build-uefi.sh --platform=D05 --output=workspace</div></pre></td></tr></table></figure></p>
+<h3 id="grubaa64-efi"><a href="#grubaa64-efi" class="headerlink" title="grubaa64.efi"></a>grubaa64.efi</h3><p><strong>description</strong>:</p>
+<p>grubaa64.efi is used to load kernel image and dtb files from SATA, SAS, USB Disk, or NFS into RAM and start the kernel.</p>
+<p><strong>target</strong>: <code>&lt;project root&gt;/workspace/binary/arm64/grubaa64.efi</code></p>
+<p><strong>source</strong>: <code>&lt;project root&gt;/grub</code></p>
+<p>build commands(supposedly, you are in <code>&lt;project root&gt;</code> currently):</p>
+<p><code>./estuary/submodules/build-grub.sh --output=./workspace</code>, if your host is not arm architecture, please execute<code>build-grub.sh --output=./workspace --cross=aarch64-linux-gnu-</code></p>
+<p>Note: more details about how to install gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md" target="_blank" rel="external">https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md</a>.</p>
+<h3 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h3><p><strong>descriptions</strong>: Image is the kernel executable program.</p>
+<p><strong>target</strong>:</p>
+<p>Image in <code>&lt;project root&gt;/workspace/binary/arm64/Image</code></p>
+<p><strong>source</strong>: <code>&lt;project root&gt;/kernel</code></p>
+<p>build commands(supposedly, you are in <code>&lt;project root&gt;</code> currently):</p>
+<p><code>./estuary/submodules/build-kernel.sh --platform=D05 --output=workspace</code>, if your host is not arm architecture, please execute <code>./estuary/submodules/build-kernel.sh --platform=D05 --output=workspace --cross=aarch64-linux-gnu-</code>.</p>
+<p>Note: more details about how to install gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md" target="_blank" rel="external">https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md</a>.</p>
+<p>More detail about distributions, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Distributions_Guide.4All.md" target="_blank" rel="external">Distributions_Guide.md</a>.</p>
+<p>More detail about toolchains, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md" target="_blank" rel="external">Toolchains_Guide.md</a>.</p>
+<p>More detail about how to deploy target system into D05 board, please refer to <a href="https://github.com/open-estuary/estuary/blob/estuary-d05-3.0b/doc/Deploy_Manual.4D05.md" target="_blank" rel="external">Deployment_Manual.md</a>.</p>
+<p>More detail about how to debug, analyse, diagnose system, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Armor_Manual.4All.md" target="_blank" rel="external">Armor_Manual.md</a>.</p>
+<p>More detail about how to benchmark system, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Caliper_Manual.4All.md" target="_blank" rel="external">Caliper_Manual.md</a>.</p>
+<p>More detail about how to access remote boards in OpenLab, please refer to <a href="http://open-estuary.org/accessing-boards-in-open-lab/" target="_blank" rel="external">Boards_in_OpenLab</a>.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Grub_Manual.4All]]></title>
       <url>http://jarsonfang.github.io/etesting/D05/Deployment/Grub_Manual.4All/</url>
       <content type="html"><![CDATA[<ul>
@@ -52,112 +84,70 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quick_Deployment.4D05]]></title>
-      <url>http://jarsonfang.github.io/etesting/D05/Deployment/Quick_Deployment.4D05/</url>
+      <title><![CDATA[UEFI_Manual.4D05]]></title>
+      <url>http://jarsonfang.github.io/etesting/D05/Deployment/UEFI_Manual.4D05/</url>
       <content type="html"><![CDATA[<ul>
 <li><a href="#1">Introduction</a></li>
-<li><a href="#2">Quick Deploy System</a><ul>
-<li><a href="#2.1">Deploy system via USB Disk</a></li>
-<li><a href="#2.2">Deploy system via DVD/BMC</a></li>
-<li><a href="#2.3">Deploy system via PXE</a></li>
-</ul>
-</li>
+<li><a href="#2">Upgrade UEFI</a></li>
+<li><a href="#3">Recover the UEFI when it broke</a></li>
 </ul>
 <a id="more"></a>
 <h2 id="1">Introduction</h2>
 
-<p>Above all, prepare hardware boards with SCSI disk and download Estuary source code from GitHub.<br>To learn more about how to do them, please visit this web site: <a href="http://open-estuary.com/estuary-user-manual/" target="_blank" rel="external">http://open-estuary.com/estuary-user-manual/</a>, and then refer to ‘Get &amp; Build Estuary yourself’.<br>Note: In my case, the working directory is <code>~/workdir</code>.</p>
-<h2 id="2">Quick Deploy System</h2>
+<p>UEFI is a kind of BIOS to boot system and provide runtime service to OS which can do some basic IO operation with the runtime service, e.g.: reboot, powe off and etc.<br>Normally, there are some trust firmware will be produce from UEFI building, they are responsible for trust reprogram, they include:</p>
+<p>  UEFI_D05.fd         //UEFI executable binary file.</p>
+<p>  CH02TEVBC_V03.bin   //CPLD binary to control power supplier.</p>
+<p>Where to get them, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Readme.4D05.md" target="_blank" rel="external">Readme.md</a>.</p>
+<h2 id="2">Upgrade UEFI</h2>
 
-<h3 id="2.1">Deploy system via USB Disk</h3>
+<p>Note: This is not necessary unless you want to upgrade UEFI really.</p>
+<ul>
+<li><p>Prepare files about UEFI on local computer</p>
+<p>FTP protocol is used for downloading between hardware boards and local network. Aboveall, please make sure you have a working FTP server in local network, so that board can get needed files from network by FTP.</p>
+<p>All files mentioned above should be ready firstly, then put them in the root directory of FTP.</p>
+</li>
+<li><p>Connect the board’s UART port to a host machine</p>
+<p>Please refer to <a href="https://github.com/open-estuary/estuary/tree/estuary-d05-3.0b/doc/Deploy_Manual.4D05.md" target="_blank" rel="external">Deploy_Manual.4D05.md</a> “Prerequisite” chapter.</p>
+<p>If you choose Method 1, use another console window, use <code>board_reboot</code> command to reset the board.</p>
+<p>If you choose Method 2, press the reset key on the board to reset the board.</p>
+<p>when system showing “Press Any key in 10 seconds to stop automatical booting…”, press any key except “enter” key to enter UEFI main menu.</p>
+</li>
+<li><p>UEFI menu introduction</p>
+<p>UEFI main menu option is showed as follow:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">continue</span></div><div class="line">select Language            &lt;standard English&gt;</div><div class="line">&gt;Boot Manager</div><div class="line">&gt;Device Manager</div><div class="line">&gt;Boot Maintenance Manager</div></pre></td></tr></table></figure>
+<p>Choose “Boot Manager” and enter into Boot option menu:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">EFI Misc Device</div><div class="line">EFI Network</div><div class="line">EFI Network 1</div><div class="line">EFI Network 2</div><div class="line">EFI Network 3</div><div class="line">EFI Internal Shell</div><div class="line">ESL Start OS</div><div class="line">Embedded Boot Loader(EBL)</div></pre></td></tr></table></figure>
+<p>D05 board support 4 on-board network ports at maximun. To enable any one of them by connecting to network cable or optical fiber. From left to right, followed by the two 2GE ports, two 10GE ports which corresponding to UEFI startup interface are EFI Network 2, EFI Network 3, EFI Network 0, EFI Network 1.</p>
+<p>EFI Internal Shell mode is a standard command shell in UEFI.</p>
+<p>Embedded Boot Loader(EBL) mode is an embedded command shell based on boot loader specially for developers.</p>
+<p>You can switch between two modes by typing “exit” from one mode to UEFI main menu and then choose the another mode.</p>
+</li>
+<li><p>Update UEFI files</p>
+<p>a. IP address config at “EFI Internal Shell” mode(Optional, you can ignore this step if DHCP works well)</p>
+<p>Press any key except “enter” key to enter UEFI main menu. Select “Boot Manager”-&gt;”EFI Internal Shell”.</p>
+<p><code>ifconfig -s eth0 static &lt;IP address&gt; &lt;mask&gt; &lt;gateway&gt;</code></p>
+<p>e.g.:</p>
+<p><code>ifconfig -s eth0 static 192.168.1.4 255.255.255.0 192.168.1.1</code></p>
+<p>b. Burn BIOS file at “Embedded Boot Loader(EBL)” mode</p>
+<p>Enter “exit” from “EFI Internal Shell” mode to the UEFI main menu and choose “Boot Manager”-&gt; “Embedded Boot Loader(EBL)”after setting the IP address done.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Download file from FTP server to board's RAM</span></div><div class="line">provision &lt;server IP&gt; -u &lt;ftp user name&gt; -p &lt;ftp password&gt; <span class="_">-f</span> &lt;UEFI binary&gt; <span class="_">-a</span> &lt;download target address&gt;</div><div class="line"><span class="comment"># Write the data into NORFLASH</span></div><div class="line">spiwfmem &lt;<span class="built_in">source</span> address&gt; &lt;target address&gt; &lt;data length&gt;</div></pre></td></tr></table></figure>
+<p>e.g.:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">provision 192.168.1.107 -u sch -p aaa <span class="_">-f</span> UEFI_D05.fd <span class="_">-a</span> 0x100000</div><div class="line">spiwfmem 0x100000 0x0000000 0x300000</div></pre></td></tr></table></figure>
+<p>c. Power off and reboot board again.</p>
+</li>
+</ul>
+<h2 id="3">Recover the UEFI when it broke</h2>
 
+<p>Actually the board can restore two UEFI in case of the default one breaks, then you can restore it as following way:</p>
 <ol>
-<li><p>Prepare usb install disk.</p>
-<ul>
-<li><p>Modify estuary/estuarycfg.json. Make sure the platform, distros are all right.</p>
-</li>
-<li><p>Change the value of “install” to “yes” in object “setup” for usb and the value “device” to your USB install disk.<br>(Notice: if the specified usb device does not exist, the first usb device will be selected by default.)</p>
-</li>
-<li><p>Use build.sh to create the usb install disk.</p>
-<p> eg: <code>./estuary/build.sh -f estuary/estuarycfg.json</code></p>
-</li>
-</ul>
-</li>
-<li><p>Connect the usb install disk to the board.</p>
-</li>
-<li><p>Reboot the board.</p>
-</li>
-<li><p>Boot from the usb device. (About how to boot from USB device, please refer to the UEFI related manual.)</p>
-</li>
-<li><p>According to the prompt to deploy the system.</p>
-</li>
-<li><p>Start the boards from “grub” menu of UEFI by default.</p>
-</li>
+<li>Power off the board and disconnect power supply.<br></li>
+<li>Push the dial switch ‘s3’ to ‘off’ with a ‘3’ on the board, please check the Hardware Boards to find where it is: <a href="http://open-estuary.com/d05-2/" target="_blank" rel="external">http://open-estuary.com/d05-2/</a>.<br></li>
+<li>Power on and enter UEFI SHELL again as above description.<br></li>
+<li>Push the dial swift ‘s3’ to ‘on’ with a ‘3’ on the board.<br></li>
+<li>Burn UEFI file for BIOS as above step3 “Update UEFI files”.<br></li>
+<li>Reset the system again.</li>
 </ol>
-<h3 id="2.2">Deploy system via DVD/BMC</h3>
-
-<ol>
-<li><p>Prepare ISO image and install disk.</p>
-<ul>
-<li><p>Modify estuary/estuarycfg.json. Make sure the platform, distros are all right.</p>
-</li>
-<li><p>Change the value of “install” to “yes” in object “setup” for iso and the value “name” to your target iso image file name.</p>
-</li>
-<li><p>Use build.sh to create the target install iso image file.</p>
-<p> eg: <code>./estuary/build.sh -f estuary/estuarycfg.json</code></p>
-</li>
-</ul>
-</li>
-<li><p>Via DVD</p>
-<ul>
-<li><p>Burn the iso image file to DVD disk if you use the physical DVD driver.</p>
-</li>
-<li><p>Connect the physical DVD driver to the board, plug in the install DVD disk.</p>
-</li>
-<li><p>Reboot the board.</p>
-</li>
-<li><p>Boot from the DVD device. (About how to boot from DVD device, please refer to the UEFI related manual.)</p>
-</li>
-<li><p>According to the prompt to deploy the system.</p>
-</li>
-<li><p>Start the boards from “grub” menu of UEFI by default.</p>
-</li>
-</ul>
-</li>
-<li><p>Via BMC</p>
-<ul>
-<li><p>Login BMC website of specified IP with browser(IE browser is suggested to use), The <code>username</code> &amp; <code>password</code> is <code>root</code> &amp; <code>Huawei12#$</code>.</p>
-</li>
-<li><p>Click “Remote” on the top of BMC webiste. Select “Remote Virtual Console (Private Mode)” to enter into KVM interface. Click “Image File” and choose the iso image, then click “Connect” button.</p>
-</li>
-<li><p>Click “Config” on the top of BMC website, click “Boot Option” to select “DVD-ROM drive”, then click “Save” button.</p>
-</li>
-<li><p>Reboot the board</p>
-</li>
-<li><p>According to the prompt to deploy the system.</p>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="2.3">Deploy system via PXE</h3>
-
-<ol>
-<li><p>Connect Ubuntu PC and hardware boards into the same local area network. (Make sure the PC can connect to the internet and no other PXE servers exist.)</p>
-</li>
-<li><p>Modify the configuration file of estuary/estuarycfg.json based on you hardware boards. Change the values of mac to physical addresses of the connected network cards on the board. Change the value of “install” to “yes” in object “setup” for PXE.</p>
-</li>
-<li><p>Backup files under the tftp root directory if necessary. Use build.sh to bBMCd project and setup the PXE server on Ubuntu PC.</p>
-<p>eg: <code>./estuary/build.sh -f estuary/estuarycfg.json</code></p>
-</li>
-<li><p>After that, install minicom and connect the serial ports of hardware boards to the Ubuntu PC. Connect the hardware boards by minicom using serial ports.</p>
-</li>
-<li><p>Reboot the hardware boards and start the boards from the correct EFI Network.</p>
-</li>
-<li><p>Install the system according to prompt. After install finished, the boards will restart automatically.</p>
-</li>
-<li><p>Start the boards from “grub” menu of UEFI by default.</p>
-</li>
-</ol>
+<p>Now you have already updated your failed BIOS, and the board will boot with new UEFI successfully.</p>
 ]]></content>
     </entry>
     
@@ -287,102 +277,112 @@
     </entry>
     
     <entry>
-      <title><![CDATA[UEFI_Manual.4D05]]></title>
-      <url>http://jarsonfang.github.io/etesting/D05/Deployment/UEFI_Manual.4D05/</url>
+      <title><![CDATA[Quick_Deployment.4D05]]></title>
+      <url>http://jarsonfang.github.io/etesting/D05/Deployment/Quick_Deployment.4D05/</url>
       <content type="html"><![CDATA[<ul>
 <li><a href="#1">Introduction</a></li>
-<li><a href="#2">Upgrade UEFI</a></li>
-<li><a href="#3">Recover the UEFI when it broke</a></li>
+<li><a href="#2">Quick Deploy System</a><ul>
+<li><a href="#2.1">Deploy system via USB Disk</a></li>
+<li><a href="#2.2">Deploy system via DVD/BMC</a></li>
+<li><a href="#2.3">Deploy system via PXE</a></li>
+</ul>
+</li>
 </ul>
 <a id="more"></a>
 <h2 id="1">Introduction</h2>
 
-<p>UEFI is a kind of BIOS to boot system and provide runtime service to OS which can do some basic IO operation with the runtime service, e.g.: reboot, powe off and etc.<br>Normally, there are some trust firmware will be produce from UEFI building, they are responsible for trust reprogram, they include:</p>
-<p>  UEFI_D05.fd         //UEFI executable binary file.</p>
-<p>  CH02TEVBC_V03.bin   //CPLD binary to control power supplier.</p>
-<p>Where to get them, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Readme.4D05.md" target="_blank" rel="external">Readme.md</a>.</p>
-<h2 id="2">Upgrade UEFI</h2>
+<p>Above all, prepare hardware boards with SCSI disk and download Estuary source code from GitHub.<br>To learn more about how to do them, please visit this web site: <a href="http://open-estuary.com/estuary-user-manual/" target="_blank" rel="external">http://open-estuary.com/estuary-user-manual/</a>, and then refer to ‘Get &amp; Build Estuary yourself’.<br>Note: In my case, the working directory is <code>~/workdir</code>.</p>
+<h2 id="2">Quick Deploy System</h2>
 
-<p>Note: This is not necessary unless you want to upgrade UEFI really.</p>
+<h3 id="2.1">Deploy system via USB Disk</h3>
+
+<ol>
+<li><p>Prepare usb install disk.</p>
 <ul>
-<li><p>Prepare files about UEFI on local computer</p>
-<p>FTP protocol is used for downloading between hardware boards and local network. Aboveall, please make sure you have a working FTP server in local network, so that board can get needed files from network by FTP.</p>
-<p>All files mentioned above should be ready firstly, then put them in the root directory of FTP.</p>
+<li><p>Modify estuary/estuarycfg.json. Make sure the platform, distros are all right.</p>
 </li>
-<li><p>Connect the board’s UART port to a host machine</p>
-<p>Please refer to <a href="https://github.com/open-estuary/estuary/tree/estuary-d05-3.0b/doc/Deploy_Manual.4D05.md" target="_blank" rel="external">Deploy_Manual.4D05.md</a> “Prerequisite” chapter.</p>
-<p>If you choose Method 1, use another console window, use <code>board_reboot</code> command to reset the board.</p>
-<p>If you choose Method 2, press the reset key on the board to reset the board.</p>
-<p>when system showing “Press Any key in 10 seconds to stop automatical booting…”, press any key except “enter” key to enter UEFI main menu.</p>
+<li><p>Change the value of “install” to “yes” in object “setup” for usb and the value “device” to your USB install disk.<br>(Notice: if the specified usb device does not exist, the first usb device will be selected by default.)</p>
 </li>
-<li><p>UEFI menu introduction</p>
-<p>UEFI main menu option is showed as follow:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">continue</span></div><div class="line">select Language            &lt;standard English&gt;</div><div class="line">&gt;Boot Manager</div><div class="line">&gt;Device Manager</div><div class="line">&gt;Boot Maintenance Manager</div></pre></td></tr></table></figure>
-<p>Choose “Boot Manager” and enter into Boot option menu:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">EFI Misc Device</div><div class="line">EFI Network</div><div class="line">EFI Network 1</div><div class="line">EFI Network 2</div><div class="line">EFI Network 3</div><div class="line">EFI Internal Shell</div><div class="line">ESL Start OS</div><div class="line">Embedded Boot Loader(EBL)</div></pre></td></tr></table></figure>
-<p>D05 board support 4 on-board network ports at maximun. To enable any one of them by connecting to network cable or optical fiber. From left to right, followed by the two 2GE ports, two 10GE ports which corresponding to UEFI startup interface are EFI Network 2, EFI Network 3, EFI Network 0, EFI Network 1.</p>
-<p>EFI Internal Shell mode is a standard command shell in UEFI.</p>
-<p>Embedded Boot Loader(EBL) mode is an embedded command shell based on boot loader specially for developers.</p>
-<p>You can switch between two modes by typing “exit” from one mode to UEFI main menu and then choose the another mode.</p>
-</li>
-<li><p>Update UEFI files</p>
-<p>a. IP address config at “EFI Internal Shell” mode(Optional, you can ignore this step if DHCP works well)</p>
-<p>Press any key except “enter” key to enter UEFI main menu. Select “Boot Manager”-&gt;”EFI Internal Shell”.</p>
-<p><code>ifconfig -s eth0 static &lt;IP address&gt; &lt;mask&gt; &lt;gateway&gt;</code></p>
-<p>e.g.:</p>
-<p><code>ifconfig -s eth0 static 192.168.1.4 255.255.255.0 192.168.1.1</code></p>
-<p>b. Burn BIOS file at “Embedded Boot Loader(EBL)” mode</p>
-<p>Enter “exit” from “EFI Internal Shell” mode to the UEFI main menu and choose “Boot Manager”-&gt; “Embedded Boot Loader(EBL)”after setting the IP address done.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Download file from FTP server to board's RAM</span></div><div class="line">provision &lt;server IP&gt; -u &lt;ftp user name&gt; -p &lt;ftp password&gt; <span class="_">-f</span> &lt;UEFI binary&gt; <span class="_">-a</span> &lt;download target address&gt;</div><div class="line"><span class="comment"># Write the data into NORFLASH</span></div><div class="line">spiwfmem &lt;<span class="built_in">source</span> address&gt; &lt;target address&gt; &lt;data length&gt;</div></pre></td></tr></table></figure>
-<p>e.g.:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">provision 192.168.1.107 -u sch -p aaa <span class="_">-f</span> UEFI_D05.fd <span class="_">-a</span> 0x100000</div><div class="line">spiwfmem 0x100000 0x0000000 0x300000</div></pre></td></tr></table></figure>
-<p>c. Power off and reboot board again.</p>
+<li><p>Use build.sh to create the usb install disk.</p>
+<p> eg: <code>./estuary/build.sh -f estuary/estuarycfg.json</code></p>
 </li>
 </ul>
-<h2 id="3">Recover the UEFI when it broke</h2>
-
-<p>Actually the board can restore two UEFI in case of the default one breaks, then you can restore it as following way:</p>
-<ol>
-<li>Power off the board and disconnect power supply.<br></li>
-<li>Push the dial switch ‘s3’ to ‘off’ with a ‘3’ on the board, please check the Hardware Boards to find where it is: <a href="http://open-estuary.com/d05-2/" target="_blank" rel="external">http://open-estuary.com/d05-2/</a>.<br></li>
-<li>Power on and enter UEFI SHELL again as above description.<br></li>
-<li>Push the dial swift ‘s3’ to ‘on’ with a ‘3’ on the board.<br></li>
-<li>Burn UEFI file for BIOS as above step3 “Update UEFI files”.<br></li>
-<li>Reset the system again.</li>
+</li>
+<li><p>Connect the usb install disk to the board.</p>
+</li>
+<li><p>Reboot the board.</p>
+</li>
+<li><p>Boot from the usb device. (About how to boot from USB device, please refer to the UEFI related manual.)</p>
+</li>
+<li><p>According to the prompt to deploy the system.</p>
+</li>
+<li><p>Start the boards from “grub” menu of UEFI by default.</p>
+</li>
 </ol>
-<p>Now you have already updated your failed BIOS, and the board will boot with new UEFI successfully.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Readme.4D05]]></title>
-      <url>http://jarsonfang.github.io/etesting/D05/Deployment/Readme.4D05/</url>
-      <content type="html"><![CDATA[<p>This is the readme file for D05 platform<br><a id="more"></a></p>
-<p>After you executed <code>./estuary/build.sh --file=./estuary/estuarycfg.json --builddir=./workspace</code> for D05, all targets files will be produced. they are:</p>
-<h3 id="UEFI-D05-fd"><a href="#UEFI-D05-fd" class="headerlink" title="UEFI_D05.fd"></a>UEFI_D05.fd</h3><p><strong>description</strong>: UEFI_D05.fd is the UEFI bios for D05 platform.</p>
-<p><strong>target</strong>: <code>&lt;project root&gt;/workspace/binary/D05/UEFI_D05.fd</code></p>
-<p><strong>source</strong>: <code>&lt;project root&gt;/uefi</code></p>
-<p>build commands(supposedly, you are in <code>&lt;project root&gt;</code> currently):<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./estuary/submodules/build-uefi.sh --platform=D05 --output=workspace</div></pre></td></tr></table></figure></p>
-<h3 id="grubaa64-efi"><a href="#grubaa64-efi" class="headerlink" title="grubaa64.efi"></a>grubaa64.efi</h3><p><strong>description</strong>:</p>
-<p>grubaa64.efi is used to load kernel image and dtb files from SATA, SAS, USB Disk, or NFS into RAM and start the kernel.</p>
-<p><strong>target</strong>: <code>&lt;project root&gt;/workspace/binary/arm64/grubaa64.efi</code></p>
-<p><strong>source</strong>: <code>&lt;project root&gt;/grub</code></p>
-<p>build commands(supposedly, you are in <code>&lt;project root&gt;</code> currently):</p>
-<p><code>./estuary/submodules/build-grub.sh --output=./workspace</code>, if your host is not arm architecture, please execute<code>build-grub.sh --output=./workspace --cross=aarch64-linux-gnu-</code></p>
-<p>Note: more details about how to install gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md" target="_blank" rel="external">https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md</a>.</p>
-<h3 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h3><p><strong>descriptions</strong>: Image is the kernel executable program.</p>
-<p><strong>target</strong>:</p>
-<p>Image in <code>&lt;project root&gt;/workspace/binary/arm64/Image</code></p>
-<p><strong>source</strong>: <code>&lt;project root&gt;/kernel</code></p>
-<p>build commands(supposedly, you are in <code>&lt;project root&gt;</code> currently):</p>
-<p><code>./estuary/submodules/build-kernel.sh --platform=D05 --output=workspace</code>, if your host is not arm architecture, please execute <code>./estuary/submodules/build-kernel.sh --platform=D05 --output=workspace --cross=aarch64-linux-gnu-</code>.</p>
-<p>Note: more details about how to install gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md" target="_blank" rel="external">https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md</a>.</p>
-<p>More detail about distributions, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Distributions_Guide.4All.md" target="_blank" rel="external">Distributions_Guide.md</a>.</p>
-<p>More detail about toolchains, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md" target="_blank" rel="external">Toolchains_Guide.md</a>.</p>
-<p>More detail about how to deploy target system into D05 board, please refer to <a href="https://github.com/open-estuary/estuary/blob/estuary-d05-3.0b/doc/Deploy_Manual.4D05.md" target="_blank" rel="external">Deployment_Manual.md</a>.</p>
-<p>More detail about how to debug, analyse, diagnose system, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Armor_Manual.4All.md" target="_blank" rel="external">Armor_Manual.md</a>.</p>
-<p>More detail about how to benchmark system, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Caliper_Manual.4All.md" target="_blank" rel="external">Caliper_Manual.md</a>.</p>
-<p>More detail about how to access remote boards in OpenLab, please refer to <a href="http://open-estuary.org/accessing-boards-in-open-lab/" target="_blank" rel="external">Boards_in_OpenLab</a>.</p>
+<h3 id="2.2">Deploy system via DVD/BMC</h3>
+
+<ol>
+<li><p>Prepare ISO image and install disk.</p>
+<ul>
+<li><p>Modify estuary/estuarycfg.json. Make sure the platform, distros are all right.</p>
+</li>
+<li><p>Change the value of “install” to “yes” in object “setup” for iso and the value “name” to your target iso image file name.</p>
+</li>
+<li><p>Use build.sh to create the target install iso image file.</p>
+<p> eg: <code>./estuary/build.sh -f estuary/estuarycfg.json</code></p>
+</li>
+</ul>
+</li>
+<li><p>Via DVD</p>
+<ul>
+<li><p>Burn the iso image file to DVD disk if you use the physical DVD driver.</p>
+</li>
+<li><p>Connect the physical DVD driver to the board, plug in the install DVD disk.</p>
+</li>
+<li><p>Reboot the board.</p>
+</li>
+<li><p>Boot from the DVD device. (About how to boot from DVD device, please refer to the UEFI related manual.)</p>
+</li>
+<li><p>According to the prompt to deploy the system.</p>
+</li>
+<li><p>Start the boards from “grub” menu of UEFI by default.</p>
+</li>
+</ul>
+</li>
+<li><p>Via BMC</p>
+<ul>
+<li><p>Login BMC website of specified IP with browser(IE browser is suggested to use), The <code>username</code> &amp; <code>password</code> is <code>root</code> &amp; <code>Huawei12#$</code>.</p>
+</li>
+<li><p>Click “Remote” on the top of BMC webiste. Select “Remote Virtual Console (Private Mode)” to enter into KVM interface. Click “Image File” and choose the iso image, then click “Connect” button.</p>
+</li>
+<li><p>Click “Config” on the top of BMC website, click “Boot Option” to select “DVD-ROM drive”, then click “Save” button.</p>
+</li>
+<li><p>Reboot the board</p>
+</li>
+<li><p>According to the prompt to deploy the system.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="2.3">Deploy system via PXE</h3>
+
+<ol>
+<li><p>Connect Ubuntu PC and hardware boards into the same local area network. (Make sure the PC can connect to the internet and no other PXE servers exist.)</p>
+</li>
+<li><p>Modify the configuration file of estuary/estuarycfg.json based on you hardware boards. Change the values of mac to physical addresses of the connected network cards on the board. Change the value of “install” to “yes” in object “setup” for PXE.</p>
+</li>
+<li><p>Backup files under the tftp root directory if necessary. Use build.sh to bBMCd project and setup the PXE server on Ubuntu PC.</p>
+<p>eg: <code>./estuary/build.sh -f estuary/estuarycfg.json</code></p>
+</li>
+<li><p>After that, install minicom and connect the serial ports of hardware boards to the Ubuntu PC. Connect the hardware boards by minicom using serial ports.</p>
+</li>
+<li><p>Reboot the hardware boards and start the boards from the correct EFI Network.</p>
+</li>
+<li><p>Install the system according to prompt. After install finished, the boards will restart automatically.</p>
+</li>
+<li><p>Start the boards from “grub” menu of UEFI by default.</p>
+</li>
+</ol>
 ]]></content>
     </entry>
     
@@ -1983,36 +1983,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[PHP]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/Server/php/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[PostgreSQL]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/Server/postgresql/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[MySQL]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/Server/mysql/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Apache2]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/Server/apache2/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Nginx]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/Server/nginx/</url>
+      <title><![CDATA[LNMP]]></title>
+      <url>http://jarsonfang.github.io/etesting/testing/Server/lnmp/</url>
       <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
 ]]></content>
     </entry>
@@ -2034,19 +2006,19 @@
     <entry>
       <title><![CDATA[FTP on Centos 7]]></title>
       <url>http://jarsonfang.github.io/etesting/testing/Server/ftp-on-centos/</url>
-      <content type="html"><![CDATA[<p>In this article, we will learn how to configure FTP server on CentOs 7 using ‘vsftpd’. ‘vsftpd’ (Very Secure File Transport Protocol Daemon) is a secure and very fast FTP server on Linux systems.</p>
-<h2 id="Install-vsftpd"><a href="#Install-vsftpd" class="headerlink" title="Install vsftpd"></a>Install vsftpd</h2><p>All commands should be run with <code>root</code> user. Run the following command in terminal to install vsftpd package:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install vsftpd ftp -y</div></pre></td></tr></table></figure></p>
+      <content type="html"><![CDATA[<p>In this article, we will learn how to configure FTP server on CentOs 7 using <code>vsftpd</code>. <code>vsftpd</code> (Very Secure File Transport Protocol Daemon) is a secure and very fast FTP server on Linux systems.</p>
+<h2 id="Install-vsftpd"><a href="#Install-vsftpd" class="headerlink" title="Install vsftpd"></a>Install vsftpd</h2><p>All commands should be run with <code>root</code> user. Run the following command in terminal to install <code>vsftpd</code> package:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install vsftpd ftp -y</div></pre></td></tr></table></figure></p>
 <h2 id="Configure-vsftpd"><a href="#Configure-vsftpd" class="headerlink" title="Configure vsftpd"></a>Configure vsftpd</h2><p>We needed to edit the configuration file <code>/etc/vsftpd/vsftpd.conf</code> for securing the FTP server since, by default it will allow anonymous users to login and use the server.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp /etc/vsftpd/vsftpd.conf&#123;,.bak&#125;</div><div class="line">vi /etc/vsftpd/vsftpd.conf</div></pre></td></tr></table></figure></p>
 <p>We have to disallow anonymous, unidentified users to access files via FTP; change the anonymous_enable setting to NO:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">anonymous_enable=NO</div></pre></td></tr></table></figure></p>
 <p>Allow local users to login by changing the local_enable setting to YES:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">local_enable=YES</div></pre></td></tr></table></figure></p>
 <p>If you want to allow the local users to be able to write to a directory, then change the write_enable setting in the configuration file to YES:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">write_enable=YES</div></pre></td></tr></table></figure></p>
 <p>Local users will be ‘chroot jailed’ and they will be denied access the local users to any other part of the server; change the chroot_local_user setting in the configuration file to YES:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chroot_local_user=YES</div></pre></td></tr></table></figure></p>
 <p>Below is the simple configuration file for your reference:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">anonymous_enable=NO</div><div class="line">local_enable=YES</div><div class="line">write_enable=YES</div><div class="line">local_umask=022</div><div class="line">chroot_local_user=YES</div><div class="line">dirmessage_enable=YES</div><div class="line">xferlog_enable=YES</div><div class="line">connect_from_port_20=YES</div><div class="line">xferlog_std_format=YES</div><div class="line">listen=YES</div><div class="line">#listen_ipv6=YES</div><div class="line">pam_service_name=vsftpd</div><div class="line">userlist_enable=YES</div><div class="line">tcp_wrappers=YES</div></pre></td></tr></table></figure></p>
-<h2 id="Enable-and-restart-the-vsftpd-service"><a href="#Enable-and-restart-the-vsftpd-service" class="headerlink" title="Enable and restart  the vsftpd service"></a>Enable and restart  the vsftpd service</h2><p>We needed to restart the ‘vsftpd’ services so that the configuration changes has applied.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart vsftpd</div></pre></td></tr></table></figure></p>
-<p>We will set the ‘vsftpd’ service to start at boot time, below is the command to enable the ‘vsftpd’ to start.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> vsftpd</div></pre></td></tr></table></figure></p>
+<h2 id="Enable-and-restart-the-vsftpd-service"><a href="#Enable-and-restart-the-vsftpd-service" class="headerlink" title="Enable and restart  the vsftpd service"></a>Enable and restart  the vsftpd service</h2><p>We needed to restart the <code>vsftpd</code> services so that the configuration changes has applied.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart vsftpd</div></pre></td></tr></table></figure></p>
+<p>We will set the <code>vsftpd</code> service to start at boot time, below is the command to enable the <code>vsftpd</code> to start.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> vsftpd</div></pre></td></tr></table></figure></p>
 <h2 id="Allowing-the-vsftpd-Through-the-Firewall"><a href="#Allowing-the-vsftpd-Through-the-Firewall" class="headerlink" title="Allowing the vsftpd Through the Firewall"></a>Allowing the vsftpd Through the Firewall</h2><p>Allow the ftp service and port <strong>21</strong> via firewall.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">firewall-cmd --permanent --add-port=21/tcp</div><div class="line">firewall-cmd --permanent --add-service=ftp</div></pre></td></tr></table></figure></p>
 <p>Restart firewall:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">firewall-cmd --reload</div></pre></td></tr></table></figure></p>
-<h2 id="Create-FTP-users"><a href="#Create-FTP-users" class="headerlink" title="Create FTP users"></a>Create FTP users</h2><p>By default, root user is not allowed to login to ftp server for security purpose. So, let us create a normal testing user called “ftpuser” with password “centos”.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">useradd ftpuser</div><div class="line">passwd ftpuser</div></pre></td></tr></table></figure></p>
+<h2 id="Create-FTP-users"><a href="#Create-FTP-users" class="headerlink" title="Create FTP users"></a>Create FTP users</h2><p>By default, root user is not allowed to login to ftp server for security purpose. So, let us create a normal testing user called “<code>ftpuser</code>” with password “centos”.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">useradd ftpuser</div><div class="line">passwd ftpuser</div></pre></td></tr></table></figure></p>
 <h2 id="Connecting-to-FTP-server"><a href="#Connecting-to-FTP-server" class="headerlink" title="Connecting to FTP server"></a>Connecting to FTP server</h2><p>Now, try to connect to FTP server itself with user “<code>ftpuser</code>”:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ftp 192.168.3.157</div></pre></td></tr></table></figure></p>
 <p>Enter the ftp user name and password.<br>Note: change <code>192.168.3.157</code> with your own FTP server address.</p>
 <p>Sample Output:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">onnected to 192.168.3.157.</div><div class="line">220 (vsFTPd 3.0.2)</div><div class="line">Name (192.168.3.157:jarson): ftpuser</div><div class="line">331 Please specify the password.</div><div class="line">Password:</div><div class="line">230 Login successful.</div><div class="line">Remote system <span class="built_in">type</span> is UNIX.</div><div class="line">Using binary mode to transfer files.</div><div class="line">ftp&gt;</div></pre></td></tr></table></figure></p>
