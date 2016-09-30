@@ -660,8 +660,8 @@
             
               
                 
-                <a class="post-title-link" href="/etesting/testing/Server/ftp/" itemprop="url">
-                  FTP
+                <a class="post-title-link" href="/etesting/testing/Server/ftp-on-centos/" itemprop="url">
+                  FTP on Centos 7
                 </a>
               
             
@@ -716,8 +716,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/etesting/testing/Server/ftp/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="testing/Server/ftp/" itemprop="commentsCount"></span>
+                <a href="/etesting/testing/Server/ftp-on-centos/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="testing/Server/ftp-on-centos/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -742,7 +742,24 @@
       
         
           
-            <p><strong>ToDo …</strong></p>
+            <p>In this article, we will learn how to configure FTP server on CentOs 7 using ‘vsftpd’. ‘vsftpd’ (Very Secure File Transport Protocol Daemon) is a secure and very fast FTP server on Linux systems.</p>
+<h2 id="Install-vsftpd"><a href="#Install-vsftpd" class="headerlink" title="Install vsftpd"></a>Install vsftpd</h2><p>All commands should be run with <code>root</code> user. Run the following command in terminal to install vsftpd package:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install vsftpd ftp -y</div></pre></td></tr></table></figure></p>
+<h2 id="Configure-vsftpd"><a href="#Configure-vsftpd" class="headerlink" title="Configure vsftpd"></a>Configure vsftpd</h2><p>We needed to edit the configuration file <code>/etc/vsftpd/vsftpd.conf</code> for securing the FTP server since, by default it will allow anonymous users to login and use the server.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp /etc/vsftpd/vsftpd.conf&#123;,.bak&#125;</div><div class="line">vi /etc/vsftpd/vsftpd.conf</div></pre></td></tr></table></figure></p>
+<p>We have to disallow anonymous, unidentified users to access files via FTP; change the anonymous_enable setting to NO:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">anonymous_enable=NO</div></pre></td></tr></table></figure></p>
+<p>Allow local users to login by changing the local_enable setting to YES:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">local_enable=YES</div></pre></td></tr></table></figure></p>
+<p>If you want to allow the local users to be able to write to a directory, then change the write_enable setting in the configuration file to YES:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">write_enable=YES</div></pre></td></tr></table></figure></p>
+<p>Local users will be ‘chroot jailed’ and they will be denied access the local users to any other part of the server; change the chroot_local_user setting in the configuration file to YES:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chroot_local_user=YES</div></pre></td></tr></table></figure></p>
+<p>Below is the simple configuration file for your reference:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">anonymous_enable=NO</div><div class="line">local_enable=YES</div><div class="line">write_enable=YES</div><div class="line">local_umask=022</div><div class="line">chroot_local_user=YES</div><div class="line">dirmessage_enable=YES</div><div class="line">xferlog_enable=YES</div><div class="line">connect_from_port_20=YES</div><div class="line">xferlog_std_format=YES</div><div class="line">listen=YES</div><div class="line">#listen_ipv6=YES</div><div class="line">pam_service_name=vsftpd</div><div class="line">userlist_enable=YES</div><div class="line">tcp_wrappers=YES</div></pre></td></tr></table></figure></p>
+<h2 id="Enable-and-restart-the-vsftpd-service"><a href="#Enable-and-restart-the-vsftpd-service" class="headerlink" title="Enable and restart  the vsftpd service"></a>Enable and restart  the vsftpd service</h2><p>We needed to restart the ‘vsftpd’ services so that the configuration changes has applied.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart vsftpd</div></pre></td></tr></table></figure></p>
+<p>We will set the ‘vsftpd’ service to start at boot time, below is the command to enable the ‘vsftpd’ to start.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> vsftpd</div></pre></td></tr></table></figure></p>
+<h2 id="Allowing-the-vsftpd-Through-the-Firewall"><a href="#Allowing-the-vsftpd-Through-the-Firewall" class="headerlink" title="Allowing the vsftpd Through the Firewall"></a>Allowing the vsftpd Through the Firewall</h2><p>Allow the ftp service and port <strong>21</strong> via firewall.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">firewall-cmd --permanent --add-port=21/tcp</div><div class="line">firewall-cmd --permanent --add-service=ftp</div></pre></td></tr></table></figure></p>
+<p>Restart firewall:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">firewall-cmd --reload</div></pre></td></tr></table></figure></p>
+<h2 id="Create-FTP-users"><a href="#Create-FTP-users" class="headerlink" title="Create FTP users"></a>Create FTP users</h2><p>By default, root user is not allowed to login to ftp server for security purpose. So, let us create a normal testing user called “ftpuser” with password “centos”.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">useradd ftpuser</div><div class="line">passwd ftpuser</div></pre></td></tr></table></figure></p>
+<h2 id="Connecting-to-FTP-server"><a href="#Connecting-to-FTP-server" class="headerlink" title="Connecting to FTP server"></a>Connecting to FTP server</h2><p>Now, try to connect to FTP server itself with user “<code>ftpuser</code>”:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ftp 192.168.3.157</div></pre></td></tr></table></figure></p>
+<p>Enter the ftp user name and password.<br>Note: change <code>192.168.3.157</code> with your own FTP server address.</p>
+<p>Sample Output:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">onnected to 192.168.3.157.</div><div class="line">220 (vsFTPd 3.0.2)</div><div class="line">Name (192.168.3.157:jarson): ftpuser</div><div class="line">331 Please specify the password.</div><div class="line">Password:</div><div class="line">230 Login successful.</div><div class="line">Remote system <span class="built_in">type</span> is UNIX.</div><div class="line">Using binary mode to transfer files.</div><div class="line">ftp&gt;</div></pre></td></tr></table></figure></p>
+<p>Congratulations! you will be able to login to FTP server without any problems.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1]: <a href="http://www.tutorialspoint.com/articles/how-to-install-and-configuration-ftp-server-in-centos-7" target="_blank" rel="external">http://www.tutorialspoint.com/articles/how-to-install-and-configuration-ftp-server-in-centos-7</a><br>[2]: <a href="https://www.unixmen.com/install-configure-ftp-server-centos-7/" target="_blank" rel="external">https://www.unixmen.com/install-configure-ftp-server-centos-7/</a></p>
 
           
         
@@ -1098,7 +1115,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/etesting/categories">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1185,19 +1202,11 @@
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://www.markdowntutorial.com/" title="Markdown-Tutorial" target="_blank">Markdown-Tutorial</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
                   <a href="https://guides.github.com/features/mastering-markdown/" title="Mastering-Markdown" target="_blank">Mastering-Markdown</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
                   <a href="http://www.cirosantilli.com/markdown-style-guide/" title="Markdown-Style-Guide" target="_blank">Markdown-Style-Guide</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/" title="Markdown-Simple-World" target="_blank">Markdown-Simple-World</a>
                 </li>
               
             </ul>

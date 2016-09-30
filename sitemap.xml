@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://jarsonfang.github.io/etesting/D05/Deployment/Readme.4D05/</loc>
+    <loc>http://jarsonfang.github.io/etesting/testing/Server/ftp-on-centos/</loc>
     
-    <lastmod>2016-09-29T10:06:59.000Z</lastmod>
+    <lastmod>2016-09-30T03:25:26.000Z</lastmod>
     
   </url>
   
@@ -16,9 +16,9 @@
   </url>
   
   <url>
-    <loc>http://jarsonfang.github.io/etesting/D05/Deployment/Quick_Deployment.4D05/</loc>
+    <loc>http://jarsonfang.github.io/etesting/D05/Deployment/Readme.4D05/</loc>
     
-    <lastmod>2016-09-29T08:27:18.000Z</lastmod>
+    <lastmod>2016-09-29T10:06:59.000Z</lastmod>
     
   </url>
   
@@ -31,6 +31,13 @@
   
   <url>
     <loc>http://jarsonfang.github.io/etesting/D05/Deployment/Grub_Manual.4All/</loc>
+    
+    <lastmod>2016-09-29T08:27:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/D05/Deployment/Quick_Deployment.4D05/</loc>
     
     <lastmod>2016-09-29T08:27:18.000Z</lastmod>
     
@@ -82,13 +89,6 @@
     <loc>http://jarsonfang.github.io/etesting/testing/virtualization/kvm/</loc>
     
     <lastmod>2016-09-28T03:36:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/Server/ftp/</loc>
-    
-    <lastmod>2016-09-28T03:36:15.000Z</lastmod>
     
   </url>
   
