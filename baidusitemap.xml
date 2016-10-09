@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>http://jarsonfang.github.io/etesting/VCS/git-in-common/</loc>
+    <lastmod>2016-10-09T02:59:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>git常用命令</title>
+        <pubTime>2016-09-22T03:00:27.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="VCS" url="http://jarsonfang.github.io/etesting/categories/VCS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/sed-awk/sed-manual/</loc>
+    <lastmod>2016-10-09T02:58:51.000Z</lastmod>
+    <data>
+        <display>
+        <title>sed 学习手册</title>
+        <pubTime>2016-09-23T06:30:15.000Z</pubTime>
+        
+        <tag>sed</tag>
+         
+         
+           
+             
+              <breadCrumb title="sed &amp; awk" url="http://jarsonfang.github.io/etesting/categories/sed-awk/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jarsonfang.github.io/etesting/testing/Server/lnmp/</loc>
     <lastmod>2016-09-30T03:47:37.000Z</lastmod>
     <data>
@@ -58,11 +98,11 @@
 
     
   <url>
-    <loc>http://jarsonfang.github.io/etesting/D05/Deployment/UEFI_Manual.4D05/</loc>
+    <loc>http://jarsonfang.github.io/etesting/D05/Deployment/Readme.4D05/</loc>
     <lastmod>2016-09-29T10:06:59.000Z</lastmod>
     <data>
         <display>
-        <title>UEFI_Manual.4D05</title>
+        <title>Readme.4D05</title>
         <pubTime>2016-09-29T07:52:01.000Z</pubTime>
         
         <tag>D05</tag>
@@ -81,11 +121,11 @@
 
     
   <url>
-    <loc>http://jarsonfang.github.io/etesting/D05/Deployment/Readme.4D05/</loc>
+    <loc>http://jarsonfang.github.io/etesting/D05/Deployment/UEFI_Manual.4D05/</loc>
     <lastmod>2016-09-29T10:06:59.000Z</lastmod>
     <data>
         <display>
-        <title>Readme.4D05</title>
+        <title>UEFI_Manual.4D05</title>
         <pubTime>2016-09-29T07:52:01.000Z</pubTime>
         
         <tag>D05</tag>
@@ -127,11 +167,11 @@
 
     
   <url>
-    <loc>http://jarsonfang.github.io/etesting/D05/Deployment/Quick_Deployment.4D05/</loc>
+    <loc>http://jarsonfang.github.io/etesting/D05/Deployment/Deploy_Manual.4D05/</loc>
     <lastmod>2016-09-29T08:27:18.000Z</lastmod>
     <data>
         <display>
-        <title>Quick_Deployment.4D05</title>
+        <title>Deploy_Manual.4D05</title>
         <pubTime>2016-09-29T07:52:01.000Z</pubTime>
         
         <tag>D05</tag>
@@ -150,11 +190,11 @@
 
     
   <url>
-    <loc>http://jarsonfang.github.io/etesting/D05/Deployment/Deploy_Manual.4D05/</loc>
+    <loc>http://jarsonfang.github.io/etesting/D05/Deployment/Quick_Deployment.4D05/</loc>
     <lastmod>2016-09-29T08:27:18.000Z</lastmod>
     <data>
         <display>
-        <title>Deploy_Manual.4D05</title>
+        <title>Quick_Deployment.4D05</title>
         <pubTime>2016-09-29T07:52:01.000Z</pubTime>
         
         <tag>D05</tag>
@@ -747,46 +787,6 @@
            
              
               <breadCrumb title="sed &amp; awk" url="http://jarsonfang.github.io/etesting/categories/sed-awk/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/sed-awk/sed-manual/</loc>
-    <lastmod>2016-09-27T02:42:03.000Z</lastmod>
-    <data>
-        <display>
-        <title>sed 学习手册</title>
-        <pubTime>2016-09-23T06:30:15.000Z</pubTime>
-        
-        <tag>sed</tag>
-         
-         
-           
-             
-              <breadCrumb title="sed &amp; awk" url="http://jarsonfang.github.io/etesting/categories/sed-awk/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/VCS/git-in-common/</loc>
-    <lastmod>2016-09-22T10:29:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>git常用命令</title>
-        <pubTime>2016-09-22T03:00:27.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="VCS" url="http://jarsonfang.github.io/etesting/categories/VCS/"/>
           
         </display>
     </data>

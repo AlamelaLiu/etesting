@@ -1425,7 +1425,7 @@
 </ol>
 <p>因为每次只把输入的某些行驻留在内存中, 并且不使用临时文件,所以可编辑的文件的有效大小,只受限于输入和输出要同时共存于次级存储的要求。可以单独的建立复杂的编辑脚本并作为给 sed 的命令文件。对于复杂的编辑,这节省了可观的键入和随之而来的错误。从命令文件运行 sed 高效于作者所知道的任何交互式编辑器,甚至包括能用预先写好的脚本驱动的编辑器。</p>
 <p>相较于交互式编辑器而言,根本性的损失是缺乏相对地址(由于操作是每次一行的),和缺乏对命令如期运行的立即验证。<br><a id="more"></a></p>
-<h2 id="sed-如何工作"><a href="#sed-如何工作" class="headerlink" title="sed 如何工作"></a>sed 如何工作</h2><p>如同其它 UNIX 命令, sed 由标准输入读入编辑文件并由标准输出送出结果。下图表示 sed将资料行 “<code>Unix</code>“ 替换成 “<code>UNIX</code>“,<br><img src="/uploads/images/sed.gif" alt="sed"><br>在图中, 上方 standard input 为标准输入, 是读取资料之处; standard output 为标准输出, 是送出结果之处;中间 sed 方块的下面两个虚线方块表示 sed 的工作流程。其中, 左边虚线方块表示 sed 将标准输入资料置入pattern space, 右边虚线方块表示 sed 将 pattern space 中编辑完毕後的资料送到标准输出。</p>
+<h2 id="sed-如何工作"><a href="#sed-如何工作" class="headerlink" title="sed 如何工作"></a>sed 如何工作</h2><p>如同其它 UNIX 命令, sed 由标准输入读入编辑文件并由标准输出送出结果。下图表示 sed将资料行 “<code>Unix</code>“ 替换成 “<code>UNIX</code>“,<br><img src="/etesting/sed-awk/sed-manual/sed.gif" alt="sed.gif" title=""><br>在图中, 上方 standard input 为标准输入, 是读取资料之处; standard output 为标准输出, 是送出结果之处;中间 sed 方块的下面两个虚线方块表示 sed 的工作流程。其中, 左边虚线方块表示 sed 将标准输入资料置入pattern space, 右边虚线方块表示 sed 将 pattern space 中编辑完毕後的资料送到标准输出。</p>
 <p>在虚线方块中, 两个实线方块分别表示 pattern space 与 sed script。其中, pattern space 为一缓区, 它是sed 工作场所; 而 sed script 则表示一组执行的编辑指令。</p>
 <p>在图中, 左边虚线方块 “Unix” 由标准输入置入 pattern space; 接着 , 在右边虚线方块中, sed执行 sed script 中的编辑指令<code>s/Unix/UNIX/</code>, 结果 “Unix” 被替换成 “UNIX”, 之後, “UNIX” 由pattern space 送到标准输出。</p>
 <p>总合上述所言, 当 sed 由标准输入读入一行资料并放入 pattern space 时, sed 依照 sed script 的编辑指令逐一对 pattern space 内的资料执行编辑, 之後, 再由 pattern space 内的结果送到标准输出, 接着再将下一行资料读入。如此重复执行上述动作 , 直至读完所有资料行为止。</p>
@@ -1880,7 +1880,7 @@
       <url>http://jarsonfang.github.io/etesting/VCS/git-in-common/</url>
       <content type="html"><![CDATA[<p>原文：<a href="http://www.cnblogs.com/1-2-3/archive/2010/07/18/git-commands.html" target="_blank" rel="external">http://www.cnblogs.com/1-2-3/archive/2010/07/18/git-commands.html</a></p>
 <p>Git 是一个很强大的分布式版本控制系统。它不但适用于管理大型开源软件的源代码，管理私人的文档和源代码也有很多优势。</p>
-<p><img src="/uploads/images/git_commands.png" alt="git_commands"></p>
+<img src="/etesting/VCS/git-in-common/git_commands.png" alt="git_commands.png" title="">
 ]]></content>
     </entry>
     
