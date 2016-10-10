@@ -481,8 +481,464 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Hexo 部署]]></title>
+      <url>http://jarsonfang.github.io/etesting/Tools/Hexo/hexo-deploy/</url>
+      <content type="html"><![CDATA[<p>Hexo 提供了快速方便的一键部署功能，让您只需一条命令就能将网站部署到服务器上。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
+<p>在开始之前，您必须先在 <code>_config.yml</code> 中修改参数，一个正确的部署配置中至少要有 <code>type</code> 参数，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div></pre></td></tr></table></figure></p>
+<p>您可同时使用多个 deployer，Hexo 会依照顺序执行每个 deployer。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">- type: git</div><div class="line">  repo:</div><div class="line">- type: heroku</div><div class="line">  repo:</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>安装 hexo-deployer-git。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>修改配置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  branch: [branch]</div><div class="line">  message: [message]</div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>repo</td>
+<td>库(Repository)地址</td>
+</tr>
+<tr>
+<td>branch</td>
+<td>分支名称。如果您使用的是GitHub或GitCafe的话，程序会尝试自动检测。</td>
+</tr>
+<tr>
+<td>message</td>
+<td>自定义提交信息（默认为Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }} ）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Rsync"><a href="#Rsync" class="headerlink" title="Rsync"></a>Rsync</h2><p>安装 hexo-deployer-rsync。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-rsync --save</div></pre></td></tr></table></figure></p>
+<p>修改配置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: rsync</div><div class="line">  host: &lt;host&gt;</div><div class="line">  user: &lt;user&gt;</div><div class="line">  root: &lt;root&gt;</div><div class="line">  port: [port]</div><div class="line">  delete: [true|false]</div><div class="line">  verbose: [true|false]</div><div class="line">  ignore_errors: [true|false]</div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>host</td>
+<td>远程主机的地址</td>
+<td></td>
+</tr>
+<tr>
+<td>user</td>
+<td>使用者名称</td>
+<td></td>
+</tr>
+<tr>
+<td>root</td>
+<td>远程主机的根目录</td>
+<td></td>
+</tr>
+<tr>
+<td>port</td>
+<td>端口</td>
+<td>22</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>删除远程主机上的旧文件</td>
+<td>true</td>
+</tr>
+<tr>
+<td>verbose</td>
+<td>显示调试信息</td>
+<td>true</td>
+</tr>
+<tr>
+<td>ignore_errors</td>
+<td>忽略错误</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="FTPSync"><a href="#FTPSync" class="headerlink" title="FTPSync"></a>FTPSync</h2><p>安装 hexo-deployer-ftpsync。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-ftpsync --save</div></pre></td></tr></table></figure></p>
+<p>修改配置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: ftpsync</div><div class="line">  host: &lt;host&gt;</div><div class="line">  user: &lt;user&gt;</div><div class="line">  pass: &lt;password&gt;</div><div class="line">  remote: [remote]</div><div class="line">  port: [port]</div><div class="line">  ignore: [ignore]</div><div class="line">  connections: [connections]</div><div class="line">  verbose: [true|false]</div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>host</td>
+<td>远程主机的地址</td>
+<td></td>
+</tr>
+<tr>
+<td>user</td>
+<td>使用者名称</td>
+<td></td>
+</tr>
+<tr>
+<td>pass</td>
+<td>密码</td>
+<td></td>
+</tr>
+<tr>
+<td>remote</td>
+<td>远程主机的根目录</td>
+<td>/</td>
+</tr>
+<tr>
+<td>port</td>
+<td>端口</td>
+<td>21</td>
+</tr>
+<tr>
+<td>ignore</td>
+<td>忽略的文件或根目录</td>
+<td></td>
+</tr>
+<tr>
+<td>connections</td>
+<td>使用的连接数</td>
+<td>1</td>
+</tr>
+<tr>
+<td>verbose</td>
+<td>显示调试信息</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h2><p>Hexo 生成的所有文件都放在 <code>public</code> 文件夹中，您可以将它们复制到您喜欢的地方。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hexo 资源文件夹]]></title>
+      <url>http://jarsonfang.github.io/etesting/Tools/Hexo/hexo-asset-folders/</url>
+      <content type="html"><![CDATA[<p>资源（Asset）代表 <code>source</code> 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等。比方说，如果你的Hexo项目中只有少量图片，那最简单的方法就是将它们放在 <code>source/images</code> 文件夹中。然后通过类似于 <code>![](/images/image.jpg)</code> 的方法访问它们。</p>
+<a id="more"></a>
+<p><strong>文章资源文件夹</strong></p>
+<p>对于那些想要更有规律地提供图片和其他资源以及想要将他们的资源分布在各个文章上的人来说，Hexo也提供了更组织化的方式来管理资源。这个稍微有些复杂但是管理资源非常方便的功能可以通过将 <code>_config.yml</code> 文件中的 <code>post_asset_folder</code> 选项设为 <code>true</code> 来打开。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">post_asset_folder: true</div></pre></td></tr></table></figure></p>
+<p>当资源文件管理功能打开后，Hexo将会在你每一次通过 <code>hexo new [layout] &lt;title&gt;</code> 命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个 markdown 文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。</p>
+<p><strong>相对路径引用的标签插件</strong></p>
+<p>通过常规的 markdown 语法和相对路径来引用图片和其它资源可能会导致它们在存档页或者主页上显示不正确。在Hexo 2时代，社区创建了很多插件来解决这个问题。但是，随着Hexo 3 的发布，许多新的标签插件被加入到了核心代码中。这使得你可以更简单地在文章中引用你的资源。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% asset_path slug %&#125;</div><div class="line">&#123;% asset_img slug [title] %&#125;</div><div class="line">&#123;% asset_link slug [title] %&#125;</div></pre></td></tr></table></figure></p>
+<p>比如说：当你打开文章资源文件夹功能后，你把一个 <code>example.jpg</code> 图片放在了你的资源文件夹中，如果通过使用相对路径的常规 markdown 语法 <code>![](/example.jpg)</code> ，它将 不会 出现在首页上。（但是它会在文章中按你期待的方式工作）</p>
+<p>正确的引用图片方式是使用下列的标签插件而不是 markdown ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% asset_img example.jpg This is an example image %&#125;</div></pre></td></tr></table></figure></p>
+<p>通过这种方式，图片将会同时出现在文章和主页以及归档页中。</p>
+<p>Q: 如果有的文章需要资源文件夹，有的文章不需要资源文件夹怎么弄？<br>A: 直接用markdown，把图片放到指定的文件夹（而不是跟文章同名的那个文件夹）？</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hexo 标签插件]]></title>
+      <url>http://jarsonfang.github.io/etesting/Tools/Hexo/hexo-tag-plugins/</url>
+      <content type="html"><![CDATA[<p>标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。</p>
+<h2 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h2><p>在文章中插入引言，可包含作者、来源和标题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</div><div class="line">content</div><div class="line">&#123;% endblockquote %&#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p><strong>没有提供参数，则只输出普通的blockquote</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% blockquote %&#125;</div><div class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</div><div class="line">&#123;% endblockquote %&#125;</div></pre></td></tr></table></figure></p>
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+<p><strong>引用书上的句子</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% blockquote David Levithan, Wide Awake %&#125;</div><div class="line">Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</div><div class="line">&#123;% endblockquote %&#125;</div></pre></td></tr></table></figure></p>
+<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+<p><strong>引用Twitter</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% blockquote @DevDocs https://twitter.com/devdocs/status/356095192085962752 %&#125;</div><div class="line">NEW: DevDocs now comes with syntax highlighting. http://devdocs.io</div><div class="line">&#123;% endblockquote %&#125;</div></pre></td></tr></table></figure></p>
+<blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io" target="_blank" rel="external">http://devdocs.io</a></p>
+<footer><strong>@DevDocs</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752" target="_blank" rel="external">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote>
+<p><strong>引用网络上的文章</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %&#125;</div><div class="line">Every interaction is both precious and an opportunity to delight.</div><div class="line">&#123;% endblockquote %&#125;</div></pre></td></tr></table></figure></p>
+<blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
+<footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html" target="_blank" rel="external">Welcome to Island Marketing</a></cite></footer></blockquote>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>在文章中插入代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% codeblock [title] [lang:language] [url] [link text] %&#125;</div><div class="line">code snippet</div><div class="line">&#123;% endcodeblock %&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><p><strong>普通的代码块</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% codeblock %&#125;</div><div class="line">alert(&apos;Hello World!&apos;);</div><div class="line">&#123;% endcodeblock %&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(&apos;Hello World!&apos;);</div></pre></td></tr></table></figure>
+<p><strong>指定语言</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% codeblock lang:objc %&#125;</div><div class="line">[rectangle setX: 10 y: 10 width: 20 height: 20];</div><div class="line">&#123;% endcodeblock %&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</div></pre></td></tr></table></figure>
+<p><strong>附加说明</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% codeblock Array.map %&#125;</div><div class="line">array.map(callback[, thisArg])</div><div class="line">&#123;% endcodeblock %&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><figcaption><span>Array.map</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">array.map(callback[, thisArg])</div></pre></td></tr></table></figure>
+<p><strong>附加说明和网址</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;% codeblock \_.compact http://underscorejs.org/#compact Underscore.js %&#125;</div><div class="line">\_.compact([0, 1, false, 2, &apos;&apos;, 3]);</div><div class="line">=&gt; [1, 2, 3]</div><div class="line">&#123;% endcodeblock %&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><figcaption><span>\_.compact</span><a href="http://underscorejs.org/#compact" target="_blank" rel="external">Underscore.js</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">\_.compact([0, 1, false, 2, &apos;&apos;, 3]);</div><div class="line">=&gt; [1, 2, 3]</div></pre></td></tr></table></figure>
+<h2 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h2><h3 id="引用文章"><a href="#引用文章" class="headerlink" title="引用文章"></a>引用文章</h3><p>引用其他文章的链接。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;% post_path slug %&#125;</div><div class="line">&#123;% post_link slug [title] %&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>示例</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% post_path hexo-commands %&#125;</div></pre></td></tr></table></figure></p>
+/etesting/Tools/Hexo/hexo-commands/
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% post_link hexo-commands %&#125;</div></pre></td></tr></table></figure>
+<a href="/etesting/Tools/Hexo/hexo-commands/" title="Hexo 命令">Hexo 命令</a>
+<h3 id="引用资源"><a href="#引用资源" class="headerlink" title="引用资源"></a>引用资源</h3><p>引用文章的资源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% asset_path slug %&#125;</div><div class="line">&#123;% asset_img slug [title] %&#125;</div><div class="line">&#123;% asset_link slug [title] %&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="Raw"><a href="#Raw" class="headerlink" title="Raw"></a>Raw</h3><p>如果您想在文章中插入 Swig 标签，可以尝试使用 Raw 标签，以免发生解析异常。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line">content</div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hexo 基本操作]]></title>
+      <url>http://jarsonfang.github.io/etesting/Tools/Hexo/hexo-operations/</url>
+      <content type="html"><![CDATA[<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p>您可以执行下列命令来创建一篇新文章。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure></p>
+<p>您可以在命令中指定文章的布局(layout)，默认为<code>post</code>，可以通过修改<code>_config.yml</code>中的<code>default_layout</code>参数来指定默认布局。</p>
+<p><strong>布局(layout)</strong></p>
+<p>Hexo有三种默认布局：<code>post</code>、<code>page</code>和<code>draft</code>，它们分别对应不同的路径，而您自定义的其他布局和<code>post</code>相同，都将存储到<code>source/_posts</code>文件夹。</p>
+<table>
+<thead>
+<tr>
+<th>布局</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>post</td>
+<td>source/_posts</td>
+</tr>
+<tr>
+<td>page</td>
+<td>source</td>
+</tr>
+<tr>
+<td>draft</td>
+<td>source/_drafts</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>不要处理我的文章</strong><br>如果你不想你的文章被处理，你可以将Front-Matter中的<code>layout:</code>设为<code>false</code>。</p>
+</blockquote>
+<a id="more"></a>
+<p><strong>文件名称</strong></p>
+<p>Hexo默认以标题作为文件名称，但您可编辑<code>new_post_name</code>参数来改变默认的文件名称，举例来说，设为<code>:year-:month-:day-:title.md</code>可让您更方便的通过日期来管理文章。</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:title</code></td>
+<td>标题（小写，空格将会被替换为短杠）</td>
+</tr>
+<tr>
+<td><code>:year</code></td>
+<td>建立的年份，比如，<code>2015</code></td>
+</tr>
+<tr>
+<td><code>:month</code></td>
+<td>建立的月份（有前导零），比如，<code>04</code></td>
+</tr>
+<tr>
+<td><code>:i_month</code></td>
+<td>建立的月份（无前导零），比如，<code>4</code></td>
+</tr>
+<tr>
+<td><code>:day</code></td>
+<td>建立的日期（有前导零），比如，<code>07</code></td>
+</tr>
+<tr>
+<td><code>:i_day</code></td>
+<td>建立的日期（无前导零），比如，<code>7</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>草稿</strong></p>
+<p>刚刚提到了 Hexo 的一种特殊布局：<code>draft</code>，这种布局在建立时会被保存到 <code>source/_drafts</code> 文件夹，您可通过 <code>publish</code> 命令将草稿移动到 <code>source/_posts</code> 文件夹，该命令的使用方式与 <code>new</code> 十分类似，您也可在命令中指定 <code>layout</code> 来指定布局。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo publish [layout] &lt;title&gt;</div></pre></td></tr></table></figure></p>
+<p>草稿默认不会显示在页面中，您可在执行时加上 <code>--draft</code> 参数，或是把 <code>render_drafts</code> 参数设为 <code>true</code> 来预览草稿。</p>
+<p><strong>模板(Scaffold)</strong></p>
+<p>在新建文章时，Hexo 会根据 <code>scaffolds</code> 文件夹内相对应的文件来建立文件，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new photo <span class="string">"My Gallery"</span></div></pre></td></tr></table></figure></p>
+<p>在执行这行指令时，Hexo 会尝试在 <code>scaffolds</code> 文件夹中寻找<code>photo.md</code>，并根据其内容建立文章，以下是您可以在模版中使用的变量：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>layout</code></td>
+<td>布局</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>标题</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>文件建立日期</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h2><p>Front-matter 是文件最上方以<code>---</code>分隔的区域，用于指定个别文件的变量，举例来说：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">title: Hello World</div><div class="line">date: 2013/7/13 20:46:25</div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>layout</td>
+<td>布局</td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td></td>
+</tr>
+<tr>
+<td>date</td>
+<td>建立日期</td>
+<td>文件建立日期</td>
+</tr>
+<tr>
+<td>updated</td>
+<td>更新日期</td>
+<td>文件更新日期</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>开启文章的评论功能</td>
+<td>true</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>标签（不适用于页面(pages)）</td>
+<td></td>
+</tr>
+<tr>
+<td>categories</td>
+<td>分类（不适用于页面(pages)）</td>
+<td></td>
+</tr>
+<tr>
+<td>permalink</td>
+<td>覆盖文章默认的永久链接</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分类和标签</strong></p>
+<p>只有文章支持分类和标签，您可以在 Front-matter 中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo 中两者有着明显的差别：分类具有顺序性和层次性，也就是说 <code>Foo, Bar</code> 不等于 <code>Bar, Foo</code>；而标签没有顺序和层次。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">categories:</div><div class="line">- Sports</div><div class="line">- Baseball</div><div class="line">tags:</div><div class="line">- Injury</div><div class="line">- Fight</div><div class="line">- Shocking</div></pre></td></tr></table></figure></p>
+<p><strong>JSON Front-matter</strong></p>
+<p>除了 YAML 外，你也可以使用 JSON 来编写 Front-matter，只要将 <code>---</code> 代换成 <code>;;;</code> 即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&quot;title&quot;: &quot;Hello World&quot;,</div><div class="line">&quot;date&quot;: &quot;2013/7/13 20:46:25&quot;</div><div class="line">;;;</div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hexo 命令]]></title>
+      <url>http://jarsonfang.github.io/etesting/Tools/Hexo/hexo-commands/</url>
+      <content type="html"><![CDATA[<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><p><strong>init</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init [folder]</div></pre></td></tr></table></figure></p>
+<p>新建一个网站。如果没有设置<code>folder</code>，Hexo默认在目前的文件夹建立网站。</p>
+<p><strong>new</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure></p>
+<p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用 <code>_config.yml</code> 中的 <code>default_layout</code> 参数代替。如果标题包含空格的话，请使用引号括起来。<br><a id="more"></a></p>
+<p><strong>generate</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure></p>
+<p>生成静态文件。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-d</code>, <code>--deploy</code></td>
+<td>文件生成后立即部署网站</td>
+</tr>
+<tr>
+<td><code>-w</code>, <code>--watch</code></td>
+<td>监视文件变动</td>
+</tr>
+</tbody>
+</table>
+<p><strong>publish</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo publish [layout] &lt;filename&gt;</div></pre></td></tr></table></figure></p>
+<p>发表草稿。</p>
+<p><strong>server</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>启动服务器。默认情况下，访问网址为：<code>http://localhost:4000/</code>。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-p</code>, <code>--port</code></td>
+<td>重设端口</td>
+</tr>
+<tr>
+<td><code>-s</code>, <code>--static</code></td>
+<td>只使用静态文件</td>
+</tr>
+<tr>
+<td><code>-l</code>, <code>--log</code></td>
+<td>启动日志记录，使用覆盖记录格式</td>
+</tr>
+</tbody>
+</table>
+<p><strong>deploy</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
+<p>部署网站。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-g</code>, <code>--generate</code></td>
+<td>部署之前预先生成静态文件</td>
+</tr>
+</tbody>
+</table>
+<p><strong>render</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo render &lt;file1&gt; [file2] ...</div></pre></td></tr></table></figure></p>
+<p>渲染文件。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-o</code>, <code>--output</code></td>
+<td>设置输出路径</td>
+</tr>
+</tbody>
+</table>
+<p><strong>migrate</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo migrate &lt;<span class="built_in">type</span>&gt;</div></pre></td></tr></table></figure></p>
+<p>从其他博客系统迁移内容。<br>例如，迁移 WordPress:<br>首先，安装 <code>hexo-migrator-wordpress</code> 插件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-migrator-wordpress --save</div></pre></td></tr></table></figure></p>
+<p>在 WordPress 仪表盘中导出数据(“Tools” → “Export” → “WordPress”)<br>插件安装完成后，执行下列命令来迁移所有文章。source 可以是 WordPress 导出的文件路径或网址。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo migrate wordpress &lt;<span class="built_in">source</span>&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>clean</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div></pre></td></tr></table></figure></p>
+<p>清除缓存文件(<code>db.json</code>)和已生成的静态文件(<code>public</code>)。</p>
+<p><strong>list</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo list &lt;<span class="built_in">type</span>&gt;</div></pre></td></tr></table></figure></p>
+<p>列出网站资料。</p>
+<p><strong>version</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo version</div></pre></td></tr></table></figure></p>
+<p>显示Hexo版本。</p>
+<h2 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h2><p><strong>安全模式</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --safe</div></pre></td></tr></table></figure></p>
+<p>在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。</p>
+<p><strong>调试模式</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --debug</div></pre></td></tr></table></figure></p>
+<p>在终端中显示调试信息并记录到<code>debug.log</code>。当您碰到问题时，可以尝试用调试模式重新执行一次，并<a href="https://github.com/hexojs/hexo/issues/new" target="_blank" rel="external">提交调试信息到GitHub</a></p>
+<p><strong>简洁模式</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --silent</div></pre></td></tr></table></figure></p>
+<p>隐藏终端信息。</p>
+<p><strong>自定义配置文件的路径</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --config custom.yml</div></pre></td></tr></table></figure></p>
+<p>自定义配置文件的路径，执行后将不再使用<code>_config.yml</code>。</p>
+<p><strong>显示草稿</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --draft</div></pre></td></tr></table></figure></p>
+<p>显示 <code>source/_drafts</code> 文件夹中的草稿文章。</p>
+<p><strong>自定义CWD</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo --cwd /path/to/cwd</div></pre></td></tr></table></figure></p>
+<p>自定义当前工作目录(Current working directory)的路径。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[awk 手册]]></title>
-      <url>http://jarsonfang.github.io/etesting/sed-awk/awk/</url>
+      <url>http://jarsonfang.github.io/etesting/Tools/sed-awk/awk/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>简体中文版由bones7456 (<a href="http://li2z.cn)整理" target="_blank" rel="external">http://li2z.cn)整理</a>.<br>原文:应该是 <a href="http://phi.sinica.edu.tw/aspac/reports/94/94011/" target="_blank" rel="external">http://phi.sinica.edu.tw/aspac/reports/94/94011/</a> 但是原文很乱.<br>说明:之前也是对awk几乎一无所知,无意中看到这篇文章,网上一搜,居然没有像样的简体中文版.有的也是不怎么完整,或者错误一大堆的.于是就顺手整理了下这篇文章.通过整理这篇文章,自己也渐渐掌握了awk的种种用法.<br>原文可能比较老,有些目前已经不适用的命令有所改动,文中所有命令均在ubuntu7.04下调试通过,用的awk是mawk.<br>由于本人能力有限,错误和不妥之处在所难免,欢迎多多指正.  </p>
 </blockquote>
@@ -1208,7 +1664,7 @@
     
     <entry>
       <title><![CDATA[sed 函数参数]]></title>
-      <url>http://jarsonfang.github.io/etesting/sed-awk/sed-functions/</url>
+      <url>http://jarsonfang.github.io/etesting/Tools/sed-awk/sed-functions/</url>
       <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">fhc2007@fhc2007-desktop:~$ sed --help</div><div class="line">用法: sed [选项]... &#123;脚本(如果没有其他脚本)&#125; [输入文件]...</div><div class="line"></div><div class="line">  -n, --quiet, --silent</div><div class="line">                 取消自动打印模式空间</div><div class="line">  <span class="_">-e</span> 脚本, --expression=脚本</div><div class="line">                 添加“脚本”到程序的运行列表</div><div class="line">  <span class="_">-f</span> 脚本文件, --file=脚本文件</div><div class="line">                 添加“脚本文件”到程序的运行列表</div><div class="line">  -i[扩展名], --in-place[=扩展名]</div><div class="line">                 直接修改文件(如果指定扩展名就备份文件)</div><div class="line">  <span class="_">-l</span> N, --line-length=N</div><div class="line">                 指定“l”命令的换行期望长度</div><div class="line">  --posix</div><div class="line">                 关闭所有 GNU 扩展</div><div class="line">  -r, --regexp-extended</div><div class="line">                 在脚本中使用扩展正则表达式</div><div class="line">  <span class="_">-s</span>, --separate</div><div class="line">                 将输入文件视为各个独立的文件而不是一个长的连续输入</div><div class="line">  -u, --unbuffered</div><div class="line">                 从输入文件读取最少的数据，更频繁的刷新输出</div><div class="line">      --help     打印帮助并退出</div><div class="line">      --version  输出版本信息并退出</div></pre></td></tr></table></figure>
 <p><span style="color:#ff0000">如果没有 -e, –expression, -f 或 –file 选项，那么第一个非选项参数被视为sed脚本。其他非选项参数被视为输入文件，如果没有输入文件，那么程序将从标准输入读取数据。</span></p>
 <p><strong>注：-n 参数和 -i 参数不要一起使用。</strong></p>
@@ -1509,7 +1965,7 @@
     
     <entry>
       <title><![CDATA[sed 学习手册]]></title>
-      <url>http://jarsonfang.github.io/etesting/sed-awk/sed-manual/</url>
+      <url>http://jarsonfang.github.io/etesting/Tools/sed-awk/sed-manual/</url>
       <content type="html"><![CDATA[<h2 id="sed-简要介绍"><a href="#sed-简要介绍" class="headerlink" title="sed 简要介绍"></a>sed 简要介绍</h2><p>Sed(Stream EDitor)为 UNIX 系统上提供将编辑工作自动化的编辑器 , 使用者无需直接编辑资料。使用者可利用 sed 所提供 20 多种不同的<span style="color:red;">函数[参数] </span>, 组合它们完成不同的编辑动作。此外 ,由於 sed 都以行为单位编辑文件 , 故其亦是行编辑器(line editor)。<br> 一般 sed 最常用在编辑那些需要不断重覆某些编辑动作的文件上, 例如将文件中的某个字串替换成另一个字串等等。这些相较於一般 UNIX 编辑器(交互式的, 如 vi、emacs)用手动的方式修改文件, sed 用起来较省力。</p>
 <p>sed 是一个非交互式上下文(context)编辑器,它被设计在下列三种情况下发挥作用:</p>
 <ol>
@@ -1519,7 +1975,7 @@
 </ol>
 <p>因为每次只把输入的某些行驻留在内存中, 并且不使用临时文件,所以可编辑的文件的有效大小,只受限于输入和输出要同时共存于次级存储的要求。可以单独的建立复杂的编辑脚本并作为给 sed 的命令文件。对于复杂的编辑,这节省了可观的键入和随之而来的错误。从命令文件运行 sed 高效于作者所知道的任何交互式编辑器,甚至包括能用预先写好的脚本驱动的编辑器。</p>
 <p>相较于交互式编辑器而言,根本性的损失是缺乏相对地址(由于操作是每次一行的),和缺乏对命令如期运行的立即验证。<br><a id="more"></a></p>
-<h2 id="sed-如何工作"><a href="#sed-如何工作" class="headerlink" title="sed 如何工作"></a>sed 如何工作</h2><p>如同其它 UNIX 命令, sed 由标准输入读入编辑文件并由标准输出送出结果。下图表示 sed将资料行 “<code>Unix</code>“ 替换成 “<code>UNIX</code>“,<br><img src="/etesting/sed-awk/sed-manual/sed.gif" alt="sed.gif" title=""><br>在图中, 上方 standard input 为标准输入, 是读取资料之处; standard output 为标准输出, 是送出结果之处;中间 sed 方块的下面两个虚线方块表示 sed 的工作流程。其中, 左边虚线方块表示 sed 将标准输入资料置入pattern space, 右边虚线方块表示 sed 将 pattern space 中编辑完毕後的资料送到标准输出。</p>
+<h2 id="sed-如何工作"><a href="#sed-如何工作" class="headerlink" title="sed 如何工作"></a>sed 如何工作</h2><p>如同其它 UNIX 命令, sed 由标准输入读入编辑文件并由标准输出送出结果。下图表示 sed将资料行 “<code>Unix</code>“ 替换成 “<code>UNIX</code>“,<br><img src="/etesting/Tools/sed-awk/sed-manual/sed.gif" alt="sed.gif" title=""><br>在图中, 上方 standard input 为标准输入, 是读取资料之处; standard output 为标准输出, 是送出结果之处;中间 sed 方块的下面两个虚线方块表示 sed 的工作流程。其中, 左边虚线方块表示 sed 将标准输入资料置入pattern space, 右边虚线方块表示 sed 将 pattern space 中编辑完毕後的资料送到标准输出。</p>
 <p>在虚线方块中, 两个实线方块分别表示 pattern space 与 sed script。其中, pattern space 为一缓区, 它是sed 工作场所; 而 sed script 则表示一组执行的编辑指令。</p>
 <p>在图中, 左边虚线方块 “Unix” 由标准输入置入 pattern space; 接着 , 在右边虚线方块中, sed执行 sed script 中的编辑指令<code>s/Unix/UNIX/</code>, 结果 “Unix” 被替换成 “UNIX”, 之後, “UNIX” 由pattern space 送到标准输出。</p>
 <p>总合上述所言, 当 sed 由标准输入读入一行资料并放入 pattern space 时, sed 依照 sed script 的编辑指令逐一对 pattern space 内的资料执行编辑, 之後, 再由 pattern space 内的结果送到标准输出, 接着再将下一行资料读入。如此重复执行上述动作 , 直至读完所有资料行为止。</p>
@@ -1745,7 +2201,7 @@
     
     <entry>
       <title><![CDATA[sed & awk 概述]]></title>
-      <url>http://jarsonfang.github.io/etesting/sed-awk/sed-awk-overview/</url>
+      <url>http://jarsonfang.github.io/etesting/Tools/sed-awk/sed-awk-overview/</url>
       <content type="html"><![CDATA[<p>摘自《sed与awk》 Dale Dougberty&amp;Arnold Robbins 著</p>
 <p>如果你正要开始学习 sed 与 awk，最好从了解它们的共同点入手：</p>
 <ul>
@@ -1837,7 +2293,7 @@
     
     <entry>
       <title><![CDATA[开发者日常使用的 Git 命令]]></title>
-      <url>http://jarsonfang.github.io/etesting/VCS/everyday-git/</url>
+      <url>http://jarsonfang.github.io/etesting/Tools/VCS/everyday-git/</url>
       <content type="html"><![CDATA[<p>原文链接： <a href="https://www.kernel.org/pub/software/scm/git/docs/everyday.html" target="_blank" rel="external">Everyday GIT With 20 Commands Or So</a>   翻译： <a href="http://blog.jobbole.com" target="_blank" rel="external"> 伯乐在线 </a> - <a href="http://blog.jobbole.com/author/cjpan/" target="_blank" rel="external">cjpan</a><br>译文链接： <a href="http://blog.jobbole.com/54184/" target="_blank" rel="external">http://blog.jobbole.com/54184/</a> （下文在原译文基础上有修正补充）</p>
 <p><span style="color:red;">原文（英）最后更新时间：Last updated 2013-02-15 15:53:17 UTC</span></p>
 <p>这些命令分四种类型：①不需要和其他开发者协作的独立开发者，会经常用到 <code>git init</code>、<code>git show branch</code>、<code>git commit</code> 等命令；②需要和其他人协作的开发者，会常用到 <code>git clone</code>、<code>git push</code>、<code>git pull</code>、<code>git format patch</code>；③在项目中负责接收其他开发者发来更新的核心开发者，会常用到 <code>git am</code>、<code>git pull</code>、<code>git format patch</code>、<code>git revert</code>、<code>git push</code>；④ 代码仓库管理员常用 <code>git daemon</code>、<code>git shell</code> ……</p>
@@ -1960,7 +2416,7 @@
     
     <entry>
       <title><![CDATA[用git保存空目录]]></title>
-      <url>http://jarsonfang.github.io/etesting/VCS/git-save-empty-dir/</url>
+      <url>http://jarsonfang.github.io/etesting/Tools/VCS/git-save-empty-dir/</url>
       <content type="html"><![CDATA[<p>git 和 svn 不同，仅仅跟踪文件的变动，不跟踪目录。Perforce 也是如此。所以，一个空目录，如果里面没有文件，即便 git add 这个目录，另外在别处 check out 的时候，是没有这个空目录的。</p>
 <p>只跟踪文件变化，不跟踪目录，这么设计是有原因的。但这会带来一些小麻烦。有时候，确实需要在代码仓库中保留某个空目录。比如测试时需要用到的空目录。</p>
 <p>变通的解决办法是在空目录下存一个 <code>.gitignore</code> 文件。然后 <code>git add</code> 此目录后，相当于跟踪了 <code>.gitignore</code> 文件，产生的“副作用”就是这个“空”目录也纳入“跟踪”，最终的效果是可以 check out 出一个看起来空空的目录。如果有许多这样的空目录，可以用下面的命令自动补充 <code>.gitignore</code> 文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch &#123;&#125;/.gitignore \;</div></pre></td></tr></table></figure></p>
@@ -1971,135 +2427,58 @@
     
     <entry>
       <title><![CDATA[git常用命令]]></title>
-      <url>http://jarsonfang.github.io/etesting/VCS/git-in-common/</url>
+      <url>http://jarsonfang.github.io/etesting/Tools/VCS/git-in-common/</url>
       <content type="html"><![CDATA[<p>原文：<a href="http://www.cnblogs.com/1-2-3/archive/2010/07/18/git-commands.html" target="_blank" rel="external">http://www.cnblogs.com/1-2-3/archive/2010/07/18/git-commands.html</a></p>
 <p>Git 是一个很强大的分布式版本控制系统。它不但适用于管理大型开源软件的源代码，管理私人的文档和源代码也有很多优势。</p>
-<img src="/etesting/VCS/git-in-common/git_commands.png" alt="git_commands.png" title="">
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[caliper]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/Utility/caliper/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[sysbench]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/Utility/sysbench/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Armor]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/Utility/armor/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[OpenJDK]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/App/openjdk/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Ceph]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/App/ceph/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[ODP]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/App/odp/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hadoop]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/App/hadoop/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
+<img src="/etesting/Tools/VCS/git-in-common/git_commands.png" alt="git_commands.png" title="">
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[KVM]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/virtualization/kvm/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/virtualization/kvm/</url>
       <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[Xen]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/virtualization/xen/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/virtualization/xen/</url>
       <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[OpenStack]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/virtualization/openstack/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/virtualization/openstack/</url>
       <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[Docker]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/virtualization/docker/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/virtualization/docker/</url>
       <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[LXC]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/virtualization/lxc/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/virtualization/lxc/</url>
       <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[QEMU]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/virtualization/qemu/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[LAMP]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/Server/lamp/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[LNMP]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/Server/lnmp/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[DNS]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/Server/dns/</url>
-      <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[DHCP]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/Server/dhcp/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/virtualization/qemu/</url>
       <content type="html"><![CDATA[<p><strong>ToDo …</strong></p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[FTP on Centos 7]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/Server/ftp-on-centos/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/Server/ftp-on-centos/</url>
       <content type="html"><![CDATA[<p>In this article, we will learn how to configure FTP server on CentOs 7 using <code>vsftpd</code>. <code>vsftpd</code> (Very Secure File Transport Protocol Daemon) is a secure and very fast FTP server on Linux systems.</p>
 <h2 id="Install-vsftpd"><a href="#Install-vsftpd" class="headerlink" title="Install vsftpd"></a>Install vsftpd</h2><p>All commands should be run with <code>root</code> user. Run the following command in terminal to install <code>vsftpd</code> package:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install vsftpd ftp -y</div></pre></td></tr></table></figure></p>
 <h2 id="Configure-vsftpd"><a href="#Configure-vsftpd" class="headerlink" title="Configure vsftpd"></a>Configure vsftpd</h2><p>We needed to edit the configuration file <code>/etc/vsftpd/vsftpd.conf</code> for securing the FTP server since, by default it will allow anonymous users to login and use the server.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp /etc/vsftpd/vsftpd.conf&#123;,.bak&#125;</div><div class="line">vi /etc/vsftpd/vsftpd.conf</div></pre></td></tr></table></figure></p>
@@ -2123,7 +2502,7 @@
     
     <entry>
       <title><![CDATA[Samba on Centos 7]]></title>
-      <url>http://jarsonfang.github.io/etesting/testing/Server/samba-on-centos/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/Server/samba-on-centos/</url>
       <content type="html"><![CDATA[<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install samba samba-client</div></pre></td></tr></table></figure>
 <h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>Now to configure samba, make the backup of original file as <code>/etc/samba/smb.conf.bak</code> before editing the file <code>/etc/samba/smb.conf</code>.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp /etc/samba/smb.conf&#123;,.bak&#125;</div></pre></td></tr></table></figure>
@@ -2144,7 +2523,7 @@
     
     <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>http://jarsonfang.github.io/etesting/Hexo/hello-world/</url>
+      <url>http://jarsonfang.github.io/etesting/Tools/Hexo/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>

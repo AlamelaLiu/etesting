@@ -2,6 +2,153 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jarsonfang.github.io/etesting/Estuary/virtualization/qemu/</loc>
+    
+    <lastmod>2016-10-10T07:40:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Estuary/virtualization/lxc/</loc>
+    
+    <lastmod>2016-10-10T07:40:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Estuary/virtualization/docker/</loc>
+    
+    <lastmod>2016-10-10T07:39:55.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Estuary/virtualization/openstack/</loc>
+    
+    <lastmod>2016-10-10T07:39:33.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Estuary/virtualization/xen/</loc>
+    
+    <lastmod>2016-10-10T07:39:09.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Estuary/virtualization/kvm/</loc>
+    
+    <lastmod>2016-10-10T07:38:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Estuary/Server/ftp-on-centos/</loc>
+    
+    <lastmod>2016-10-10T07:38:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Estuary/Server/samba-on-centos/</loc>
+    
+    <lastmod>2016-10-10T07:37:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Tools/sed-awk/sed-awk-overview/</loc>
+    
+    <lastmod>2016-10-10T06:38:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Tools/sed-awk/sed-functions/</loc>
+    
+    <lastmod>2016-10-10T06:38:09.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Tools/sed-awk/sed-manual/</loc>
+    
+    <lastmod>2016-10-10T06:37:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Tools/sed-awk/awk/</loc>
+    
+    <lastmod>2016-10-10T06:37:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Tools/VCS/git-in-common/</loc>
+    
+    <lastmod>2016-10-10T06:36:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Tools/VCS/everyday-git/</loc>
+    
+    <lastmod>2016-10-10T06:35:51.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Tools/VCS/git-save-empty-dir/</loc>
+    
+    <lastmod>2016-10-10T06:35:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Tools/Hexo/hello-world/</loc>
+    
+    <lastmod>2016-10-10T06:34:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Tools/Hexo/hexo-asset-folders/</loc>
+    
+    <lastmod>2016-10-10T06:34:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Tools/Hexo/hexo-tag-plugins/</loc>
+    
+    <lastmod>2016-10-10T06:33:55.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Tools/Hexo/hexo-operations/</loc>
+    
+    <lastmod>2016-10-10T06:33:33.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Tools/Hexo/hexo-commands/</loc>
+    
+    <lastmod>2016-10-10T06:33:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jarsonfang.github.io/etesting/Tools/Hexo/hexo-deploy/</loc>
+    
+    <lastmod>2016-10-10T06:33:03.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jarsonfang.github.io/etesting/Documents/Grub_Manual.4All/</loc>
     
     <lastmod>2016-10-10T03:56:28.000Z</lastmod>
@@ -65,188 +212,6 @@
   </url>
   
   <url>
-    <loc>http://jarsonfang.github.io/etesting/VCS/git-in-common/</loc>
-    
-    <lastmod>2016-10-09T02:59:27.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/sed-awk/sed-manual/</loc>
-    
-    <lastmod>2016-10-09T02:58:51.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/Server/lnmp/</loc>
-    
-    <lastmod>2016-09-30T03:47:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/Server/ftp-on-centos/</loc>
-    
-    <lastmod>2016-09-30T03:31:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/Server/samba-on-centos/</loc>
-    
-    <lastmod>2016-09-29T08:17:12.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/virtualization/openstack/</loc>
-    
-    <lastmod>2016-09-28T03:37:25.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/virtualization/lxc/</loc>
-    
-    <lastmod>2016-09-28T03:37:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/virtualization/docker/</loc>
-    
-    <lastmod>2016-09-28T03:37:11.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/virtualization/qemu/</loc>
-    
-    <lastmod>2016-09-28T03:36:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/virtualization/xen/</loc>
-    
-    <lastmod>2016-09-28T03:36:51.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/virtualization/kvm/</loc>
-    
-    <lastmod>2016-09-28T03:36:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/Server/dhcp/</loc>
-    
-    <lastmod>2016-09-28T03:36:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/Server/dns/</loc>
-    
-    <lastmod>2016-09-28T03:35:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/Server/lamp/</loc>
-    
-    <lastmod>2016-09-28T03:34:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/App/hadoop/</loc>
-    
-    <lastmod>2016-09-28T03:34:27.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/App/odp/</loc>
-    
-    <lastmod>2016-09-28T03:34:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/App/ceph/</loc>
-    
-    <lastmod>2016-09-28T03:34:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/App/openjdk/</loc>
-    
-    <lastmod>2016-09-28T03:33:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/Utility/armor/</loc>
-    
-    <lastmod>2016-09-28T03:33:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/Utility/sysbench/</loc>
-    
-    <lastmod>2016-09-28T03:05:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/testing/Utility/caliper/</loc>
-    
-    <lastmod>2016-09-28T03:05:45.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/sed-awk/sed-awk-overview/</loc>
-    
-    <lastmod>2016-09-27T06:11:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/sed-awk/sed-functions/</loc>
-    
-    <lastmod>2016-09-27T03:05:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/sed-awk/awk/</loc>
-    
-    <lastmod>2016-09-27T02:43:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/VCS/git-save-empty-dir/</loc>
-    
-    <lastmod>2016-09-22T10:10:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/VCS/everyday-git/</loc>
-    
-    <lastmod>2016-09-22T10:10:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://jarsonfang.github.io/about/index.html</loc>
     
     <lastmod>2016-09-20T02:43:07.000Z</lastmod>
@@ -264,13 +229,6 @@
     <loc>http://jarsonfang.github.io/tags/index.html</loc>
     
     <lastmod>2016-09-20T02:38:25.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jarsonfang.github.io/etesting/Hexo/hello-world/</loc>
-    
-    <lastmod>2016-09-20T02:19:47.000Z</lastmod>
     
   </url>
   

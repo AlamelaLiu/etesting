@@ -264,8 +264,8 @@
             
               
                 
-                <a class="post-title-link" href="/etesting/sed-awk/sed-functions/" itemprop="url">
-                  sed 函数参数
+                <a class="post-title-link" href="/etesting/Tools/Hexo/hexo-asset-folders/" itemprop="url">
+                  Hexo 资源文件夹
                 </a>
               
             
@@ -278,8 +278,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-23T14:33:06+08:00" content="2016-09-23">
-              2016-09-23
+            <time itemprop="dateCreated" datetime="2016-10-02T09:17:33+08:00" content="2016-10-02">
+              2016-10-02
             </time>
           </span>
 
@@ -292,8 +292,20 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/sed-awk/" itemprop="url" rel="index">
-                    <span itemprop="name">sed & awk</span>
+                  <a href="/etesting/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
                   </a>
                 </span>
 
@@ -308,8 +320,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/etesting/sed-awk/sed-functions/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="sed-awk/sed-functions/" itemprop="commentsCount"></span>
+                <a href="/etesting/Tools/Hexo/hexo-asset-folders/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Tools/Hexo/hexo-asset-folders/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -333,14 +345,9 @@
 
       
         
-          <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">fhc2007@fhc2007-desktop:~$ sed --help</div><div class="line">用法: sed [选项]... &#123;脚本(如果没有其他脚本)&#125; [输入文件]...</div><div class="line"></div><div class="line">  -n, --quiet, --silent</div><div class="line">                 取消自动打印模式空间</div><div class="line">  <span class="_">-e</span> 脚本, --expression=脚本</div><div class="line">                 添加“脚本”到程序的运行列表</div><div class="line">  <span class="_">-f</span> 脚本文件, --file=脚本文件</div><div class="line">                 添加“脚本文件”到程序的运行列表</div><div class="line">  -i[扩展名], --in-place[=扩展名]</div><div class="line">                 直接修改文件(如果指定扩展名就备份文件)</div><div class="line">  <span class="_">-l</span> N, --line-length=N</div><div class="line">                 指定“l”命令的换行期望长度</div><div class="line">  --posix</div><div class="line">                 关闭所有 GNU 扩展</div><div class="line">  -r, --regexp-extended</div><div class="line">                 在脚本中使用扩展正则表达式</div><div class="line">  <span class="_">-s</span>, --separate</div><div class="line">                 将输入文件视为各个独立的文件而不是一个长的连续输入</div><div class="line">  -u, --unbuffered</div><div class="line">                 从输入文件读取最少的数据，更频繁的刷新输出</div><div class="line">      --help     打印帮助并退出</div><div class="line">      --version  输出版本信息并退出</div></pre></td></tr></table></figure>
-<p><span style="color:#ff0000">如果没有 -e, –expression, -f 或 –file 选项，那么第一个非选项参数被视为sed脚本。其他非选项参数被视为输入文件，如果没有输入文件，那么程序将从标准输入读取数据。</span></p>
-<p><strong>注：-n 参数和 -i 参数不要一起使用。</strong></p>
-<p>本章将以一节一个函数参数的方式 ,介绍所有 sed 提供的函数参数 , 其中有</p>
-<p>|<a href="#s">s</a>|<a href="#d">d</a>|<a href="#a">a</a>|<a href="#i">i</a>|<a href="#c">c</a>|<a href="#p">p</a>|<a href="#l">l</a>|<a href="#r">r</a>|<a href="#w">w</a>|<a href="#y">y</a>|<a href="#!">!</a>|<a href="#n">n</a>|<a href="#q">q</a>|<a href="#equal">=</a>|<a href="#com">#</a>|<a href="#Next">N</a>|<a href="#Delete">D</a>|<a href="#Print">P</a>|<a href="#h">h</a>|<a href="#Hold">H</a>|<a href="#g">g</a>|<a href="#Gg">G</a>|<a href="#x">x</a>|<a href="#b">b</a>|<a href="#t">t</a>|</p>
-<p>另外 , 在各节中 , 首先简单介绍函数参数功能 , 接着说明函数参数与位址参数配合的格式 ,而其中也一并描述 sed 执行此函数参数的工作情形。<br>
+          <p>资源（Asset）代表 <code>source</code> 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等。比方说，如果你的Hexo项目中只有少量图片，那最简单的方法就是将它们放在 <code>source/images</code> 文件夹中。然后通过类似于 <code>![](/images/image.jpg)</code> 的方法访问它们。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/etesting/sed-awk/sed-functions/#more" rel="contents">
+            <a class="btn" href="/etesting/Tools/Hexo/hexo-asset-folders/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -391,7 +398,716 @@
             
               
                 
-                <a class="post-title-link" href="/etesting/sed-awk/sed-manual/" itemprop="url">
+                <a class="post-title-link" href="/etesting/Tools/Hexo/hexo-tag-plugins/" itemprop="url">
+                  Hexo 标签插件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-01T21:40:05+08:00" content="2016-10-01">
+              2016-10-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/etesting/Tools/Hexo/hexo-tag-plugins/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Tools/Hexo/hexo-tag-plugins/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。</p>
+<h2 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h2><p>在文章中插入引言，可包含作者、来源和标题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</div><div class="line">content</div><div class="line">&#123;% endblockquote %&#125;</div></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/etesting/Tools/Hexo/hexo-tag-plugins/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/etesting/Tools/Hexo/hexo-operations/" itemprop="url">
+                  Hexo 基本操作
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-01T20:33:03+08:00" content="2016-10-01">
+              2016-10-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/etesting/Tools/Hexo/hexo-operations/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Tools/Hexo/hexo-operations/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p>您可以执行下列命令来创建一篇新文章。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure></p>
+<p>您可以在命令中指定文章的布局(layout)，默认为<code>post</code>，可以通过修改<code>_config.yml</code>中的<code>default_layout</code>参数来指定默认布局。</p>
+<p><strong>布局(layout)</strong></p>
+<p>Hexo有三种默认布局：<code>post</code>、<code>page</code>和<code>draft</code>，它们分别对应不同的路径，而您自定义的其他布局和<code>post</code>相同，都将存储到<code>source/_posts</code>文件夹。</p>
+<table>
+<thead>
+<tr>
+<th>布局</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>post</td>
+<td>source/_posts</td>
+</tr>
+<tr>
+<td>page</td>
+<td>source</td>
+</tr>
+<tr>
+<td>draft</td>
+<td>source/_drafts</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>不要处理我的文章</strong><br>如果你不想你的文章被处理，你可以将Front-Matter中的<code>layout:</code>设为<code>false</code>。</p>
+</blockquote>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/etesting/Tools/Hexo/hexo-operations/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/etesting/Tools/Hexo/hexo-commands/" itemprop="url">
+                  Hexo 命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-01T09:52:54+08:00" content="2016-10-01">
+              2016-10-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/etesting/Tools/Hexo/hexo-commands/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Tools/Hexo/hexo-commands/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><p><strong>init</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init [folder]</div></pre></td></tr></table></figure></p>
+<p>新建一个网站。如果没有设置<code>folder</code>，Hexo默认在目前的文件夹建立网站。</p>
+<p><strong>new</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure></p>
+<p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用 <code>_config.yml</code> 中的 <code>default_layout</code> 参数代替。如果标题包含空格的话，请使用引号括起来。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/etesting/Tools/Hexo/hexo-commands/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/etesting/Tools/sed-awk/awk/" itemprop="url">
+                  awk 手册
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-23T15:08:36+08:00" content="2016-09-23">
+              2016-09-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/sed-awk/" itemprop="url" rel="index">
+                    <span itemprop="name">sed & awk</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/etesting/Tools/sed-awk/awk/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Tools/sed-awk/awk/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>简体中文版由bones7456 (<a href="http://li2z.cn)整理">http://li2z.cn)整理</a>.<br>原文:应该是 <a href="http://phi.sinica.edu.tw/aspac/reports/94/94011/">http://phi.sinica.edu.tw/aspac/reports/94/94011/</a> 但是原文很乱.<br>说明:之前也是对awk几乎一无所知,无意中看到这篇文章,网上一搜,居然没有像样的简体中文版.有的也是不怎么完整,或者错误一大堆的.于是就顺手整理了下这篇文章.通过整理这篇文章,自己也渐渐掌握了awk的种种用法.<br>原文可能比较老,有些目前已经不适用的命令有所改动,文中所有命令均在ubuntu7.04下调试通过,用的awk是mawk.<br>由于本人能力有限,错误和不妥之处在所难免,欢迎多多指正.  </p>
+</blockquote>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/etesting/Tools/sed-awk/awk/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/etesting/Tools/sed-awk/sed-functions/" itemprop="url">
+                  sed 函数参数
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-23T14:33:06+08:00" content="2016-09-23">
+              2016-09-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/sed-awk/" itemprop="url" rel="index">
+                    <span itemprop="name">sed & awk</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/etesting/Tools/sed-awk/sed-functions/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Tools/sed-awk/sed-functions/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">fhc2007@fhc2007-desktop:~$ sed --help</div><div class="line">用法: sed [选项]... &#123;脚本(如果没有其他脚本)&#125; [输入文件]...</div><div class="line"></div><div class="line">  -n, --quiet, --silent</div><div class="line">                 取消自动打印模式空间</div><div class="line">  <span class="_">-e</span> 脚本, --expression=脚本</div><div class="line">                 添加“脚本”到程序的运行列表</div><div class="line">  <span class="_">-f</span> 脚本文件, --file=脚本文件</div><div class="line">                 添加“脚本文件”到程序的运行列表</div><div class="line">  -i[扩展名], --in-place[=扩展名]</div><div class="line">                 直接修改文件(如果指定扩展名就备份文件)</div><div class="line">  <span class="_">-l</span> N, --line-length=N</div><div class="line">                 指定“l”命令的换行期望长度</div><div class="line">  --posix</div><div class="line">                 关闭所有 GNU 扩展</div><div class="line">  -r, --regexp-extended</div><div class="line">                 在脚本中使用扩展正则表达式</div><div class="line">  <span class="_">-s</span>, --separate</div><div class="line">                 将输入文件视为各个独立的文件而不是一个长的连续输入</div><div class="line">  -u, --unbuffered</div><div class="line">                 从输入文件读取最少的数据，更频繁的刷新输出</div><div class="line">      --help     打印帮助并退出</div><div class="line">      --version  输出版本信息并退出</div></pre></td></tr></table></figure>
+<p><span style="color:#ff0000">如果没有 -e, –expression, -f 或 –file 选项，那么第一个非选项参数被视为sed脚本。其他非选项参数被视为输入文件，如果没有输入文件，那么程序将从标准输入读取数据。</span></p>
+<p><strong>注：-n 参数和 -i 参数不要一起使用。</strong></p>
+<p>本章将以一节一个函数参数的方式 ,介绍所有 sed 提供的函数参数 , 其中有</p>
+<p>|<a href="#s">s</a>|<a href="#d">d</a>|<a href="#a">a</a>|<a href="#i">i</a>|<a href="#c">c</a>|<a href="#p">p</a>|<a href="#l">l</a>|<a href="#r">r</a>|<a href="#w">w</a>|<a href="#y">y</a>|<a href="#!">!</a>|<a href="#n">n</a>|<a href="#q">q</a>|<a href="#equal">=</a>|<a href="#com">#</a>|<a href="#Next">N</a>|<a href="#Delete">D</a>|<a href="#Print">P</a>|<a href="#h">h</a>|<a href="#Hold">H</a>|<a href="#g">g</a>|<a href="#Gg">G</a>|<a href="#x">x</a>|<a href="#b">b</a>|<a href="#t">t</a>|</p>
+<p>另外 , 在各节中 , 首先简单介绍函数参数功能 , 接着说明函数参数与位址参数配合的格式 ,而其中也一并描述 sed 执行此函数参数的工作情形。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/etesting/Tools/sed-awk/sed-functions/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/etesting/Tools/sed-awk/sed-manual/" itemprop="url">
                   sed 学习手册
                 </a>
               
@@ -419,7 +1135,19 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/sed-awk/" itemprop="url" rel="index">
+                  <a href="/etesting/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/sed-awk/" itemprop="url" rel="index">
                     <span itemprop="name">sed & awk</span>
                   </a>
                 </span>
@@ -435,8 +1163,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/etesting/sed-awk/sed-manual/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="sed-awk/sed-manual/" itemprop="commentsCount"></span>
+                <a href="/etesting/Tools/sed-awk/sed-manual/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Tools/sed-awk/sed-manual/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -470,7 +1198,7 @@
 <p>因为每次只把输入的某些行驻留在内存中, 并且不使用临时文件,所以可编辑的文件的有效大小,只受限于输入和输出要同时共存于次级存储的要求。可以单独的建立复杂的编辑脚本并作为给 sed 的命令文件。对于复杂的编辑,这节省了可观的键入和随之而来的错误。从命令文件运行 sed 高效于作者所知道的任何交互式编辑器,甚至包括能用预先写好的脚本驱动的编辑器。</p>
 <p>相较于交互式编辑器而言,根本性的损失是缺乏相对地址(由于操作是每次一行的),和缺乏对命令如期运行的立即验证。<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/etesting/sed-awk/sed-manual/#more" rel="contents">
+            <a class="btn" href="/etesting/Tools/sed-awk/sed-manual/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -521,7 +1249,7 @@
             
               
                 
-                <a class="post-title-link" href="/etesting/sed-awk/sed-awk-overview/" itemprop="url">
+                <a class="post-title-link" href="/etesting/Tools/sed-awk/sed-awk-overview/" itemprop="url">
                   sed & awk 概述
                 </a>
               
@@ -549,7 +1277,19 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/sed-awk/" itemprop="url" rel="index">
+                  <a href="/etesting/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/sed-awk/" itemprop="url" rel="index">
                     <span itemprop="name">sed & awk</span>
                   </a>
                 </span>
@@ -565,8 +1305,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/etesting/sed-awk/sed-awk-overview/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="sed-awk/sed-awk-overview/" itemprop="commentsCount"></span>
+                <a href="/etesting/Tools/sed-awk/sed-awk-overview/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Tools/sed-awk/sed-awk-overview/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -600,7 +1340,7 @@
 </ul>
 <p>它们有如此多的共同点，原因之一是它们都起源于相同的行编辑器—— ed。下面首先对 ed 做简短介绍，再介绍 sed 和 awk 是如何一步步形成<span style="color:red">可编程的编辑器</span>的。sed 和 awk 的区别在于它们控制所做的工作时所用的指令不同。这是一个主要的区别，而且这影响了这些程序最适于处理的任务类型。<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/etesting/sed-awk/sed-awk-overview/#more" rel="contents">
+            <a class="btn" href="/etesting/Tools/sed-awk/sed-awk-overview/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -651,7 +1391,7 @@
             
               
                 
-                <a class="post-title-link" href="/etesting/VCS/everyday-git/" itemprop="url">
+                <a class="post-title-link" href="/etesting/Tools/VCS/everyday-git/" itemprop="url">
                   开发者日常使用的 Git 命令
                 </a>
               
@@ -679,7 +1419,19 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/VCS/" itemprop="url" rel="index">
+                  <a href="/etesting/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/VCS/" itemprop="url" rel="index">
                     <span itemprop="name">VCS</span>
                   </a>
                 </span>
@@ -695,8 +1447,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/etesting/VCS/everyday-git/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="VCS/everyday-git/" itemprop="commentsCount"></span>
+                <a href="/etesting/Tools/VCS/everyday-git/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Tools/VCS/everyday-git/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -726,7 +1478,7 @@
 <p>对于任何想做提交的人来说，甚至对于某位单独工作的人来说，【个人开发者（单独开发）】部分命令都是必不可少的。如果你和别人一起工作，你也会需要【个人开发者（参与者）】部分列出的命令。</p>
 <p>除了上述的部分，担当【集成人员】角色的人需要知道更多命令。【代码库管理】命令帮助系统管理员负责管理，以及向git代码库提交内容。<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/etesting/VCS/everyday-git/#more" rel="contents">
+            <a class="btn" href="/etesting/Tools/VCS/everyday-git/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -777,7 +1529,7 @@
             
               
                 
-                <a class="post-title-link" href="/etesting/VCS/git-save-empty-dir/" itemprop="url">
+                <a class="post-title-link" href="/etesting/Tools/VCS/git-save-empty-dir/" itemprop="url">
                   用git保存空目录
                 </a>
               
@@ -805,7 +1557,19 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/VCS/" itemprop="url" rel="index">
+                  <a href="/etesting/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/etesting/categories/Tools/VCS/" itemprop="url" rel="index">
                     <span itemprop="name">VCS</span>
                   </a>
                 </span>
@@ -821,8 +1585,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/etesting/VCS/git-save-empty-dir/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="VCS/git-save-empty-dir/" itemprop="commentsCount"></span>
+                <a href="/etesting/Tools/VCS/git-save-empty-dir/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Tools/VCS/git-save-empty-dir/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -880,661 +1644,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/etesting/VCS/git-in-common/" itemprop="url">
-                  git常用命令
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-22T11:00:27+08:00" content="2016-09-22">
-              2016-09-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/VCS/" itemprop="url" rel="index">
-                    <span itemprop="name">VCS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/etesting/VCS/git-in-common/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="VCS/git-in-common/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>原文：<a href="http://www.cnblogs.com/1-2-3/archive/2010/07/18/git-commands.html" target="_blank" rel="external">http://www.cnblogs.com/1-2-3/archive/2010/07/18/git-commands.html</a></p>
-<p>Git 是一个很强大的分布式版本控制系统。它不但适用于管理大型开源软件的源代码，管理私人的文档和源代码也有很多优势。</p>
-<img src="/etesting/VCS/git-in-common/git_commands.png" alt="git_commands.png" title="">
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/etesting/testing/Utility/caliper/" itemprop="url">
-                  caliper
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-20T16:16:05+08:00" content="2016-09-20">
-              2016-09-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/testing/" itemprop="url" rel="index">
-                    <span itemprop="name">testing</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/testing/Utility/" itemprop="url" rel="index">
-                    <span itemprop="name">Utility</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/etesting/testing/Utility/caliper/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="testing/Utility/caliper/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>ToDo …</strong></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/etesting/testing/Utility/sysbench/" itemprop="url">
-                  sysbench
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-20T16:15:48+08:00" content="2016-09-20">
-              2016-09-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/testing/" itemprop="url" rel="index">
-                    <span itemprop="name">testing</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/testing/Utility/" itemprop="url" rel="index">
-                    <span itemprop="name">Utility</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/etesting/testing/Utility/sysbench/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="testing/Utility/sysbench/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>ToDo …</strong></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/etesting/testing/Utility/armor/" itemprop="url">
-                  Armor
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-20T15:50:02+08:00" content="2016-09-20">
-              2016-09-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/testing/" itemprop="url" rel="index">
-                    <span itemprop="name">testing</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/testing/Utility/" itemprop="url" rel="index">
-                    <span itemprop="name">Utility</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/etesting/testing/Utility/armor/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="testing/Utility/armor/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>ToDo …</strong></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/etesting/testing/App/openjdk/" itemprop="url">
-                  OpenJDK
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-20T15:39:30+08:00" content="2016-09-20">
-              2016-09-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/testing/" itemprop="url" rel="index">
-                    <span itemprop="name">testing</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/testing/App/" itemprop="url" rel="index">
-                    <span itemprop="name">App</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/etesting/testing/App/openjdk/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="testing/App/openjdk/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>ToDo …</strong></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/etesting/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/etesting/">1</a><span class="page-number current">2</span><a class="page-number" href="/etesting/page/3/">3</a><a class="page-number" href="/etesting/page/4/">4</a><a class="extend next" rel="next" href="/etesting/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/etesting/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/etesting/">1</a><span class="page-number current">2</span><a class="page-number" href="/etesting/page/3/">3</a><a class="extend next" rel="next" href="/etesting/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1575,7 +1689,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/etesting/archives">
-              <span class="site-state-item-count">36</span>
+              <span class="site-state-item-count">30</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1583,7 +1697,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/etesting/categories">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1592,7 +1706,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/etesting/tags">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
