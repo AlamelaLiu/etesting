@@ -61,7 +61,7 @@
 <link href="/etesting/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="D03," />
+  <meta name="keywords" content="Testing" />
 
 
 
@@ -77,16 +77,15 @@
 
 
 
-<meta name="description" content="This is the readme file for D03 platform">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Readme.4D03">
-<meta property="og:url" content="http://jarsonfang.github.io/Documents/D03/Readme.4D03/index.html">
+<meta name="description" content="Testing cases">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Etesting">
+<meta property="og:url" content="http://jarsonfang.github.io/categories/Estuary/Documents/index.html">
 <meta property="og:site_name" content="Etesting">
-<meta property="og:description" content="This is the readme file for D03 platform">
-<meta property="og:updated_time" content="2016-10-10T03:53:35.000Z">
+<meta property="og:description" content="Testing cases">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Readme.4D03">
-<meta name="twitter:description" content="This is the readme file for D03 platform">
+<meta name="twitter:title" content="Etesting">
+<meta name="twitter:description" content="Testing cases">
 
 
 
@@ -107,9 +106,9 @@
 
 
 
-  <link rel="canonical" href="http://jarsonfang.github.io/Documents/D03/Readme.4D03/"/>
+  <link rel="canonical" href="http://jarsonfang.github.io/categories/Estuary/Documents/"/>
 
-  <title> Readme.4D03 | Etesting </title>
+  <title> 分类: Documents | Etesting </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -130,7 +129,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <div class="container one-collumn sidebar-position-right  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -241,219 +240,278 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Readme.4D03
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-09T10:05:01+08:00" content="2016-10-09">
-              2016-10-09
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/Documents/" itemprop="url" rel="index">
-                    <span itemprop="name">Documents</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/etesting/categories/Documents/D03/" itemprop="url" rel="index">
-                    <span itemprop="name">D03</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/etesting/Documents/D03/Readme.4D03/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="Documents/D03/Readme.4D03/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>This is the readme file for D03 platform<br><a id="more"></a></p>
-<p>After you executed<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./estuary/build.sh --file=./estuary/estuarycfg.json --builddir=./workspace</div></pre></td></tr></table></figure></p>
-<p>for D03, all targets files will be produced. they are:</p>
-<h3 id="UEFI-D03-fd"><a href="#UEFI-D03-fd" class="headerlink" title="UEFI_D03.fd"></a>UEFI_D03.fd</h3><p><strong>description</strong>: <code>UEFI_D03.fd</code> is the UEFI bios for D03 platform.<br><strong>target</strong>: <code>&lt;project root&gt;/workspace/binary/D03/UEFI_D03.fd</code><br><strong>source</strong>: <code>&lt;project root&gt;/uefi</code></p>
-<p>build commands(supposedly, you are in <code>&lt;project root&gt;</code> currently):<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./estuary/submodules/build-uefi.sh --platform=D03 --output=workspace</div></pre></td></tr></table></figure></p>
-<h3 id="grubaa64-efi"><a href="#grubaa64-efi" class="headerlink" title="grubaa64.efi"></a>grubaa64.efi</h3><p><strong>description</strong>: <code>grubaa64.efi</code> is used to load kernel image and dtb files from SATA, SAS, USB Disk, or NFS into RAM and start the kernel.<br><strong>target</strong>: <code>&lt;project root&gt;/workspace/binary/arm64/grubaa64.efi</code><br><strong>source</strong>: <code>&lt;project root&gt;/grub</code></p>
-<p>build commands(supposedly, you are in <code>&lt;project root&gt;</code> currently):<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./estuary/submodules/build-grub.sh --output=./workspace</div></pre></td></tr></table></figure></p>
-<p>if your host is not arm architecture, please execute<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./estuary/submodules/build-grub.sh --output=./workspace --cross=aarch64-linux-gnu-</div></pre></td></tr></table></figure></p>
-<p>Note: more details about how to install <code>gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux</code>, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md" target="_blank" rel="external">https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md</a>.</p>
-<h3 id="Image-amp-hip06-d03-dtb"><a href="#Image-amp-hip06-d03-dtb" class="headerlink" title="Image &amp; hip06-d03.dtb"></a>Image &amp; hip06-d03.dtb</h3><p><strong>descriptions</strong>: <code>Image</code> is the kernel executable program, and <code>hip06-d03.dtb</code> is the device tree binary.<br><strong>target</strong>:<br><code>Image</code> in <code>&lt;project root&gt;/workspace/binary/arm64/Image</code><br><code>hip06-d03.dtb</code> in <code>&lt;project root&gt;/workspace/binary/D03/hip06-d03.dtb</code><br><strong>source</strong>: <code>&lt;project root&gt;/kernel</code></p>
-<p>build commands(supposedly, you are in <code>&lt;project root&gt;</code> currently):<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./estuary/submodules/build-kernel.sh --platform=D03 --output=workspace</div></pre></td></tr></table></figure></p>
-<p>if your host is not arm architecture, please execute<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./estuary/submodules/build-kernel.sh --platform=D03 --output=workspace --cross=aarch64-linux-gnu-</div></pre></td></tr></table></figure></p>
-<p>Note: more details about how to install <code>gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux</code>, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md" target="_blank" rel="external">https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md</a>.</p>
-<p>More detail about distributions, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Distributions_Guide.4All.md" target="_blank" rel="external">Distributions_Guide.md</a>.</p>
-<p>More detail about toolchains, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md" target="_blank" rel="external">Toolchains_Guide.md</a>.</p>
-<p>More detail about how to deploy target system into D03 board, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Deploy_Manual.4D03.md" target="_blank" rel="external">Deployment_Manual.md</a>.</p>
-<p>More detail about how to debug, analyse, diagnose system, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Armor_Manual.4All.md" target="_blank" rel="external">Armor_Manual.md</a>.</p>
-<p>More detail about how to benchmark system, please refer to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Caliper_Manual.4All.md" target="_blank" rel="external">Caliper_Manual.md</a>.</p>
-<p>More detail about how to access remote boards in OpenLab, please refer to <a href="http://open-estuary.org/accessing-boards-in-open-lab/" target="_blank" rel="external">Boards_in_OpenLab</a>.</p>
-
-      
+  <section id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        Documents
+        <small>分类</small>
+      </h2>
     </div>
 
-    <div>
+    
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-
-      
-    </div>
-
-    <div>
-      
+            <a class="post-title-link" href="/etesting/Estuary/Documents/Grub_Manual.4All/" itemprop="url">
+              
+                <span itemprop="name">Grub_Manual.4ALL</span>
+              
+            </a>
         
+      </h1>
 
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-10-10T10:11:01+08:00"
+              content="2016-10-10" >
+          10-10
+        </time>
+      </div>
 
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/etesting/tags/D03/" rel="tag">#D03</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/etesting/Tools/Hexo/hexo-deploy/" rel="next" title="Hexo 部署">
-                <i class="fa fa-chevron-left"></i> Hexo 部署
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/etesting/Documents/D03/Quick_Deployment.4D03/" rel="prev" title="Quick_Deployment.4D03">
-                Quick_Deployment.4D03 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
+    
       
-        <div class="ds-share flat" data-thread-key="Documents/D03/Readme.4D03/"
-     data-title="Readme.4D03"
-     data-content=""
-     data-url="http://jarsonfang.github.io/etesting/Documents/D03/Readme.4D03/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
 
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/etesting/Estuary/Documents/D05/Deploy_Manual.4D05/" itemprop="url">
+              
+                <span itemprop="name">Deploy_Manual.4D05</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-10-10T10:10:01+08:00"
+              content="2016-10-10" >
+          10-10
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
       
-    </div>
-  </div>
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/etesting/Estuary/Documents/D05/UEFI_Manual.4D05/" itemprop="url">
+              
+                <span itemprop="name">UEFI_Manual.4D05</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-10-10T10:08:01+08:00"
+              content="2016-10-10" >
+          10-10
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/etesting/Estuary/Documents/D05/Quick_Deployment.4D05/" itemprop="url">
+              
+                <span itemprop="name">Quick_Deployment.4D05</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-10-10T10:06:01+08:00"
+              content="2016-10-10" >
+          10-10
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/etesting/Estuary/Documents/D05/Readme.4D05/" itemprop="url">
+              
+                <span itemprop="name">Readme.4D05</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-10-10T10:05:01+08:00"
+              content="2016-10-10" >
+          10-10
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/etesting/Estuary/Documents/D03/UEFI_Manual.4D03/" itemprop="url">
+              
+                <span itemprop="name">UEFI_Manual.4D03</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-10-09T10:08:01+08:00"
+              content="2016-10-09" >
+          10-09
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/etesting/Estuary/Documents/D03/Deploy_Manual.4D03/" itemprop="url">
+              
+                <span itemprop="name">Deploy_Manual.4D03</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-10-09T10:07:01+08:00"
+              content="2016-10-09" >
+          10-09
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/etesting/Estuary/Documents/D03/Quick_Deployment.4D03/" itemprop="url">
+              
+                <span itemprop="name">Quick_Deployment.4D03</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-10-09T10:06:01+08:00"
+              content="2016-10-09" >
+          10-09
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/etesting/Estuary/Documents/D03/Readme.4D03/" itemprop="url">
+              
+                <span itemprop="name">Readme.4D03</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-10-09T10:05:01+08:00"
+              content="2016-10-09" >
+          10-09
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+  </section>
+
+  
+
 
 
           </div>
           
 
-  <p>热评文章</p>
-  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
-
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="Documents/D03/Readme.4D03/"
-           data-title="Readme.4D03" data-url="http://jarsonfang.github.io/etesting/Documents/D03/Readme.4D03/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -473,17 +531,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/etesting/images/avatar.png"
@@ -603,17 +652,6 @@
       </section>
 
       
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#UEFI-D03-fd"><span class="nav-number">1.</span> <span class="nav-text">UEFI_D03.fd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grubaa64-efi"><span class="nav-number">2.</span> <span class="nav-text">grubaa64.efi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Image-amp-hip06-d03-dtb"><span class="nav-number">3.</span> <span class="nav-text">Image & hip06-d03.dtb</span></a></li></ol></div>
-            
-          </div>
-        </section>
-      
 
     </div>
   </aside>
@@ -709,10 +747,6 @@
   
 
   
-  <script type="text/javascript" src="/etesting/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/etesting/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 

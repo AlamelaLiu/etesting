@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Grub_Manual.4ALL]]></title>
-      <url>http://jarsonfang.github.io/etesting/Documents/Grub_Manual.4All/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/Documents/Grub_Manual.4All/</url>
       <content type="html"><![CDATA[<ul>
 <li><a href="#1">Introduction</a></li>
 <li><a href="#2">Grub config file</a></li>
@@ -39,7 +39,7 @@
     
     <entry>
       <title><![CDATA[Deploy_Manual.4D05]]></title>
-      <url>http://jarsonfang.github.io/etesting/Documents/D05/Deploy_Manual.4D05/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/Documents/D05/Deploy_Manual.4D05/</url>
       <content type="html"><![CDATA[<ul>
 <li><a href="#1">Introduction</a></li>
 <li><a href="#2">Preparation</a><ul>
@@ -109,7 +109,7 @@
     
     <entry>
       <title><![CDATA[UEFI_Manual.4D05]]></title>
-      <url>http://jarsonfang.github.io/etesting/Documents/D05/UEFI_Manual.4D05/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/Documents/D05/UEFI_Manual.4D05/</url>
       <content type="html"><![CDATA[<ul>
 <li><a href="#1">Introduction</a></li>
 <li><a href="#2">Upgrade UEFI</a></li>
@@ -154,7 +154,7 @@
     
     <entry>
       <title><![CDATA[Quick_Deployment.4D05]]></title>
-      <url>http://jarsonfang.github.io/etesting/Documents/D05/Quick_Deployment.4D05/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/Documents/D05/Quick_Deployment.4D05/</url>
       <content type="html"><![CDATA[<ul>
 <li><a href="#1">Introduction</a></li>
 <li><a href="#2">Quick Deploy System</a><ul>
@@ -218,7 +218,7 @@
     
     <entry>
       <title><![CDATA[Readme.4D05]]></title>
-      <url>http://jarsonfang.github.io/etesting/Documents/D05/Readme.4D05/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/Documents/D05/Readme.4D05/</url>
       <content type="html"><![CDATA[<p>This is the readme file for D05 platform<br><a id="more"></a></p>
 <p>After you executed<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./estuary/build.sh --file=./estuary/estuarycfg.json --builddir=./workspace</div></pre></td></tr></table></figure></p>
 <p>for D05, all targets files will be produced. they are:</p>
@@ -237,7 +237,7 @@
     
     <entry>
       <title><![CDATA[UEFI_Manual.4D03]]></title>
-      <url>http://jarsonfang.github.io/etesting/Documents/D03/UEFI_Manual.4D03/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/Documents/D03/UEFI_Manual.4D03/</url>
       <content type="html"><![CDATA[<ul>
 <li><a href="#1">Introduction</a></li>
 <li><a href="#2">Upgrade UEFI</a></li>
@@ -279,7 +279,7 @@
     
     <entry>
       <title><![CDATA[Deploy_Manual.4D03]]></title>
-      <url>http://jarsonfang.github.io/etesting/Documents/D03/Deploy_Manual.4D03/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/Documents/D03/Deploy_Manual.4D03/</url>
       <content type="html"><![CDATA[<ul>
 <li><a href="#1">Introduction</a></li>
 <li><a href="#2">Preparation</a><ul>
@@ -404,7 +404,7 @@
     
     <entry>
       <title><![CDATA[Quick_Deployment.4D03]]></title>
-      <url>http://jarsonfang.github.io/etesting/Documents/D03/Quick_Deployment.4D03/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/Documents/D03/Quick_Deployment.4D03/</url>
       <content type="html"><![CDATA[<ul>
 <li><a href="#1">Introduction</a></li>
 <li><a href="#2">Quick Deploy System</a><ul>
@@ -457,7 +457,7 @@
     
     <entry>
       <title><![CDATA[Readme.4D03]]></title>
-      <url>http://jarsonfang.github.io/etesting/Documents/D03/Readme.4D03/</url>
+      <url>http://jarsonfang.github.io/etesting/Estuary/Documents/D03/Readme.4D03/</url>
       <content type="html"><![CDATA[<p>This is the readme file for D03 platform<br><a id="more"></a></p>
 <p>After you executed<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./estuary/build.sh --file=./estuary/estuarycfg.json --builddir=./workspace</div></pre></td></tr></table></figure></p>
 <p>for D03, all targets files will be produced. they are:</p>
