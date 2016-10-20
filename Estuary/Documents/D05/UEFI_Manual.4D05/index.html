@@ -87,7 +87,7 @@ Recover the UEFI when it broke">
 <meta property="og:description" content="Introduction
 Upgrade UEFI
 Recover the UEFI when it broke">
-<meta property="og:updated_time" content="2016-10-10T10:06:05.000Z">
+<meta property="og:updated_time" content="2016-10-20T07:31:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UEFI_Manual.4D05">
 <meta name="twitter:description" content="Introduction
@@ -377,11 +377,20 @@ Recover the UEFI when it broke">
 <p>Choose “Boot Manager” and enter into Boot option menu:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">EFI Misc Device</div><div class="line">EFI Network</div><div class="line">EFI Network 1</div><div class="line">EFI Network 2</div><div class="line">EFI Network 3</div><div class="line">EFI Internal Shell</div><div class="line">ESL Start OS</div><div class="line">Embedded Boot Loader(EBL)</div></pre></td></tr></table></figure></p>
 <p>D05 board support 4 on-board network ports at maximun. To enable any one of them by connecting to network cable or optical fiber. From left to right, followed by the two 2GE ports, two 10GE ports which corresponding to UEFI startup interface are EFI Network 2, EFI Network 3, EFI Network 0, EFI Network 1.</p>
 <p><em>EFI Internal Shell mode</em> is a standard command shell in UEFI.<br><em>Embedded Boot Loader(EBL) mode</em> is an embedded command shell based on boot loader specially for developers.<br>You can switch between two modes by typing “exit” from one mode to UEFI main menu and then choose the another mode.</p>
-<h3 id="Update-UEFI-files"><a href="#Update-UEFI-files" class="headerlink" title="Update UEFI files"></a>Update UEFI files</h3><p>a. IP address config at “EFI Internal Shell” mode(Optional, you can ignore this step if DHCP works well)<br>   Press any key except “enter” key to enter UEFI main menu. Select “Boot Manager”-&gt;”EFI Internal Shell”.<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ifconfig <span class="_">-s</span> eth0 static &lt;IP address&gt; &lt;mask&gt; &lt;gateway&gt;</div></pre></td></tr></table></figure></p>
-<p>   e.g.:<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ifconfig <span class="_">-s</span> eth0 static 192.168.1.4 255.255.255.0 192.168.1.1</div></pre></td></tr></table></figure></p>
-<p>b. Burn BIOS file at “Embedded Boot Loader(EBL)” mode<br>   Enter “exit” from “EFI Internal Shell” mode to the UEFI main menu and choose “Boot Manager”-&gt; “Embedded Boot Loader(EBL)”after setting the IP address done.<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Download file from FTP server to board's RAM</span></div><div class="line">provision &lt;server IP&gt; -u &lt;ftp user name&gt; -p &lt;ftp password&gt; <span class="_">-f</span> &lt;UEFI binary&gt; <span class="_">-a</span> &lt;download target address&gt;</div><div class="line"><span class="comment"># Write the data into NORFLASH</span></div><div class="line">spiwfmem &lt;<span class="built_in">source</span> address&gt; &lt;target address&gt; &lt;data length&gt;</div></pre></td></tr></table></figure></p>
-<p>   e.g.:<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">provision 192.168.1.107 -u sch -p aaa <span class="_">-f</span> UEFI_D05.fd <span class="_">-a</span> 0x100000</div><div class="line">spiwfmem 0x100000 0x0000000 0x300000</div></pre></td></tr></table></figure></p>
-<p>c. Power off and reboot board again.</p>
+<h3 id="Update-UEFI-files"><a href="#Update-UEFI-files" class="headerlink" title="Update UEFI files"></a>Update UEFI files</h3><ul>
+<li><p>IP address config at “EFI Internal Shell” mode(Optional, you can ignore this step if DHCP works well)<br>Press any key except “enter” key to enter UEFI main menu. Select “Boot Manager”-&gt;”EFI Internal Shell”.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ifconfig <span class="_">-s</span> eth0 static &lt;IP address&gt; &lt;mask&gt; &lt;gateway&gt;</div></pre></td></tr></table></figure>
+<p>e.g.:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ifconfig <span class="_">-s</span> eth0 static 192.168.1.4 255.255.255.0 192.168.1.1</div></pre></td></tr></table></figure>
+</li>
+<li><p>Burn BIOS file at “Embedded Boot Loader(EBL)” mode<br>Enter “exit” from “EFI Internal Shell” mode to the UEFI main menu and choose “Boot Manager”-&gt; “Embedded Boot Loader(EBL)”after setting the IP address done.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Download file from FTP server to board's RAM</span></div><div class="line">provision &lt;server IP&gt; -u &lt;ftp user name&gt; -p &lt;ftp password&gt; <span class="_">-f</span> &lt;UEFI binary&gt; <span class="_">-a</span> &lt;download target address&gt;</div><div class="line"><span class="comment"># Write the data into NORFLASH</span></div><div class="line">spiwfmem &lt;<span class="built_in">source</span> address&gt; &lt;target address&gt; &lt;data length&gt;</div></pre></td></tr></table></figure>
+<p>e.g.:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">provision 192.168.1.107 -u sch -p aaa <span class="_">-f</span> UEFI_D05.fd <span class="_">-a</span> 0x100000</div><div class="line">spiwfmem 0x100000 0x0000000 0x300000</div></pre></td></tr></table></figure>
+</li>
+<li><p>Power off and reboot board again.</p>
+</li>
+</ul>
 <h2 id="Recover-the-UEFI-when-it-broke"><a href="#Recover-the-UEFI-when-it-broke" class="headerlink" title="Recover the UEFI when it broke"></a><a name="3">Recover the UEFI when it broke</a></h2><ol>
 <li>Connect board’s BMC port to the network port of your ubuntu host.</li>
 <li>Configure board’s BMC IP and your ubuntu host’s IP at the same network segment.</li>
@@ -428,16 +437,16 @@ Recover the UEFI when it broke">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/etesting/Estuary/Documents/D05/Quick_Deployment.4D05/" rel="next" title="Quick_Deployment.4D05">
-                <i class="fa fa-chevron-left"></i> Quick_Deployment.4D05
+              <a href="/etesting/Estuary/Documents/QEMU/Readme.4QEMU/" rel="next" title="Readme.4QEMU.md">
+                <i class="fa fa-chevron-left"></i> Readme.4QEMU.md
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/etesting/Estuary/Documents/D05/Deploy_Manual.4D05/" rel="prev" title="Deploy_Manual.4D05">
-                Deploy_Manual.4D05 <i class="fa fa-chevron-right"></i>
+              <a href="/etesting/Estuary/Documents/HiKey/Deploy_Manual.4HiKey/" rel="prev" title="Deploy_Manual.4HiKey.md">
+                Deploy_Manual.4HiKey.md <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -532,7 +541,7 @@ Recover the UEFI when it broke">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/etesting/archives">
-              <span class="site-state-item-count">30</span>
+              <span class="site-state-item-count">51</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -540,7 +549,7 @@ Recover the UEFI when it broke">
           
             <div class="site-state-item site-state-categories">
               <a href="/etesting/categories">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -549,7 +558,7 @@ Recover the UEFI when it broke">
           
             <div class="site-state-item site-state-tags">
               <a href="/etesting/tags">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

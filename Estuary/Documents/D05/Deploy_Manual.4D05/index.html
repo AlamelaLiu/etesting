@@ -103,7 +103,7 @@ Bring up System via ACPI mode
 Boot via PXE(ACPI)
 Boot via NFS(ACPI)
 Boot via DISK(SAS/USB/SATA)(ACPI)">
-<meta property="og:updated_time" content="2016-10-10T10:05:53.000Z">
+<meta property="og:updated_time" content="2016-10-20T07:31:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Deploy_Manual.4D05">
 <meta name="twitter:description" content="Introduction
@@ -420,9 +420,9 @@ Boot via DISK(SAS/USB/SATA)(ACPI)">
 <h3 id="Boot-via-NFS-ACPI"><a href="#Boot-via-NFS-ACPI" class="headerlink" title="Boot via NFS(ACPI)"></a><a name="3.2">Boot via NFS(ACPI)</a></h3><p>In this boot mode, the root parameter in <code>grub.cfg</code> menuentry will set to <code>/dev/nfs</code> and <code>nfsroot</code> will be set to the path of rootfs on NFS server. You can use <code>showmount -e &lt;server ip address&gt;</code> to list the exported NFS directories on the NFS server.</p>
 <p>D05 supports booting via NFS, you can try it as following steps:</p>
 <ol>
-<li>Enable DHCP, TFTP and NFS service according to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Setup_PXE_Env_on_Host.4All.md" target="_blank" rel="external">Setup_PXE_Env_on_Host.md</a>.</li>
-<li>Get and config grub file to support NFS boot according to <a href="https://github.com/open-estuary/estuary/tree/estuary-d05-3.0b/doc/Grub_Manual.4All.md" target="_blank" rel="external">Grub_Manual.md</a>.<br><strong>Note</strong>: D05 only supports booting via ACPI mode with Centos distribution, so please refer to <a href="https://github.com/open-estuary/estuary/tree/estuary-d05-3.0b/doc/Grub_Manual.4All.md" target="_blank" rel="external">Grub_Manual.md</a> to get correct configuration.</li>
-<li>Reboot D05 and press anykey except “enter” to enter UEFI Boot Menu</li>
+<li>Enable DHCP, TFTP and NFS service according to <a href="https://github.com/open-estuary/estuary/blob/master/doc/Setup_PXE_Env_on_Host.4All.md" target="_blank" rel="external">Setup_PXE_Env_on_Host.md</a>.  </li>
+<li>Get and config grub file to support NFS boot according to <a href="https://github.com/open-estuary/estuary/tree/estuary-d05-3.0b/doc/Grub_Manual.4All.md" target="_blank" rel="external">Grub_Manual.md</a>.<br><strong>Note</strong>: D05 only supports booting via ACPI mode with Centos distribution, so please refer to <a href="https://github.com/open-estuary/estuary/tree/estuary-d05-3.0b/doc/Grub_Manual.4All.md" target="_blank" rel="external">Grub_Manual.md</a> to get correct configuration.  </li>
+<li>Reboot D05 and press anykey except “enter” to enter UEFI Boot Menu  </li>
 <li>Select boot option “Boot Manager”-&gt;”EFI Network <code>&lt;No&gt;</code>“ boot option to enter.<br><strong>Note</strong>: If you are connecting the D05 board of openlab, please select “EFI Network 2”. The value of <code>&lt;No&gt;</code> is depended on which D05 GE port is connected.</li>
 </ol>
 <h3 id="Boot-via-DISK-SAS-USB-SATA-ACPI"><a href="#Boot-via-DISK-SAS-USB-SATA-ACPI" class="headerlink" title="Boot via DISK(SAS/USB/SATA)(ACPI)"></a><a id="3.3">Boot via DISK(SAS/USB/SATA)(ACPI)</a></h3><p>D05 board supports booting via SAS, USB and SATA by default. The UEFI will directly get the grub from the EFI system partition on the hard disk. The grub will load the grub configuration file from the EFI system partition. So <code>grubaa64.efi</code>, <code>grub.cfg</code>, <code>Image</code> and different estuary release distributions are stored on disk.</p>
@@ -477,16 +477,16 @@ Boot via DISK(SAS/USB/SATA)(ACPI)">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/etesting/Estuary/Documents/D05/UEFI_Manual.4D05/" rel="next" title="UEFI_Manual.4D05">
-                <i class="fa fa-chevron-left"></i> UEFI_Manual.4D05
+              <a href="/etesting/Estuary/Documents/All/Distributions_Guide.4All/" rel="next" title="Distributions_Guild.4All.md">
+                <i class="fa fa-chevron-left"></i> Distributions_Guild.4All.md
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/etesting/Estuary/Documents/Grub_Manual.4All/" rel="prev" title="Grub_Manual.4ALL">
-                Grub_Manual.4ALL <i class="fa fa-chevron-right"></i>
+              <a href="/etesting/Estuary/Documents/D02/UEFI_Manual.4D02/" rel="prev" title="UEFI_Manual.4D02.md">
+                UEFI_Manual.4D02.md <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -581,7 +581,7 @@ Boot via DISK(SAS/USB/SATA)(ACPI)">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/etesting/archives">
-              <span class="site-state-item-count">30</span>
+              <span class="site-state-item-count">51</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -589,7 +589,7 @@ Boot via DISK(SAS/USB/SATA)(ACPI)">
           
             <div class="site-state-item site-state-categories">
               <a href="/etesting/categories">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -598,7 +598,7 @@ Boot via DISK(SAS/USB/SATA)(ACPI)">
           
             <div class="site-state-item site-state-tags">
               <a href="/etesting/tags">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
