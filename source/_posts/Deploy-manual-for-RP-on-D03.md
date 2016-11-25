@@ -12,7 +12,7 @@ categories:
 
 ### 下载相应版本的RP映像文件到tftp目录
 
-tftp的根目录为`/var/lib/tftpboot`，RP映像文件以latest版本为例。  
+假设tftp的根目录为`/var/lib/tftpboot`，RP映像文件以latest版本为例。  
 需要下载的RP映像文件包括：uefi、centos-installer。文件下载链接如下：  
 uefi:<https://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/debug/d03/>  
 centos-installer: <https://builds.96boards.org/snapshots/reference-platform/components/centos-installer/latest/>  
@@ -23,6 +23,7 @@ mkdir ${TFTP_ROOT}/rp1612 && cd ${TFTP_ROOT}/rp1612
 mkdir -p uefi/snapshots/latest
 mkdir -p centos-installer/snapshots/
 wget http://jarsonfang.github.io/etesting/Estuary/Documents/D03/Deploy-manual-for-RP-on-D03/download_files.sh
+chmod +x download_files.sh
 export PATH=${PWD}:$PATH
 pushd uefi/snapshots/latest
 download_files.sh https://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/debug/d03/
@@ -31,6 +32,7 @@ pushd centos-installer/snapshots
 download_files.sh https://builds.96boards.org/snapshots/reference-platform/components/centos-installer/latest/
 popd
 ```
+<!--more-->
 
 ### 拷贝`grubaa64.efi`文件到tftp根目录
 
@@ -48,7 +50,7 @@ popd
 为升级UEFI做准备。
 ```bash
 cd ${TFTP_ROOT}
-pusd uefi/snapshots/latest
+pusd rp1612/uefi/snapshots/latest
 cp d03/D03.fd ~/
 popd
 ```
@@ -153,4 +155,7 @@ wget http://jarsonfang.github.io/etesting/Estuary/Documents/D03/Deploy-manual-fo
 {% asset_image 16.png 图16 Installing CentOS Linux (Continue) %}
 若出现上图所示情况，则重启单板，重复PXE方式安装系统的所有步骤。
 
-系统安装完成后，按回车键退出安装并重启系统。
+系统安装完成后，按回车键退出安装并重启系统。  
+系统默认初始用户名：linaro 密码：linaro
+
+
