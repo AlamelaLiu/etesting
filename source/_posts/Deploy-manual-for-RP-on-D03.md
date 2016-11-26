@@ -10,10 +10,14 @@ categories:
   - D03
 ---
 
+### PXE服务器环境
+
+服务器IP地址：192.168.3.100
+TFTP根目录：/var/lib/tftpboot
+
 ### 下载相应版本的RP映像文件到tftp目录
 
-假设tftp的根目录为`/var/lib/tftpboot`，RP映像文件以latest版本为例。  
-需要下载的RP映像文件包括：uefi、centos-installer。文件下载链接如下：  
+RP映像文件以latest版本为例，需要下载的RP映像文件包括：uefi、centos-installer。文件下载链接如下：  
 uefi:<https://builds.96boards.org/snapshots/reference-platform/components/uefi/latest/debug/d03/>  
 centos-installer: <https://builds.96boards.org/snapshots/reference-platform/components/centos-installer/latest/>  
 使用{% asset_link download_files.sh %}脚本进行文件下载。
@@ -95,23 +99,23 @@ wget http://jarsonfang.github.io/etesting/Estuary/Documents/D03/Deploy-manual-fo
    ```
    {% asset_image 1.png 图1. UEFI - Main menu %}
 
-2. 在“EFI Internal Shell”中配置IP地址  
-   选择“Boot Manager”->“EFI Internal Shell”进入“EFI Internal Shell”，  
-   “Boot Manager”菜单界面，如图2所示：  
+2. ~~在“EFI Internal Shell”中配置IP地址~~  
+   ~~选择“Boot Manager”->“EFI Internal Shell”进入“EFI Internal Shell”，~~  
+   ~~“Boot Manager”菜单界面，如图2所示：~~  
    {% asset_image 2.png 图2. UEFI - Boot Manager %}
-   “EFI Internal Shell”界面，如图3所示：
+   ~~“EFI Internal Shell”界面，如图3所示：~~
    {% asset_image 3.png 图3. UEFI - EFI Internal Shell %}
-   使用以下命令配置单板IP地址：
+   ~~使用以下命令配置单板IP地址：~~
    ```bash
    ifconfig -s eth0 static <IP address> <mask> <gateway>
    ```
-   e.g.:
+   ~~e.g.:~~
    ```bash
    ifconfig -s eth0 static 192.168.3.250 255.255.255.0 192.168.1.1
    ```
-   如图4所示：
+   ~~如图4所示：~~
    {% asset_image 4.png 图4. UEFI - Config IP address %}
-   D03单板IP地址可使用下面的命令获取：
+   ~~D03单板IP地址可使用下面的命令获取：~~
    ```bash
    jarson@LAVA:~$ grep "BMC5" /usr/local/openlab/openlab_conf/bmcinfo.cfg 
    BMC5: ip=192.168.3.250, interface=lanplus, account=root, pass=Huawei12#$
