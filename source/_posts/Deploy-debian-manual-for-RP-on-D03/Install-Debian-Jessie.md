@@ -290,7 +290,7 @@ $ cat /srv/tftp/debian-installer/arm64/grub/grub.cfg
 set default=0
 set timeout=1
 menuentry 'Install with preseeding' {
-    linux    /debian-installer/arm64/linux console=ttyS0,115200 earlycon=hisilpcuart,mmio,0xa01b0000,0,0x2f8 pcie_aspm=off ip=dhcp interface=eth0 auto=true priority=critical url=http://people.linaro.org/~ricardo.salveti/preseed.cfg
+    linux    /debian-installer/arm64/linux console=ttyS0,115200 earlycon=hisilpcuart,mmio,0xa01b0000,0,0x2f8 pcie_aspm=off ip=dhcp interface=eth0 auto=true priority=critical url=http://114.119.4.74:8083/rp1612/preseed.cfg
     initrd   /debian-installer/arm64/initrd.gz
 }
 ```
