@@ -1,12 +1,13 @@
 ---
-title: Setup_PXE_Env_on_Host.4All.md
+title: Setup_PXE_Env_on_Host.4All
 date: 2016-10-10 10:10:01
 tags:
-  - All
+  - D02
+  - D03
+  - D05
 categories:
   - Estuary
   - Documents
-  - All
 ---
 * [Introduction](#1)
 * [Setup DHCP server on Ubuntu](#2)

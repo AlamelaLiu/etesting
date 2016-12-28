@@ -1,12 +1,11 @@
 ---
-title: Readme.4HiKey.md
+title: Readme.4HiKey
 date: 2016-10-10 10:08:01
 tags:
   - HiKey
 categories:
   - Estuary
   - Documents
-  - HiKey
 ---
 This is the readme file for HiKey platform
 

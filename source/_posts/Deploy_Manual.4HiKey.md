@@ -1,12 +1,11 @@
 ---
-title: Deploy_Manual.4HiKey.md
+title: Deploy_Manual.4HiKey
 date: 2016-10-10 10:08:01
 tags:
   - HiKey
 categories:
   - Estuary
   - Documents
-  - HiKey
 ---
 * [Introduction](#1)
 * [Preparation](#2)

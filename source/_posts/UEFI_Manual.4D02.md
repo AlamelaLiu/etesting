@@ -1,12 +1,11 @@
 ---
-title: UEFI_Manual.4D02.md
+title: UEFI_Manual.4D02
 date: 2016-10-10 10:10:01
 tags:
   - D02
 categories:
   - Estuary
   - Documents
-  - D02
 ---
 * [Introduction](#1)
 * [Upgrade UEFI](#2)

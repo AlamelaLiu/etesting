@@ -1,12 +1,11 @@
 ---
-title: Quick_Deployment.4D02.md
+title: Quick_Deployment.4D02
 date: 2016-10-09 10:07:01
 tags:
   - D02
 categories:
   - Estuary
   - Documents
-  - D02
 ---
 * [Introduction](#1)
 * [Quick Deploy System](#2)

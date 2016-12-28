@@ -1,12 +1,13 @@
 ---
-title: Setup_HiKey_WiFi_Env.4HiKey.md
+title: Setup_HiKey_WiFi_Env.4HiKey
 date: 2016-10-10 10:10:01
 tags:
-  - All
+  - D02
+  - D03
+  - D05
 categories:
   - Estuary
   - Documents
-  - All
 ---
 * [Config WiFi On mini-rootfs systerm](#1)
 * [Config WiFi On Ubuntu & Debian systerm](#2)

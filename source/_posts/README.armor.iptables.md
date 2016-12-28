@@ -1,12 +1,13 @@
 ---
-title: README.armor.iptables.md
+title: README.armor.iptables
 date: 2016-10-10 10:10:01
 tags:
-  - All
+  - D02
+  - D03
+  - D05
 categories:
   - Estuary
   - Documents
-  - All
 ---
 How to verify iptables tool
 

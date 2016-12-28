@@ -1,12 +1,11 @@
 ---
-title: Readme.4D02.md
+title: Readme.4D02
 date: 2016-10-09 10:07:01
 tags:
   - D02
 categories:
   - Estuary
   - Documents
-  - D02
 ---
 This is the readme file for D02 platform
 
