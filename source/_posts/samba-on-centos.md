@@ -3,10 +3,10 @@ title: Samba on Centos 7
 date: 2016-09-20 14:16:21
 tags:
   - Samba
-  - Centos
+  - CentOS
 categories:
   - Estuary
-  - Server
+  - Documents
 ---
 
 ## Installation
@@ -14,6 +14,8 @@ categories:
 ```bash
 yum install samba samba-client
 ```
+
+<!--more-->
 
 ## Configuration
 
